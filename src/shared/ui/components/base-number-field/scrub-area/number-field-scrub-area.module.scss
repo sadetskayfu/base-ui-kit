@@ -1,0 +1,18 @@
+.scrub-area {
+	max-width: min-content;
+	cursor: ew-resize;
+
+	&:where([data-disabled]) {
+		cursor: default;
+	}
+
+	label {
+		cursor: inherit;
+	}
+}
+
+.scrub-area-cursor {
+	fill: var(--font-color-hard-invert);
+	stroke: var(--font-color-hard);
+	display: flex;
+}

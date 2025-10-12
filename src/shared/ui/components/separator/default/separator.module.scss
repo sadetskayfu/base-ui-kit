@@ -1,0 +1,10 @@
+.separator {
+	background-color: var(--border-color-grey);
+
+	&[data-orientation='vertical'] {
+		width: var(--border-weight-soft);
+	}
+	&[data-orientation='horizontal'] {
+		height: var(--border-weight-soft);
+	}
+}

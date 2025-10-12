@@ -1,0 +1,18 @@
+import * as React from 'react';
+import { Button } from '../button';
+
+export type ButtonContext = {
+	size?: Button.Props['size'];
+	radius?: Button.Props['radius'];
+	variant?: Button.Props['variant'];
+	color?: Button.Props['color'];
+	iconButton?: boolean;
+	disabled?: boolean;
+	loading?: boolean;
+};
+
+export const ButtonContext = React.createContext<ButtonContext | undefined>(undefined);
+
+export function useButtonContext() {
+	return React.useContext(ButtonContext);
+}

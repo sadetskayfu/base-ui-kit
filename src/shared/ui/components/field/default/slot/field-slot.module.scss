@@ -1,0 +1,15 @@
+.slot {
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	cursor: inherit;
+
+	&:where(.separator) {
+		&:where([data-side='right']) {
+			border-left: var(--border-weight-soft) solid var(--border-color-grey);
+		}
+		&:where([data-side='left']) {
+			border-right: var(--border-weight-soft) solid var(--border-color-grey);
+		}
+	}
+}

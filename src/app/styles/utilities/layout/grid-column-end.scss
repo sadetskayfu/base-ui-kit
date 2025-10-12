@@ -1,0 +1,34 @@
+.yar-gce {
+	/* Keep this selector here to maintain the source order */
+}
+.yar-gce-1 {
+	grid-column-end: 1;
+}
+.yar-gce-2 {
+	grid-column-end: 2;
+}
+.yar-gce-3 {
+	grid-column-end: 3;
+}
+.yar-gce-4 {
+	grid-column-end: 4;
+}
+.yar-gce-5 {
+	grid-column-end: 5;
+}
+.yar-gce-6 {
+	grid-column-end: 6;
+}
+.yar-gce-7 {
+	grid-column-end: 7;
+}
+.yar-gce-8 {
+	grid-column-end: 8;
+}
+.yar-gce-9 {
+	grid-column-end: 9;
+}
+
+.yar-gce {
+	grid-column-end: var(--grid-column-end);
+}

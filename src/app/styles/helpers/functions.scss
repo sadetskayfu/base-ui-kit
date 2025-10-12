@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+@function s($pixel) {
+	@if math.is-unitless($pixel) {
+		@return calc(#{$pixel} * var(--scaling) * 1px);
+	} @else {
+		@error 'Передавайте число без единиц измерений';
+	}
+}

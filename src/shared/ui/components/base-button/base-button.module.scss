@@ -1,0 +1,42 @@
+.button {
+	--base-button-height: ;
+	--base-button-padding-inline: ;
+	position: relative;
+	flex-shrink: 0;
+	overflow: hidden;
+	padding-block: 0px;
+	padding-inline: var(--base-button-padding-inline);
+	min-height: var(--base-button-height);
+	height: fit-content;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+	user-select: none;
+
+	&:where(.size-1) {
+		--base-button-padding-inline: var(--space-3);
+		--base-button-height: var(--button-height-1);
+	}
+	&:where(.size-2) {
+		--base-button-padding-inline: var(--space-3);
+		--base-button-height: var(--button-height-2);
+	}
+	&:where(.size-3) {
+		--base-button-padding-inline: var(--space-4);
+		--base-button-height: var(--button-height-3);
+	}
+	&:where(.size-4) {
+		--base-button-padding-inline: var(--space-4);
+		--base-button-height: var(--button-height-4);
+	}
+
+    &:where(:not(.icon-button)) {
+        column-gap: var(--base-button-padding-inline);
+    }
+
+	&:where(.icon-button) {
+		min-width: var(--base-button-height);
+		max-width: fit-content;
+		padding-inline: var(--space-1);
+	}
+}

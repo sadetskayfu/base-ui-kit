@@ -1,0 +1,26 @@
+.arrow {
+	--popup-arrow-size: 14px;
+	--popup-arrow-offset: calc((var(--popup-arrow-size) / 2) * -1);
+	width: var(--popup-arrow-size);
+	height: var(--popup-arrow-size);
+	background-color: inherit;
+	clip-path: polygon(0 0, 0 100%, 100% 100%);
+	border: 1px solid rgb(9, 9, 12);
+
+	&[data-side='top'] {
+		transform: rotate(-45deg);
+		bottom: var(--popup-arrow-offset);
+	}
+	&[data-side='bottom'] {
+		transform: rotate(-225deg);
+		top: var(--popup-arrow-offset);
+	}
+	&[data-side='left'] {
+		transform: rotate(-135deg);
+		right: var(--popup-arrow-offset);
+	}
+	&[data-side='right'] {
+		transform: rotate(-315deg);
+		left: var(--popup-arrow-offset);
+	}
+}

@@ -1,0 +1,39 @@
+:root,
+.dark-theme {
+	--warning-hue: 24;
+	--warning-saturation: 84%;
+	--warning-lightness: 54%;
+
+	--color-warning-a1: hsla(
+		var(--warning-hue),
+		var(--warning-saturation),
+		var(--warning-lightness),
+		0.1
+	);
+	--color-warning-a2: hsla(
+		var(--warning-hue),
+		var(--warning-saturation),
+		var(--warning-lightness),
+		0.2
+	);
+	--color-warning-a3: hsla(
+		var(--warning-hue),
+		var(--warning-saturation),
+		var(--warning-lightness),
+		0.3
+	);
+	--color-warning-a9: hsla(
+		var(--warning-hue),
+		var(--warning-saturation),
+		var(--warning-lightness),
+		0.9
+	);
+
+	--border-color-warning: var(--color-warning-a2);
+
+	--solid-color-warning-1: #ec7525;
+	--solid-color-warning-2: #c48c67;
+
+	--font-color-warning-soft: var(--solid-color-warning-2);
+	--font-color-warning-hard: var(--solid-color-warning-1);
+}

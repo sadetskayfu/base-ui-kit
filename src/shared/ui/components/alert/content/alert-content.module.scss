@@ -1,0 +1,4 @@
+.content:not(:empty) {
+	padding-left: calc(var(--alert-icon-size) + var(--alert-header-column-gap));
+    margin-top: var(--space-2);
+}

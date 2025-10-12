@@ -1,0 +1,7 @@
+.yar-Grid {
+	display: grid;
+	align-items: stretch;
+	justify-content: flex-start;
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-rows: none;
+}

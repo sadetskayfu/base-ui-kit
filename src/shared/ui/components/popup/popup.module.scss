@@ -1,0 +1,25 @@
+.popup {
+	max-width: var(--available-width);
+	max-height: var(--available-height);
+	box-shadow: var(--box-shadow-paper);
+	transform-origin: var(--transform-origin);
+	display: flex;
+	flex-direction: column;
+
+	transition:
+		opacity 0.2s,
+		transform 0.2s;
+
+	&[data-starting-style],
+	&[data-ending-style] {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+
+	&:where(.anchor-width) {
+		width: var(--anchor-width);
+	}
+	&:where(.min-anchor-width) {
+		min-width: var(--anchor-width);
+	}
+}

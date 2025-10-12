@@ -1,0 +1,73 @@
+.avatar {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	user-select: none;
+	flex-shrink: 0;
+	width: var(--avatar-size);
+	height: var(--avatar-size);
+
+	&:where(.size-1) {
+		--avatar-size: var(--space-5);
+	}
+	&:where(.size-2) {
+		--avatar-size: var(--space-6);
+	}
+	&:where(.size-3) {
+		--avatar-size: var(--space-7);
+	}
+	&:where(.size-4) {
+		--avatar-size: var(--space-8);
+	}
+	&:where(.size-5) {
+		--avatar-size: var(--space-9);
+	}
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: inherit;
+}
+
+.fallback {
+	font-weight: var(--font-weight-medium);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	border-radius: inherit;
+	font-size: calc(var(--avatar-size) / 1.5);
+
+	&:where(.variant-solid) {
+        &:where(.color-accent) {
+			color: var(--font-color-hard-invert);
+			background-color: var(--solid-color-accent-1);
+		}
+		&:where(.color-secondary) {
+			color: var(--font-color-hard);
+			background-color: var(--bg-color-grey-4);
+		}
+	}
+
+	&:where(.variant-ghost) {
+		&:where(.color-accent) {
+			color: var(--color-accent-a9);
+			background-color: var(--color-accent-a2);
+		}
+		&:where(.color-secondary) {
+			color: var(--color-grey-a9);
+			background-color: var(--color-grey-a2);
+		}
+	}
+
+	&:where(.one-letter) {
+		font-size: calc(var(--avatar-size) / 1.5);
+	}
+	&:where(.two-letter) {
+		font-size: calc(var(--avatar-size) / 2.5);
+	}
+}

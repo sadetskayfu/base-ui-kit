@@ -1,0 +1,13 @@
+.content {
+	&:where(.variable-padding) {
+		&[data-overflow-x-end],
+		&[data-overflow-x-start] {
+			padding-bottom: var(--scroll-area-clickable-scrollbar-width);
+		}
+
+		&[data-overflow-y-end],
+		&[data-overflow-y-start] {
+			padding-right: var(--scroll-area-clickable-scrollbar-width);
+		}
+	}
+}

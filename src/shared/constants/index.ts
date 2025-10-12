@@ -1,0 +1,17 @@
+import {
+	EMPTY_ARRAY as BASE_EMPTY_ARRAY,
+	EMPTY_OBJECT as BASE_EMPTY_OBJECT,
+	NOOP as BASE_NOOP,
+} from '@base-ui-components/utils/empty';
+
+export const EMPTY_ARRAY = BASE_EMPTY_ARRAY;
+export const EMPTY_OBJECT = BASE_EMPTY_OBJECT;
+export const NOOP = BASE_NOOP;
+
+export const CONTAINER_PADDING_X = 16;
+
+export const POPUP_SIDE_OFFSET = 5;
+export const POPUP_SIDE_OFFSET_WITH_ARROW = 12;
+export const POPUP_ARROW_PADDING = 10;
+export const POPUP_COLLISION_PADDING_BLOCK = 5;
+export const POPUP_COLLISION_PADDING_INLINE = CONTAINER_PADDING_X;

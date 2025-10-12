@@ -1,0 +1,39 @@
+:root,
+.dark-theme {
+	--accent-hue: 243;
+	--accent-saturation: 92%;
+	--accent-lightness: 75%;
+
+	--color-accent-a1: hsla(
+		var(--accent-hue),
+		var(--accent-saturation),
+		var(--accent-lightness),
+		0.1
+	);
+	--color-accent-a2: hsla(
+		var(--accent-hue),
+		var(--accent-saturation),
+		var(--accent-lightness),
+		0.2
+	);
+	--color-accent-a3: hsla(
+		var(--accent-hue),
+		var(--accent-saturation),
+		var(--accent-lightness),
+		0.3
+	);
+	--color-accent-a9: hsla(
+		var(--accent-hue),
+		var(--accent-saturation),
+		var(--accent-lightness),
+		0.9
+	);
+
+	--border-color-accent: var(--color-accent-a2);
+
+	--solid-color-accent-1: #8d87fa;
+	--solid-color-accent-2: #aaa6ff;
+
+	--font-color-accent-soft: #8d87fa;
+	--font-color-accent-hard: #aaa6ff;
+}

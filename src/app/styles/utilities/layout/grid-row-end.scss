@@ -1,0 +1,34 @@
+.yar-gre {
+	/* Keep this selector here to maintain the source order */
+}
+.yar-gre-1 {
+	grid-row-end: 1;
+}
+.yar-gre-2 {
+	grid-row-end: 2;
+}
+.yar-gre-3 {
+	grid-row-end: 3;
+}
+.yar-gre-4 {
+	grid-row-end: 4;
+}
+.yar-gre-5 {
+	grid-row-end: 5;
+}
+.yar-gre-6 {
+	grid-row-end: 6;
+}
+.yar-gre-7 {
+	grid-row-end: 7;
+}
+.yar-gre-8 {
+	grid-row-end: 8;
+}
+.yar-gre-9 {
+	grid-row-end: 9;
+}
+
+.yar-gre {
+	grid-row-end: var(--grid-row-end);
+}

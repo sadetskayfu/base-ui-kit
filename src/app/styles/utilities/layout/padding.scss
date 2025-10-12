@@ -1,0 +1,357 @@
+/* * * * * * * * * * * * * * * * * * * */
+/*                                     */
+/*              All sides              */
+/*                                     */
+/* * * * * * * * * * * * * * * * * * * */
+
+.yar-p {
+	/* Keep this selector here to maintain the source order */
+}
+.yar-p-0 {
+	padding: 0;
+}
+.yar-p-1 {
+	padding: var(--space-1);
+}
+.yar-p-2 {
+	padding: var(--space-2);
+}
+.yar-p-3 {
+	padding: var(--space-3);
+}
+.yar-p-4 {
+	padding: var(--space-4);
+}
+.yar-p-5 {
+	padding: var(--space-5);
+}
+.yar-p-6 {
+	padding: var(--space-6);
+}
+.yar-p-7 {
+	padding: var(--space-7);
+}
+.yar-p-8 {
+	padding: var(--space-8);
+}
+.yar-p-9 {
+	padding: var(--space-9);
+}
+.yar-p-inset {
+	padding-top: var(--inset-padding-top);
+	padding-right: var(--inset-padding-right);
+	padding-bottom: var(--inset-padding-bottom);
+	padding-left: var(--inset-padding-left);
+}
+
+.yar-p {
+	padding: var(--p);
+}
+
+/* * * * * * * * * * * * * * * * * * * */
+/*                                     */
+/*           Left and right            */
+/*                                     */
+/* * * * * * * * * * * * * * * * * * * */
+
+.yar-px {
+	/* Keep this selector here to maintain the source order */
+}
+.yar-px-0 {
+	padding-left: 0;
+	padding-right: 0;
+}
+.yar-px-1 {
+	padding-left: var(--space-1);
+	padding-right: var(--space-1);
+}
+.yar-px-2 {
+	padding-left: var(--space-2);
+	padding-right: var(--space-2);
+}
+.yar-px-3 {
+	padding-left: var(--space-3);
+	padding-right: var(--space-3);
+}
+.yar-px-4 {
+	padding-left: var(--space-4);
+	padding-right: var(--space-4);
+}
+.yar-px-5 {
+	padding-left: var(--space-5);
+	padding-right: var(--space-5);
+}
+.yar-px-6 {
+	padding-left: var(--space-6);
+	padding-right: var(--space-6);
+}
+.yar-px-7 {
+	padding-left: var(--space-7);
+	padding-right: var(--space-7);
+}
+.yar-px-8 {
+	padding-left: var(--space-8);
+	padding-right: var(--space-8);
+}
+.yar-px-9 {
+	padding-left: var(--space-9);
+	padding-right: var(--space-9);
+}
+.yar-px-inset {
+	padding-left: var(--inset-padding-left);
+	padding-right: var(--inset-padding-right);
+}
+
+.yar-px {
+	padding-left: var(--pl);
+	padding-right: var(--pr);
+}
+
+/* * * * * * * * * * * * * * * * * * * */
+/*                                     */
+/*           Top and bottom            */
+/*                                     */
+/* * * * * * * * * * * * * * * * * * * */
+
+.yar-py {
+	/* Keep this selector here to maintain the source order */
+}
+.yar-py-0 {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.yar-py-1 {
+	padding-top: var(--space-1);
+	padding-bottom: var(--space-1);
+}
+.yar-py-2 {
+	padding-top: var(--space-2);
+	padding-bottom: var(--space-2);
+}
+.yar-py-3 {
+	padding-top: var(--space-3);
+	padding-bottom: var(--space-3);
+}
+.yar-py-4 {
+	padding-top: var(--space-4);
+	padding-bottom: var(--space-4);
+}
+.yar-py-5 {
+	padding-top: var(--space-5);
+	padding-bottom: var(--space-5);
+}
+.yar-py-6 {
+	padding-top: var(--space-6);
+	padding-bottom: var(--space-6);
+}
+.yar-py-7 {
+	padding-top: var(--space-7);
+	padding-bottom: var(--space-7);
+}
+.yar-py-8 {
+	padding-top: var(--space-8);
+	padding-bottom: var(--space-8);
+}
+.yar-py-9 {
+	padding-top: var(--space-9);
+	padding-bottom: var(--space-9);
+}
+.yar-py-inset {
+	padding-top: var(--inset-padding-top);
+	padding-bottom: var(--inset-padding-bottom);
+}
+
+.yar-py {
+	padding-top: var(--pt);
+	padding-bottom: var(--pb);
+}
+
+/* * * * * * * * * * * * * * * * * * * */
+/*                                     */
+/*                 Top                 */
+/*                                     */
+/* * * * * * * * * * * * * * * * * * * */
+
+.yar-pt {
+	/* Keep this selector here to maintain the source order */
+}
+.yar-pt-0 {
+	padding-top: 0;
+}
+.yar-pt-1 {
+	padding-top: var(--space-1);
+}
+.yar-pt-2 {
+	padding-top: var(--space-2);
+}
+.yar-pt-3 {
+	padding-top: var(--space-3);
+}
+.yar-pt-4 {
+	padding-top: var(--space-4);
+}
+.yar-pt-5 {
+	padding-top: var(--space-5);
+}
+.yar-pt-6 {
+	padding-top: var(--space-6);
+}
+.yar-pt-7 {
+	padding-top: var(--space-7);
+}
+.yar-pt-8 {
+	padding-top: var(--space-8);
+}
+.yar-pt-9 {
+	padding-top: var(--space-9);
+}
+.yar-pt-inset {
+	padding-top: var(--inset-padding-top);
+}
+
+.yar-pt {
+	padding-top: var(--pt);
+}
+
+/* * * * * * * * * * * * * * * * * * * */
+/*                                     */
+/*                Right                */
+/*                                     */
+/* * * * * * * * * * * * * * * * * * * */
+
+.yar-pr {
+	/* Keep this selector here to maintain the source order */
+}
+.yar-pr-0 {
+	padding-right: 0;
+}
+.yar-pr-1 {
+	padding-right: var(--space-1);
+}
+.yar-pr-2 {
+	padding-right: var(--space-2);
+}
+.yar-pr-3 {
+	padding-right: var(--space-3);
+}
+.yar-pr-4 {
+	padding-right: var(--space-4);
+}
+.yar-pr-5 {
+	padding-right: var(--space-5);
+}
+.yar-pr-6 {
+	padding-right: var(--space-6);
+}
+.yar-pr-7 {
+	padding-right: var(--space-7);
+}
+.yar-pr-8 {
+	padding-right: var(--space-8);
+}
+.yar-pr-9 {
+	padding-right: var(--space-9);
+}
+.yar-pr-inset {
+	padding-right: var(--inset-padding-right);
+}
+
+.yar-pr {
+	padding-right: var(--pr);
+}
+
+
+/* * * * * * * * * * * * * * * * * * * */
+/*                                     */
+/*               Bottom                */
+/*                                     */
+/* * * * * * * * * * * * * * * * * * * */
+
+.yar-pb {
+	/* Keep this selector here to maintain the source order */
+}
+.yar-pb-0 {
+	padding-bottom: 0;
+}
+.yar-pb-1 {
+	padding-bottom: var(--space-1);
+}
+.yar-pb-2 {
+	padding-bottom: var(--space-2);
+}
+.yar-pb-3 {
+	padding-bottom: var(--space-3);
+}
+.yar-pb-4 {
+	padding-bottom: var(--space-4);
+}
+.yar-pb-5 {
+	padding-bottom: var(--space-5);
+}
+.yar-pb-6 {
+	padding-bottom: var(--space-6);
+}
+.yar-pb-7 {
+	padding-bottom: var(--space-7);
+}
+.yar-pb-8 {
+	padding-bottom: var(--space-8);
+}
+.yar-pb-9 {
+	padding-bottom: var(--space-9);
+}
+.yar-pb-inset {
+	padding-bottom: var(--inset-padding-bottom);
+}
+
+.yar-pb {
+	padding-bottom: var(--pb);
+}
+
+/* * * * * * * * * * * * * * * * * * * */
+/*                                     */
+/*                Left                 */
+/*                                     */
+/* * * * * * * * * * * * * * * * * * * */
+
+.yar-pl {
+	/* Keep this selector here to maintain the source order */
+}
+.yar-pl-0 {
+	padding-left: 0;
+}
+.yar-pl-1 {
+	padding-left: var(--space-1);
+}
+.yar-pl-2 {
+	padding-left: var(--space-2);
+}
+.yar-pl-3 {
+	padding-left: var(--space-3);
+}
+.yar-pl-4 {
+	padding-left: var(--space-4);
+}
+.yar-pl-5 {
+	padding-left: var(--space-5);
+}
+.yar-pl-6 {
+	padding-left: var(--space-6);
+}
+.yar-pl-7 {
+	padding-left: var(--space-7);
+}
+.yar-pl-8 {
+	padding-left: var(--space-8);
+}
+.yar-pl-9 {
+	padding-left: var(--space-9);
+}
+.yar-pl-inset {
+	padding-left: var(--inset-padding-left);
+}
+
+.yar-pl {
+	padding-left: var(--pl);
+}
+

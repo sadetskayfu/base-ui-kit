@@ -1,0 +1,32 @@
+.radio-item {
+    &:where([data-checked]),
+    &:where([data-selected]) {
+        .radio::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+.radio {
+    position: relative;
+    border-radius: 50%;
+    height: 1em;
+    width: 1em;
+    margin-left: auto;
+    background-color: var(--bg-color-grey-1);
+
+    &:after {
+        --size: calc(1em - 5px);
+        content: '';
+        @include abs-center;
+        width: var(--size);
+        height: var(--size);
+        opacity: 0;
+        transform: scale(0.5);
+        background-color: var(--solid-color-accent-1);
+        border-radius: inherit;
+        transition: transform 0.1s, opacity 0.1s;
+    }
+}
+

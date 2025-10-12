@@ -1,0 +1,13 @@
+.yar-fs {
+	/* Keep this selector here to maintain the source order */
+}
+.yar-fs-0 {
+	flex-shrink: 0;
+}
+.yar-fs-1 {
+	flex-shrink: 1;
+}
+.yar-fs {
+	flex-shrink: var(--flex-shrink);
+}
+

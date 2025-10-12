@@ -1,0 +1,55 @@
+@use './helpers' as *;
+
+.container {
+	max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+	margin-inline: auto;
+	padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+	@include visually-hidden;
+}
+
+.disabled {
+	@include disabled;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.ml-auto {
+	margin-left: auto;
+}
+
+.truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.lucide {
+	stroke-width: 2px;
+	flex-shrink: 0;
+	height: 1em;
+	width: 1em;
+}
+
+.custom-scrollbar-s {
+	&::-webkit-scrollbar {
+		width: var(--space-3);
+		height: var(--space-3);
+	}
+	&::-webkit-scrollbar-track,
+	&::-webkit-scrollbar-thumb {
+		background-clip: content-box;
+		border: var(--space-1) solid transparent;
+		border-radius: var(--space-3);
+	}
+	&::-webkit-scrollbar-track {
+		background-color: var(--border-color-grey);
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--font-color-soft);
+	}
+}

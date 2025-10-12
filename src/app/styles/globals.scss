@@ -1,0 +1,14 @@
+body {
+    background-color: var(--bg-color-grey-1);
+    color: var(--font-color-soft);
+    font-weight: var(--default-font-weight);
+    line-height: var(--default-line-height);
+    font-size: var(--default-font-size);
+    letter-spacing: var(--default-letter-spacing);
+    font-family: var(--default-font-family);
+    color-scheme: dark;
+}
+
+a, button {
+    font-weight: var(--font-weight-medium);
+}

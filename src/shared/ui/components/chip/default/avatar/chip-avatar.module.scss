@@ -1,0 +1,4 @@
+.avatar {
+    --avatar-size: calc(var(--chip-height) - var(--chip-padding) * 2);
+    border-radius: var(--chip-avatar-radius);
+}

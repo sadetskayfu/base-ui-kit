@@ -1,0 +1,13 @@
+.yar-fg {
+	/* Keep this selector here to maintain the source order */
+}
+.yar-fg-0 {
+	flex-grow: 0;
+}
+.yar-fg-1 {
+	flex-grow: 1;
+}
+
+.yar-fg {
+	flex-grow: var(--flex-grow);
+}

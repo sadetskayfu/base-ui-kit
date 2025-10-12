@@ -1,0 +1,34 @@
+.yar-gtc {
+	/* Keep this selector here to maintain the source order */
+}
+.yar-gtc-1 {
+	grid-template-columns: minmax(0, 1fr);
+}
+.yar-gtc-2 {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.yar-gtc-3 {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.yar-gtc-4 {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.yar-gtc-5 {
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.yar-gtc-6 {
+	grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.yar-gtc-7 {
+	grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.yar-gtc-8 {
+	grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+.yar-gtc-9 {
+	grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.yar-gtc {
+	grid-template-columns: var(--grid-template-columns);
+}

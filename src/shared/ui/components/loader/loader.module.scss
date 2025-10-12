@@ -1,0 +1,76 @@
+.loader {
+	--loader-size: ;
+	--loader-stroke-width: ;
+	--loader-color: ;
+	--loader-radius: calc((var(--loader-size) - var(--loader-stroke-width)) / 2);
+	--loader-circumference-length: calc(2 * 3.14 * var(--loader-radius));
+	--loader-stroke-length: calc(80 * (1 / 100) * var(--loader-circumference-length));
+	--loader-dash-offset-small: calc((15 * (1 / 100) * var(--loader-circumference-length)) * -1);
+	--loader-dash-offset-large: calc(var(--loader-circumference-length) * -1);
+	width: var(--loader-size);
+	height: var(--loader-size);
+	border-radius: 50%;
+
+	&:where(.color-primary) {
+		--loader-color: purple;
+	}
+	&:where(.color-current-color) {
+		--loader-color: currentColor;
+	}
+
+	&:where(.size-1em) {
+		--loader-size: 1em;
+		--loader-stroke-width: 2px;
+	}
+	&:where(.size-l) {
+		--loader-size: 40px;
+		--loader-stroke-width: 4px;
+	}
+
+	&:where(.abs-center) {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		translate: -50% -50%;
+	}
+}
+
+.svg {
+	width: inherit;
+	height: inherit;
+	animation: rotate 1.4s linear infinite;
+}
+
+.circle {
+	--half-height: calc(var(--loader-size) / 2);
+	stroke: var(--loader-color);
+	stroke-width: var(--loader-stroke-width);
+	fill: transparent;
+	cx: var(--half-height);
+	cy: var(--half-height);
+	r: var(--loader-radius);
+	animation: loading 1.4s ease-in-out infinite;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes loading {
+	0% {
+		stroke-dasharray: 1px, var(--loader-circumference-length);
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dashoffset: var(--loader-dash-offset-small);
+	}
+	100% {
+		stroke-dasharray: var(--loader-stroke-length), var(--loader-circumference-length);
+		stroke-dashoffset: var(--loader-dash-offset-large);
+	}
+}

@@ -1,0 +1,75 @@
+.chip {
+	--chip-height: ;
+	--chip-padding: 2px;
+	--chip-color: ;
+	--chip-bg-color: ;
+	--chip-border-radius: ;
+	height: var(--chip-height);
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	flex-shrink: 0;
+	transition:
+		color 0.2s,
+		background-color 0.2s,
+		border-color 0.2s;
+	background-color: var(--chip-bg-color);
+	color: var(--chip-color);
+	display: inline-flex;
+	align-items: center;
+	padding: var(--chip-padding);
+	border: none;
+	border-radius: var(--chip-border-radius);
+    font-weight: var(--font-weight-medium);
+	user-select: none;
+
+	&:where(.radius-1) {
+		--chip-border-radius: var(--radius-1);
+        --chip-avatar-radius: calc(var(--radius-1) - 1px);
+	}
+	&:where(.radius-full) {
+		--chip-border-radius: var(--radius-full);
+        --chip-avatar-radius: 50%;
+	}
+
+	&:where(.size-1) {
+		--chip-height: var(--button-height-2);
+		font-size: var(--font-size-2);
+	}
+	&:where(.size-2) {
+		--chip-height: var(--button-height-3);
+		font-size: var(--font-size-3);
+	}
+
+	&:where(.variant-ghost) {
+		--chip-hover-bg-color: ;
+
+		&:not(.disabled) {
+			&:where(.interactive) {
+				@include hover {
+					background-color: var(--chip-hover-bg-color);
+				}
+			}
+		}
+
+		&:where(.color-accent) {
+			--chip-color: var(--font-color-accent-hard);
+			--chip-bg-color: var(--color-accent-a2);
+			--chip-hover-bg-color: var(--color-accent-a3);
+		}
+		&:where(.color-secondary) {
+			--chip-color: var(--font-color-hard);
+			--chip-bg-color: var(--color-grey-a2);
+			--chip-hover-bg-color: var(--color-grey-a3);
+		}
+	}
+
+	&:focus-visible {
+		@include focused-outline;
+	}
+
+	&:where([data-disabled]),
+	&:where(.disabled) {
+		@include disabled;
+	}
+}

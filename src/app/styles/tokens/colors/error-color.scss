@@ -1,0 +1,19 @@
+:root,
+.dark-theme {
+	--error-hue: 0;
+	--error-saturation: 80%;
+	--error-lightness: 57%;
+
+	--color-error-a1: hsla(var(--error-hue), var(--error-saturation), var(--error-lightness), 0.1);
+	--color-error-a2: hsla(var(--error-hue), var(--error-saturation), var(--error-lightness), 0.2);
+	--color-error-a3: hsla(var(--error-hue), var(--error-saturation), var(--error-lightness), 0.3);
+	--color-error-a9: hsla(var(--error-hue), var(--error-saturation), var(--error-lightness), 0.9);
+
+	--border-color-error: var(--color-error-a2);
+
+	--solid-color-error-1: #e93c3c;
+	--solid-color-error-2: #b64242;
+
+	--font-color-error-soft: var(--solid-color-error-2);
+	--font-color-error-hard: var(--solid-color-error-1);
+}

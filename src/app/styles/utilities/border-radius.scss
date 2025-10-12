@@ -1,0 +1,24 @@
+.yar-radius-none {
+    border-radius: 0px;
+}
+.yar-radius-1 {
+    border-radius: var(--radius-1);
+}
+.yar-radius-2 {
+    border-radius: var(--radius-2);
+}
+.yar-radius-3 {
+    border-radius: var(--radius-3);
+}
+.yar-radius-4 {
+    border-radius: var(--radius-4);
+}
+.yar-radius-5 {
+    border-radius: var(--radius-5);
+}
+.yar-radius-full {
+    border-radius: 999px;
+}
+.yar-radius-circular {
+    border-radius: 50%;
+}

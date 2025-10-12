@@ -1,0 +1,18 @@
+.scroll-area {
+    --scroll-area-scrollbar-width: 4px;
+    --scroll-area-scrollbar-margin: 10px;
+    --scroll-area-clickable-scrollbar-width: 16px;
+    --scroll-area-overflow-shadow-color: var(--bg-color-grey-1);
+}
+
+.content {
+    &[data-overflow-x-end],
+    &[data-overflow-x-start] {
+        padding-bottom: var(--scroll-area-clickable-scrollbar-width);
+    }
+
+    &[data-overflow-y-end],
+    &[data-overflow-y-start] {
+        padding-right: var(--scroll-area-clickable-scrollbar-width);
+    }
+}

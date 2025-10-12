@@ -1,0 +1,30 @@
+.checkbox-item {
+    &:where([data-checked]),
+    &:where([data-selected]) {
+        .check-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+.checkbox {
+    margin-left: auto;
+    border-radius: var(--radius-1);
+    height: 1em;
+    width: 1em;
+    background-color: var(--bg-color-grey-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--solid-color-accent-1);
+}
+
+.check-icon {
+    --size: calc(1em - 3px);
+    width: var(--size);
+    height: var(--size);
+    opacity: 0;
+    transition: opacity 0.1s, transform 0.1s;
+    transform: scale(0.5);
+}

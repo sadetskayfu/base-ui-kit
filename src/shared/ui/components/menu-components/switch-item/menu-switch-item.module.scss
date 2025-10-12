@@ -1,0 +1,30 @@
+.switch-item {
+    &:where([data-checked]),
+    &:where([data-selected]) {
+        .switch::after {
+            transform: translateX(0.5em);
+            background-color: var(--solid-color-accent-1);
+        }
+    }
+}
+
+.switch {
+    margin-left: auto;
+    border-radius: var(--radius-full);
+    height: 1em;
+    width: 2em;
+    background-color: var(--bg-color-grey-1);
+    position: relative;
+ 
+    &:after {
+        --size: calc(1em - 5px);
+        content: '';
+        @include abs-center;
+        width: var(--size);
+        height: var(--size);
+        background-color: var(--color-grey-a2);
+        border-radius: 50%;
+        transform: translateX(-0.5em);
+        transition: transform 0.2s, background-color 0.2s;
+    }
+}

@@ -1,0 +1,30 @@
+.yar-lt-normal::before,
+.yar-lt-end::before,
+.yar-lt-normal::after,
+.yar-lt-start::after {
+	content: none;
+}
+
+.yar-lt-start::before,
+.yar-lt-both::before,
+.yar-lt-end::after,
+.yar-lt-both::after {
+	content: '';
+	display: table;
+}
+
+.yar-lt-start::before,
+.yar-lt-both::before {
+	margin-bottom: calc(
+		var(--leading-trim-start, var(--default-leading-trim-start)) -
+			var(--line-height, calc(1em * var(--default-line-height))) / 2
+	);
+}
+
+.yar-lt-end::after,
+.yar-lt-both::after {
+	margin-top: calc(
+		var(--leading-trim-end, var(--default-leading-trim-end)) -
+			var(--line-height, calc(1em * var(--default-line-height))) / 2
+	);
+}

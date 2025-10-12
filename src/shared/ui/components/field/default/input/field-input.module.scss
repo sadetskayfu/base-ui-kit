@@ -1,0 +1,18 @@
+.input {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	text-overflow: ellipsis;
+	padding-block: var(--input-padding-block);
+	padding-inline: var(--input-padding-inline);
+	width: 100%;
+	min-height: calc(var(--input-height) - var(--border-weight-soft) * 2);
+	color: var(--font-color-hard);
+	cursor: inherit;
+	font-size: var(--font-size-3);
+	font-weight: var(--font-weight-light);
+
+	&::placeholder {
+		color: var(--font-color-soft);
+	}
+}

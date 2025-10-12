@@ -1,0 +1,46 @@
+:root {
+	--font-size-1: calc(12px * var(--scaling));
+	--font-size-2: calc(14px * var(--scaling));
+	--font-size-3: calc(16px * var(--scaling));
+	--font-size-4: calc(18px * var(--scaling));
+	--font-size-5: calc(20px * var(--scaling));
+	--font-size-6: calc(24px * var(--scaling));
+	--font-size-7: calc(28px * var(--scaling));
+	--font-size-8: calc(35px * var(--scaling));
+	--font-size-9: calc(60px * var(--scaling));
+
+	--font-weight-light: 300;
+	--font-weight-medium: 500;
+	--font-weight-bold: 700;
+
+	--default-font-family: "Exo 2", sans-serif;
+	--default-font-size: var(--font-size-3);
+	--default-font-style: normal;
+	--default-font-weight: var(--font-weight-light);
+	--default-line-height: 1.5;
+	--default-letter-spacing: 0em;
+	--default-leading-trim-start: 0.42em;
+	--default-leading-trim-end: 0.36em;
+}
+
+@font-face {
+	font-family: 'Exo 2';
+	src: url('@/assets/fonts/Exo2-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Exo 2';
+	src: url('@/assets/fonts/Exo2-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Exo 2';
+	src: url('@/assets/fonts/Exo2-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}

@@ -1,0 +1,12 @@
+
+@use 'space';
+@use 'radius';
+@use 'typography';
+@use './colors';
+@use '../helpers' as *;
+
+:root {
+    --scaling: 1;
+    --border-weight-soft: 1px;
+    --border-weight-hard: 2px;
+}

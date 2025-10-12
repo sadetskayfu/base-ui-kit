@@ -1,0 +1,47 @@
+.input-container {
+	--input-border-color: var(--border-color-grey);
+	--input-hover-border-color: var(--font-color-soft);
+	--input-focus-outline-color: var(--solid-color-accent-1);
+	--input-height: ;
+	--input-padding-inline: ;
+	--input-padding-block: ;
+	min-height: var(--input-height);
+	display: flex;
+	align-items: center;
+	border: var(--border-weight-soft) solid var(--input-border-color);
+	transition: border-color 0.2s;
+
+	&[data-focused] {
+		outline: var(--border-weight-hard) solid var(--input-focus-outline-color);
+		outline-offset: calc(var(--border-weight-hard) / 2 * -1);
+	}
+
+	&:not([data-disabled], [data-focused]) {
+		@include hover {
+			border-color: var(--input-hover-border-color);
+		}
+	}
+	overflow: hidden;
+	cursor: text;
+
+	&[data-disabled] {
+		@include disabled;
+	}
+
+	&.size-1 {
+		--input-height: var(--button-height-3);
+		--input-padding-inline: var(--space-3);
+		--input-padding-block: calc(var(--space-3) / 2);
+	}
+	&.size-2 {
+		--input-height: var(--button-height-4);
+		--input-padding-inline: var(--space-4);
+		--input-padding-block: calc(var(--space-4) / 2);
+	}
+
+	&[data-errored] {
+		--input-border-color: var(--border-color-error);
+		--input-focus-outline-color: var(--font-color-error-hard);
+		--input-hover-border-color: var(--font-color-error-soft);
+	}
+}
