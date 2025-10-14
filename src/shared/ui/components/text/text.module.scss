@@ -1,29 +1,29 @@
-.yar-Text {
-	&:where(.yar-size-1) {
+.text {
+	&:where(.size-1) {
 		font-size: var(--font-size-1);
 	}
-	&:where(.yar-size-2) {
+	&:where(.size-2) {
 		font-size: var(--font-size-2);
 	}
-	&:where(.yar-size-3) {
+	&:where(.size-3) {
 		font-size: var(--font-size-3);
 	}
-	&:where(.yar-size-4) {
+	&:where(.size-4) {
 		font-size: var(--font-size-4);
 	}
-	&:where(.yar-size-5) {
+	&:where(.size-5) {
 		font-size: var(--font-size-5);
 	}
-	&:where(.yar-size-6) {
+	&:where(.size-6) {
 		font-size: var(--font-size-6);
 	}
-	&:where(.yar-size-7) {
+	&:where(.size-7) {
 		font-size: var(--font-size-7);
 	}
-	&:where(.yar-size-8) {
+	&:where(.size-8) {
 		font-size: var(--font-size-8);
 	}
-	&:where(.yar-size-9) {
+	&:where(.size-9) {
 		font-size: var(--font-size-9);
 	}
 }

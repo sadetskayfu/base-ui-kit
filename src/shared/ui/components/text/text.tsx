@@ -1,9 +1,9 @@
 import * as React from 'react';
 import classNames from 'classnames';
-
 import { extractProps, marginPropDefs, type MarginProps } from '@/shared/lib/utilities-props';
 import { useRenderElement } from '@/shared/hooks';
 import { textPropDefs, type TextOwnProps } from './text.props';
+import styles from './text.module.scss'
 
 export const Text = React.forwardRef(function Text(
 	props: Text.Props,
@@ -13,6 +13,7 @@ export const Text = React.forwardRef(function Text(
 		tag = 'span',
 		render,
 		className,
+		size,
 		...otherProps
 	} = extractProps(props, textPropDefs, marginPropDefs);
 
@@ -21,7 +22,7 @@ export const Text = React.forwardRef(function Text(
 		ref: forwardedRef,
 		props: [
 			{
-				className: classNames('yar-Text', className),
+				className: classNames(styles['text'], size && styles[`size-${size}`], className),
 			},
 			otherProps,
 		],
@@ -35,5 +36,6 @@ export namespace Text {
 			MarginProps,
 			TextOwnProps {
 		tag?: keyof React.JSX.IntrinsicElements;
+		size?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
 	}
 }

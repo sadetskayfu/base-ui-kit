@@ -7,10 +7,6 @@ import { Icon } from '../components/icons';
 import { getGroupLabel, type ItemGroup, type Item } from './items';
 
 export function SearchAutocomplete() {
-    const [searchValue, setSearchValue] = React.useState<string>('')
-    const [isLoading, setIsLoading] = React.useState<boolean>(false);
-    const [searchResults, setSearchResults] = React.useState<Item[]>([]);
-
 	return (
 		<Flex>
 			<Autocomplete.Root>
