@@ -1,0 +1,19 @@
+.input {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: var(--font-color-hard);
+	text-overflow: ellipsis;
+	flex: 1;
+	min-width: 60px;
+	padding-block: 0px;
+    padding-inline: var(--space-1);
+
+	&::placeholder {
+		color: var(--font-color-soft);
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}

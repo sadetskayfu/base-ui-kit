@@ -11,11 +11,11 @@ export function TooltipSection() {
 				width="300px"
 				content="Текст — зафиксированная на каком-либо материальном носителе человеческая мысль."
 			>
-				<Button variant='ghost' radius='3'>Tooltip</Button>
+				<Button variant='ghost' radius='3' color='secondary'>Tooltip</Button>
 			</Tooltip>
 			<Flex gap='1'>
 				<TooltipProvider>
-					<ButtonProvider iconButton variant='ghost' radius='3'>
+					<ButtonProvider iconButton variant='ghost' radius='3' color='secondary'>
 						<Tooltip content="Info">
 							<Button aria-label="Info">
 								<Icon.Info />

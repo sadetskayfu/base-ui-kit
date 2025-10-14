@@ -5,7 +5,7 @@ import { Menu } from '@/shared/ui/components/menu';
 export function ExampleMenuWithArrow() {
 	return (
 		<Menu.Root>
-			<Menu.Trigger render={<Button color="accent" variant="ghost" radius="3" />}>
+			<Menu.Trigger render={<Button color="accent" variant="ghost" radius="3" animateBorder />}>
 				With arrow
 				<Menu.Icon />
 			</Menu.Trigger>

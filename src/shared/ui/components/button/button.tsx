@@ -15,18 +15,20 @@ export const Button = React.forwardRef(function Button(
 		variant,
 		color,
 		size,
-		radius,
+		radius: radiusProp,
 		loading: loadingProp,
 		disabled: disabledProp,
 		iconButton,
 		disableRipple,
+		animateBorder,
 		...otherProps
 	} = props;
 
 	const context = useButtonContext();
 
-	const loading = loadingProp || context?.loading
-	const disabled = disabledProp || context?.disabled
+	const loading = loadingProp || context?.loading;
+	const disabled = disabledProp || context?.disabled;
+	const radius = radiusProp || context?.radius
 
 	return (
 		<BaseButton
@@ -37,7 +39,9 @@ export const Button = React.forwardRef(function Button(
 				styles[`color-${color || context?.color || 'accent'}`],
 				{
 					[styles['loading']]: loading,
-                    [styles['disabled']]: disabled
+					[styles['disabled']]: disabled,
+					[styles['animate-border']]: animateBorder,
+					['animate-border']: animateBorder,
 				},
 				className
 			)}
@@ -69,5 +73,6 @@ export namespace Button {
 		 */
 		color?: Color;
 		loading?: boolean;
+		animateBorder?: boolean
 	}
 }

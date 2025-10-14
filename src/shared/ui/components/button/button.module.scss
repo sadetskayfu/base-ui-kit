@@ -1,13 +1,21 @@
 .button {
 	--button-color: ;
+	--border-color: var(--button-color);
 	transition:
 		background-color 0.2s,
 		color 0.2s,
 		border-color 0.2s,
-		box-shadow 0.3s;
+		border-radius 0.4s;
 	border: none;
 	color: var(--button-color);
 	justify-content: center;
+
+	&:not(.animate-border) {
+		&:focus-visible {
+			@include focused-outline;
+			outline-offset: 2px;
+		}
+	}
 
 	&:where(.variant-filled) {
 		--button-hover-bg-color: ;
@@ -65,7 +73,7 @@
 		&:where(.color-secondary) {
 			--button-bg-color: var(--color-grey-a2);
 			--button-hover-bg-color: var(--color-grey-a3);
-			--button-color: var(--font-color-hard);
+			--button-color: var(--font-color-accent-hard);
 		}
 		&:where(.color-warning) {
 			--button-bg-color: var(--color-warning-a2);
@@ -162,27 +170,9 @@
 		}
 	}
 
-	&:where(.variant-filled) {
-		&:focus-visible {
-			outline: var(--border-weight-hard) solid var(--button-bg-color);
-			outline-offset: var(--border-weight-hard);
-		}
-	}
-	&:not(.variant-filled) {
-		&:focus-visible {
-			outline: var(--border-weight-hard) solid var(--button-color);
-			outline-offset: var(--border-weight-hard);
-		}
-	}
-
 	&.loading {
 		color: transparent;
 		opacity: 1;
-	}
-
-	&:where([data-popup-open]) {
-		box-shadow: 0 0 15px 2px var(--color-accent-a3);
-		background-color: var(--button-hover-bg-color);
 	}
 
 	.loader {

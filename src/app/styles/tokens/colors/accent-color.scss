@@ -1,8 +1,8 @@
 :root,
 .dark-theme {
-	--accent-hue: 243;
-	--accent-saturation: 92%;
-	--accent-lightness: 75%;
+	--accent-hue: 44;
+	--accent-saturation: 56%;
+	--accent-lightness: 69%;
 
 	--color-accent-a1: hsla(
 		var(--accent-hue),
@@ -26,14 +26,14 @@
 		var(--accent-hue),
 		var(--accent-saturation),
 		var(--accent-lightness),
-		0.9
+		0.6
 	);
 
 	--border-color-accent: var(--color-accent-a2);
 
-	--solid-color-accent-1: #8d87fa;
-	--solid-color-accent-2: #aaa6ff;
+	--solid-color-accent-1: #DCC483;
+	--solid-color-accent-2: #aa9763;
 
-	--font-color-accent-soft: #8d87fa;
-	--font-color-accent-hard: #aaa6ff;
+	--font-color-accent-soft: #aa9763;
+	--font-color-accent-hard: #DCC483;
 }

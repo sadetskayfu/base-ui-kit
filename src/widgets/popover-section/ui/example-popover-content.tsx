@@ -5,7 +5,7 @@ import { Popover } from '@/shared/ui/components/popover';
 export function ExamplePopoverContent() {
 	return (
 		<Flex direction="column" gapY="2">
-			<Popover.Title color="hard" size="4" weight="medium" align="center">
+			<Popover.Title align="center">
 				Что такое текст?
 			</Popover.Title>
 			<Popover.Description>

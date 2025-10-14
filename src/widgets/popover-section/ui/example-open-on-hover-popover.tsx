@@ -10,7 +10,7 @@ export function ExampleOpenOnHoverPopover() {
 			</Popover.Trigger>
 			<Popover.Portal>
 				<Popover.Positioner>
-					<Popover.Popup p="4" width="400px">
+					<Popover.Popup width="400px">
 						<ExamplePopoverContent />
 					</Popover.Popup>
 				</Popover.Positioner>

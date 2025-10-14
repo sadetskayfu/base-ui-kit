@@ -20,6 +20,7 @@ export const BaseButton = React.forwardRef(function BaseButton(
 		render,
 		className,
 		size = '3',
+		autoFs,
 		disabled,
 		disableRipple: disableRippleProp,
 		disableRippleSpaceKey,
@@ -47,6 +48,7 @@ export const BaseButton = React.forwardRef(function BaseButton(
 						'disabled': disabled,
 						'full-width': fullWidth,
 						[styles['icon-button']]: iconButton,
+						[styles['auto-fs']]: autoFs
 					},
 					className
 				),
@@ -88,5 +90,6 @@ export namespace BaseButton {
 		 * @default '3'
 		 */
 		size?: Size;
+		autoFs?: boolean
 	}
 }

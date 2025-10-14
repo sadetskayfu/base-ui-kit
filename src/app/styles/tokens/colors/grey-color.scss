@@ -1,20 +1,20 @@
 :root,
 .dark-theme {
-	--grey-hue: 0;
-	--grey-saturation: 0%;
-	--grey-lightness: 100%;
+	--grey-hue: 232;
+	--grey-saturation: 16%;
+	--grey-lightness: 73%;
 
-	--bg-color-grey-1: #18181a;
-	--bg-color-grey-2: #222224;
-	--bg-color-grey-3: #303031;
-	--bg-color-grey-4: #3d3d41;
+	--bg-color-grey-1: #101017;
+	--bg-color-grey-2: #181920;
+	--bg-color-grey-3: #21222C;
+	--bg-color-grey-4: #272937;
 
-	--border-color-grey: var(--color-grey-a2);
+	--border-color-grey: #3e404d;
 
-	--font-color-soft: #a2a2a7;
-	--font-color-hard: #ffffff;
-	--font-color-hard-invert: #18181a;
-	--font-color-soft-invert: #222224;
+	--font-color-soft: #969696;
+	--font-color-hard: #f3f1ec;
+	--font-color-hard-invert: #101017;
+	--font-color-soft-invert: #181920;
 
 	--color-grey-a1: hsla(var(--grey-hue), var(--grey-saturation), var(--grey-lightness), 0.05);
 	--color-grey-a2: hsla(var(--grey-hue), var(--grey-saturation), var(--grey-lightness), 0.15);

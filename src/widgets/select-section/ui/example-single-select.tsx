@@ -6,7 +6,7 @@ import { Select } from '@/shared/ui/components/select';
 export function ExampleSingleSelect() {
 	return (
 		<Select.Root items={fonts}>
-			<Select.Trigger nativeButton render={<Button size='4' color="secondary" variant="ghost" radius="3" />}>
+			<Select.Trigger nativeButton render={<Button size='3' color="secondary" variant="ghost" radius="3" animateBorder />}>
 				<Select.Value />
 				<Select.Icon />
 			</Select.Trigger>

@@ -3,9 +3,3 @@
 @use 'success-color';
 @use 'accent-color';
 @use 'grey-color';
-
-:root,
-.dark-theme {
-	--box-shadow-paper: 0 0 8px rgb(9, 9, 12);
-	--backdrop-bg-color: hsla(0, 0, 0, 0.5);
-}

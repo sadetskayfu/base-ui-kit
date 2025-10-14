@@ -1,0 +1,7 @@
+.chips {
+	padding-inline: var(--input-padding-inline);
+	padding-block: var(--input-padding-block);
+	width: 100%;
+	min-height: calc(var(--input-height) - var(--border-weight-soft) * 2);
+	cursor: inherit;
+}

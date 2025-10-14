@@ -2,5 +2,12 @@ import { Text } from '@/shared/ui/components/text';
 import { BasePopover } from '../base';
 
 export function PopoverTitle(props: Text.Props) {
-	return <BasePopover.Title render={<Text />} {...props} />;
+	const { size = '4', color = 'hard', weight = 'medium', ...otherProps } = props;
+
+	return (
+		<BasePopover.Title
+			render={<Text size={size} color={color} weight={weight} />}
+			{...otherProps}
+		/>
+	);
 }

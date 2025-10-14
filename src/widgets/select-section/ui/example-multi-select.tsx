@@ -7,7 +7,7 @@ export function ExampleMultiSelect() {
 		<Select.Root multiple>
 			<Select.Trigger
 				nativeButton
-				render={<Button color="secondary" variant="ghost" radius="3" size="4" />}
+				render={<Button color="secondary" variant="ghost" radius="3" size="3" animateBorder />}
 			>
 				<Select.Value>
 					{(value: string[]) => {
@@ -24,8 +24,8 @@ export function ExampleMultiSelect() {
 			</Select.Trigger>
 			<Select.Portal>
 				<Select.Positioner alignItemWithTrigger={false}>
-					<Select.Popup>
-						<Select.ScrollArea maxHeight="400px" alwaysVisibleScrollbar>
+					<Select.Popup height='400px'>
+						<Select.ScrollArea alwaysVisibleScrollbar>
 							<Select.List>
 								{fruits.map(fruit => (
 									<Select.CheckboxItem key={fruit} value={fruit} visualMargin="1">

@@ -5,4 +5,4 @@ export { FieldHelperText as HelperText } from './helper-text/field-helper-text';
 export { FieldLabel as Label } from './label/field-label';
 export { FieldSlot as Slot } from './slot/field-slot';
 
-export { Root, Action } from '../base/index.parts';
+export { Root, Action, Input as BaseInput } from '../base/index.parts';

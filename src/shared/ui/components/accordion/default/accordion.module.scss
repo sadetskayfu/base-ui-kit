@@ -1,7 +1,8 @@
 .accordion {
 	--accordion-transition: 0.4s;
-	border-left: var(--accordion-border-weight) solid var(--border-color-grey);
-	transition: border-color 0.2s;
+	transition: border-color 0.2s, margin 0.4s;
+	border: 1px solid var(--border-color-grey);
+	border-radius: var(--radius-3);
 
 	&:not([data-disabled]) {
 		@include hover {
@@ -11,6 +12,7 @@
 
 	&:where([data-open]) {
 		border-color: var(--solid-color-accent-1);
+		margin-block: 10px;
 	}
 
 	&:where(.size-1) {
@@ -55,37 +57,10 @@
 	position: relative;
 	cursor: inherit;
 	user-select: none;
-
-	&::before {
-		content: '';
-		position: absolute;
-		background: linear-gradient(to right, var(--bg-color-grey-3) 0%, transparent 100%);
-		transition:
-			width var(--accordion-transition),
-			background-color 0.2s;
-		height: 100%;
-		width: 0%;
-		left: 0;
-		top: 0;
-		z-index: -1;
-	}
-
-	&:focus-visible {
-		outline: var(--accordion-border-weight) solid var(--solid-color-accent-1);
-	}
+	
 
 	&:where([data-panel-open]) {
 		color: var(--font-color-accent-hard);
-
-		&:where(:focus-visible) {
-			&::before {
-				background-color: var(--solid-color-accent-2);
-			}
-		}
-
-		&::before {
-			width: 100%;
-		}
 
 		.indicator {
 			transform: rotate(45deg);
@@ -93,16 +68,16 @@
 		}
 	}
 
-	&:not([data-disabled]) {
-		@include hover {
-			&:where(:not([data-panel-open])) {
-				color: var(--font-color-accent-hard);
-				.indicator {
-					color: var(--font-color-accent-hard);
-				}
-			}
-		}
-	}
+	// &:not([data-disabled]) {
+	// 	@include hover {
+	// 		&:where(:not([data-panel-open])) {
+	// 			color: var(--font-color-accent-hard);
+	// 			.indicator {
+	// 				color: var(--font-color-accent-hard);
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 
 .indicator {
@@ -131,31 +106,3 @@
 	padding-left: calc(var(--accordion-padding-inline) * 2 + var(--accordion-title-size));
 }
 
-.corner {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 50%;
-	height: 50%;
-	pointer-events: none;
-	z-index: -1;
-
-	&:before,
-	&:after {
-		content: '';
-		position: absolute;
-	}
-
-	&:before {
-		height: var(--accordion-border-weight);
-		width: 100%;
-		bottom: 0;
-		background: linear-gradient(to left, var(--bg-color-grey-3) 0%, transparent 100%);
-	}
-	&:after {
-		width: var(--accordion-border-weight);
-		height: 100%;
-		right: 0;
-		background: linear-gradient(to top, var(--bg-color-grey-3) 0%, transparent 100%);
-	}
-}

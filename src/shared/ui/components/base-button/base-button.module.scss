@@ -3,7 +3,6 @@
 	--base-button-padding-inline: ;
 	position: relative;
 	flex-shrink: 0;
-	overflow: hidden;
 	padding-block: 0px;
 	padding-inline: var(--base-button-padding-inline);
 	min-height: var(--base-button-height);
@@ -38,5 +37,9 @@
 		min-width: var(--base-button-height);
 		max-width: fit-content;
 		padding-inline: var(--space-1);
+	}
+
+	&:where(.auto-fs) {
+		font-size: calc(var(--base-button-height) / 2);
 	}
 }

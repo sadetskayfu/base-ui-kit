@@ -10,7 +10,7 @@ export function ExamplePopoverWithArrow() {
 			</Popover.Trigger>
 			<Popover.Portal>
 				<Popover.Positioner arrow>
-					<Popover.Popup p='4' width='400px'>
+					<Popover.Popup width='400px'>
                         <Popover.Arrow />
 						<ExamplePopoverContent />
 					</Popover.Popup>

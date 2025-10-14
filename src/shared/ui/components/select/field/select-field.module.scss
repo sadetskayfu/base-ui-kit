@@ -10,12 +10,12 @@
     user-select: none;
     font-weight: var(--font-weight-light);
 
-	&:where(.focused) {
+	&:where([data-focused]) {
 		outline: var(--border-weight-hard) solid var(--field-focus-outline-color);
 		outline-offset: calc(var(--border-weight-hard) / 2 * -1);
 	}
 
-	&:not([data-disabled], .focused) {
+	&:not([data-disabled], [data-focused]) {
 		@include hover {
 			border-color: var(--field-hover-border-color);
 		}
@@ -38,7 +38,7 @@
 		column-gap: var(--space-3);
 	}
 
-	&:where(.errored) {
+	&:where([data-errored]) {
 		--field-border-color: var(--border-color-error);
 		--field-focus-outline-color: var(--font-color-error-hard);
 		--field-hover-border-color: var(--font-color-error-soft);

@@ -9,6 +9,10 @@ import {
 	type RadiusProp,
 	type LayoutProps,
 	type MarginProps,
+	type BorderProp,
+	borderPropDef,
+	type BgColorProp,
+	bgColorPropDef,
 } from '@/shared/lib/utilities-props';
 import { useRenderElement } from '@/shared/hooks';
 import { type GridOwnProps, gridPropDefs } from './grid.props';
@@ -22,7 +26,7 @@ export const Grid = React.forwardRef(function Grid(
 		render,
 		className,
 		...otherProps
-	} = extractProps(props, gridPropDefs, layoutPropDefs, marginPropDefs, radiusPropDef);
+	} = extractProps(props, gridPropDefs, layoutPropDefs, marginPropDefs, radiusPropDef, borderPropDef, bgColorPropDef);
 
 	return useRenderElement(tag, {
 		render,
@@ -38,6 +42,8 @@ export namespace Grid {
 			LayoutProps,
 			MarginProps,
 			RadiusProp,
+			BorderProp,
+			BgColorProp,
 			GridOwnProps {
 		tag?: keyof React.JSX.IntrinsicElements;
 	}

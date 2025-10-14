@@ -44,11 +44,10 @@ export function ExampleGroupSelect() {
 			</Flex>
 			<Select.Portal>
 				<Select.Positioner>
-					<Select.Popup>
+					<Select.Popup height='400px'>
 						<Select.ScrollArea
 							withStickyGroupLabel
 							alwaysVisibleScrollbar
-							maxHeight="400px"
 						>
 							<Select.List>
 								{groupedUsers.map(group => (

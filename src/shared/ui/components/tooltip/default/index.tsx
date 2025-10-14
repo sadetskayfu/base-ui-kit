@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Text } from '@/shared/ui/components/text';
-import { STooltip } from '../styled/index';
+import { StyledTooltip } from '../styled/index';
 
 export function Tooltip(props: Tooltip.Props) {
 	const {
@@ -24,17 +24,22 @@ export function Tooltip(props: Tooltip.Props) {
 	const labelId = React.useId();
 
 	return (
-		<STooltip.Root delay={delay} open={open} onOpenChange={setOpen} {...otherProps}>
-			<STooltip.Trigger
+		<StyledTooltip.Root delay={delay} open={open} onOpenChange={setOpen} {...otherProps}>
+			<StyledTooltip.Trigger
 				aria-describedby={describeChild && open ? labelId : undefined}
 				render={children}
 			/>
-			<STooltip.Portal>
-				<STooltip.Positioner side={side}>
-					<STooltip.Popup width={width}>
-						<STooltip.Arrow />
+			<StyledTooltip.Portal>
+				<StyledTooltip.Positioner side={side}>
+					<StyledTooltip.Popup width={width} bgColor="grey-2" radius="2" px="2" py="1">
+						<StyledTooltip.Arrow />
 						{typeof content === 'string' ? (
-							<Text id={describeChild ? labelId : undefined} color="hard" size="2" align='center'>
+							<Text
+								id={describeChild ? labelId : undefined}
+								color="hard"
+								size="2"
+								align="center"
+							>
 								{content}
 							</Text>
 						) : typeof content === 'function' ? (
@@ -42,18 +47,20 @@ export function Tooltip(props: Tooltip.Props) {
 						) : (
 							content
 						)}
-					</STooltip.Popup>
-				</STooltip.Positioner>
-			</STooltip.Portal>
-		</STooltip.Root>
+					</StyledTooltip.Popup>
+				</StyledTooltip.Positioner>
+			</StyledTooltip.Portal>
+		</StyledTooltip.Root>
 	);
 }
 
 export namespace Tooltip {
-	export interface Props extends STooltip.Root.Props, Pick<STooltip.Popup.Props, 'width'> {
+	export interface Props
+		extends StyledTooltip.Root.Props,
+			Pick<StyledTooltip.Popup.Props, 'width'>,
+			Pick<StyledTooltip.Positioner.Props, 'side'> {
 		children: React.ReactElement<Record<string, unknown>>;
 		content: string | ((id: string) => React.ReactNode) | React.ReactNode;
 		describeChild?: boolean;
-		side?: STooltip.Positioner.Props['side'];
 	}
 }

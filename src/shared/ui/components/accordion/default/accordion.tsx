@@ -18,15 +18,14 @@ export function Accordion(props: Accordion.Props) {
 			className={classNames(styles['accordion'], styles[`size-${size}`], className)}
 			{...otherProps}
 		>
-			<BaseAccordion.Header className={styles['header']} render={<TitleTag />}>
-				<BaseAccordion.Trigger className={styles['trigger']}>
+			<BaseAccordion.Header className={classNames(styles['header'])} render={<TitleTag />}>
+				<BaseAccordion.Trigger className={classNames(styles['trigger'], 'animate-border')}>
 					<Icon.Plus className={styles['indicator']} />
 					{title}
 				</BaseAccordion.Trigger>
 			</BaseAccordion.Header>
 			<BaseAccordion.Panel hiddenUntilFound className={styles['panel']}>
 				<div className={styles['content']}>{children}</div>
-				<span className={styles['corner']} />
 			</BaseAccordion.Panel>
 		</BaseAccordion.Item>
 	);

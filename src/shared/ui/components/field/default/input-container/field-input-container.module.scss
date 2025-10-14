@@ -31,12 +31,12 @@
 	&.size-1 {
 		--input-height: var(--button-height-3);
 		--input-padding-inline: var(--space-3);
-		--input-padding-block: calc(var(--space-3) / 2);
+		--input-padding-block: calc(var(--space-3) / 2.5);
 	}
 	&.size-2 {
 		--input-height: var(--button-height-4);
 		--input-padding-inline: var(--space-4);
-		--input-padding-block: calc(var(--space-4) / 2);
+		--input-padding-block: calc(var(--space-4) / 2.5);
 	}
 
 	&[data-errored] {

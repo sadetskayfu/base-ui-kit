@@ -4,17 +4,28 @@
 	height: var(--checkbox-size);
 	width: var(--checkbox-size);
 	margin: calc(var(--checkbox-size) / 4 * -1);
+	color: var(--solid-color-accent-1);
 	padding: 0;
 	border: none;
-	color: var(--theme-color-primary-main);
 	border-radius: 50%;
 	background-color: transparent;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	overflow: hidden;
 	transition: background-color 0.2s;
 	flex-shrink: 0;
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 50%;
+		height: 50%;
+		border-radius: 50%;
+		background-color: var(--color-accent-a2);
+		opacity: 0;
+		transition: width 0.4s, height 0.4s, opacity 0.4s;
+		z-index: -1;
+	}
 
 	&:before {
 		content: '';
@@ -37,12 +48,14 @@
 	}
 
 	&:focus-visible {
-		background-color: var(--color-accent-a3);
+		outline: 2px solid var(--solid-color-accent-1);
 	}
 
 	@include hover {
-		&:not([data-disabled]) {
-			background-color: var(--color-accent-a1);
+		&::after {
+			width: 100%;
+			height: 100%;
+			opacity: 1;
 		}
 	}
 }

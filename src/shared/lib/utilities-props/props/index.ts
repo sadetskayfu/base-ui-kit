@@ -3,7 +3,6 @@ export * from './prop-def';
 
 // Individual props
 export * from './truncate.prop';
-export * from './leading-trim.prop';
 export * from './gap.props';
 export * from './height.props';
 export * from './layout.props';

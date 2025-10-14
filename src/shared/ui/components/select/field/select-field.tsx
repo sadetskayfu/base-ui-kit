@@ -33,10 +33,11 @@ export const SelectField = React.forwardRef(function SelectField(
 					className={classNames(
 						styles['field'],
 						styles[`size-${size}`],
-						{ [styles['focused']]: focused, [styles['errored']]: errored },
 						className
 					)}
 					aria-invalid={errored ? 'true' : undefined}
+					data-focused={focused ? '' : undefined}
+					data-errored={errored ? '' : undefined}
 					onFocus={() => setFocused(true)}
 					onBlur={() => setFocused(false)}
 					{...otherProps}

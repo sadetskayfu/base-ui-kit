@@ -12,5 +12,6 @@ export function NumberFieldRoot(props: NumberFieldRoot.Props) {
 export namespace NumberFieldRoot {
 	export interface Props extends Omit<BaseNumberField.Root.Props, 'className'> {
 		className?: string;
+		errored?: boolean
 	}
 }

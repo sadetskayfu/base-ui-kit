@@ -7,6 +7,10 @@ import {
 	type RadiusProp,
 	type LayoutProps,
 	type MarginProps,
+	type BorderProp,
+	borderPropDef,
+	type BgColorProp,
+	bgColorPropDef,
 } from '@/shared/lib/utilities-props';
 import { useRenderElement } from '@/shared/hooks';
 import { flexPropDefs, type FlexOwnProps } from './flex.props';
@@ -21,7 +25,7 @@ export const Flex = React.forwardRef(function Flex(
 		tag = 'div',
 		render,
 		...otherProps
-	} = extractProps({ ...props, display, justify }, flexPropDefs, layoutPropDefs, marginPropDefs, radiusPropDef);
+	} = extractProps({ ...props, display, justify }, flexPropDefs, layoutPropDefs, marginPropDefs, radiusPropDef, borderPropDef, bgColorPropDef);
 
 	return useRenderElement(tag, {
 		render,
@@ -37,6 +41,8 @@ export namespace Flex {
 			LayoutProps,
 			MarginProps,
 			RadiusProp,
+			BorderProp,
+			BgColorProp,
 			FlexOwnProps {
 		tag?: keyof React.JSX.IntrinsicElements;
 	}

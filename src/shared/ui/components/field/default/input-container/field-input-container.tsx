@@ -52,7 +52,7 @@ export const FieldInputContainer = React.forwardRef(function FieldInputContainer
 });
 
 export namespace FieldInputContainer {
-	export type Size = '1' | '2'
+	export type Size = '1' | '2';
 
 	export interface Props extends BaseField.InputContainer.Props, RadiusProp, MarginProps {
 		size?: Size;
