@@ -12,8 +12,6 @@
   "dependencies": {
     "@base-ui-components/react": "^1.0.0-beta.4",
     "@base-ui-components/utils": "^0.1.2",
-    "@floating-ui/utils": "^0.2.10",
-    "@floating-ui/react-dom": "^2.1.6",
     "classnames": "^2.5.1",
     "lucide-react": "^0.545.0",
     "react": "^19.1.1",
