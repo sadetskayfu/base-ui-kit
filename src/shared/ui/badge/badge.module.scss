@@ -1,0 +1,89 @@
+.badge-container {
+	position: relative;
+}
+
+.badge {
+	position: absolute;
+	user-select: none;
+	pointer-events: none;
+	transform: scale(0);
+	transition: transform 0.3s;
+    border-radius: var(--radius-full);
+	z-index: 1;
+
+	&:where(.visible) {
+		transform: scale(1);
+	}
+
+	&:where(.border-color-grey-1) {
+		border: 2px solid var(--bg-color-grey-1);
+	}
+	&:where(.border-color-grey-2) {
+		border: 2px solid var(--bg-color-grey-2);
+	}
+	&:where(.border-color-grey-3) {
+		border: 2px solid var(--bg-color-grey-3);
+	}
+
+	&:where(.size-1) {
+		height: var(--space-3);
+		width: var(--space-3);
+		border-radius: 50%;
+	}
+	&:where(.size-2) {
+		height: var(--space-5);
+		min-width: var(--space-5);
+		font-size: var(--font-size-1);
+		padding-inline: var(--space-1);
+	}
+
+	&:where(.position-top-left) {
+		translate: -50% -50%;
+
+		&:where(.overlap-square) {
+			top: 0px;
+			left: 0px;
+		}
+		&:where(.overlap-circular) {
+			top: 14%;
+			left: 14%;
+		}
+	}
+
+	&:where(.position-top-right) {
+		translate: 50% -50%;
+
+		&:where(.overlap-square) {
+			top: 0px;
+			right: 0px;
+		}
+		&:where(.overlap-circular) {
+			top: 14%;
+			right: 14%;
+		}
+	}
+	&:where(.position-bottom-right) {
+		translate: 50% 50%;
+
+		&:where(.overlap-square) {
+			bottom: 0px;
+			right: 0px;
+		}
+		&:where(.overlap-circular) {
+			bottom: 14%;
+			right: 14%;
+		}
+	}
+	&:where(.position-bottom-left) {
+		translate: -50% 50%;
+
+		&:where(.overlap-square) {
+			bottom: 0px;
+			left: 0px;
+		}
+		&:where(.overlap-circular) {
+			bottom: 14%;
+			left: 14%;
+		}
+	}
+}

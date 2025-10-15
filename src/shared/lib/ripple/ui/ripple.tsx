@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import type { Ripple as RippleType } from '../model/ripple';
-import styles from './ripple.module.css';
+import styles from './ripple.module.scss';
 
 interface RippleProps {
 	ripples: RippleType[];

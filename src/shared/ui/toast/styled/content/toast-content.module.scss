@@ -1,0 +1,12 @@
+.content {
+	overflow: hidden;
+	transition: opacity 0.25s;
+
+	&[data-behind] {
+		opacity: 0;
+	}
+
+	&[data-expanded] {
+		opacity: 1;
+	}
+}

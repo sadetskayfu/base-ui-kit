@@ -1,0 +1,16 @@
+.skeleton {
+    animation: blinking 1s ease-in-out infinite;
+    background-color: var(--color-grey-a1);
+}
+
+@keyframes blinking {
+    0% {
+        background-color: var(--color-grey-a1);
+    }
+    50% {
+        background-color: var(--color-grey-a3);
+    }
+    100% {
+        background-color: var(--color-grey-a1);
+    }
+}

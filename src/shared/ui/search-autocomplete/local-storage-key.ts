@@ -1,1 +1,0 @@
-export const SEARCH_AUTOCOMPLETE_LOCAL_STORAGE_KEY = 'historySearch'

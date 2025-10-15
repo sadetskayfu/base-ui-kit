@@ -1,4 +1,4 @@
-import type { GetPropDefTypes, PropDef } from './prop-def.js';
+import type { GetPropDefTypes, PropDef } from './prop-def';
 
 const bgColor = ['grey-1', 'grey-2', 'grey-3'] as const;
 

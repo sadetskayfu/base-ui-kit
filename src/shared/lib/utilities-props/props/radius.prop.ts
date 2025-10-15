@@ -1,4 +1,4 @@
-import type { GetPropDefTypes, PropDef } from './prop-def.js';
+import type { GetPropDefTypes, PropDef } from './prop-def';
 
 const radius = ['none', '1', '2', '3', '4', '5', 'full', 'circular'] as const;
 

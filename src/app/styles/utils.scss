@@ -89,6 +89,7 @@
 		@include hover {
 			border-top-left-radius: 0px;
 			border-bottom-right-radius: 0px;
+
 			&:before,
 			&:after {
 				width: 100%;
@@ -102,6 +103,7 @@
 	&[data-focused] {
 		border-top-left-radius: 0px;
 		border-bottom-right-radius: 0px;
+
 		&:before,
 		&:after {
 			width: 100%;
@@ -113,6 +115,7 @@
 	&:focus-visible {
 		border-top-left-radius: 0px;
 		border-bottom-right-radius: 0px;
+		
 		&:before,
 		&:after{
 			width: 100%;

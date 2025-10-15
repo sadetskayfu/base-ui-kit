@@ -1,0 +1,47 @@
+.item {
+    --star-size: 40px;
+    height: var(--star-size);
+    width: var(--star-size);
+    display: flex;
+    position: relative;
+
+    input {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        opacity: 0;
+        cursor: inherit;
+
+        &:focus-visible ~ .focus-indicator {
+            background-color: var(--color-accent-a2);
+        }
+    }
+
+    &:where(.size-1) {
+        --star-size: var(--button-height-1);
+    }
+    &:where(.size-2) {
+        --star-size: var(--button-height-2);
+    }
+}
+
+.focus-indicator {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-1);
+}
+
+.star-icon {
+    position: absolute;
+    pointer-events: none;
+    font-size: var(--star-size);
+    color: var(--border-color-grey);
+    stroke-width: var(--border-weight-soft) !important;
+
+    &.filled {
+        color: var(--solid-color-accent-1);
+        fill: var(--solid-color-accent-1);
+    }
+}

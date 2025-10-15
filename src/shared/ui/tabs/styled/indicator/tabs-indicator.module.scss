@@ -1,0 +1,19 @@
+.indicator {
+    width: var(--active-tab-width);
+    height: var(--active-tab-height);
+    background-color: var(--color-accent-a3);
+    position: absolute;
+    transition: transform 0.4s, width 0.4s;
+
+    &:where([data-orientation='horizontal']) {
+        left: 0;
+        top: 0;
+        transform: translateX(var(--active-tab-left));
+    }
+
+    &:where([data-orientation='vertical']) {
+        left: 0;
+        top: 0;
+        transform: translateY(var(--active-tab-top));
+    }
+}

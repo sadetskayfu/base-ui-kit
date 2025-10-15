@@ -1,0 +1,1 @@
+export { Tabs as BaseTabs } from '@base-ui-components/react'

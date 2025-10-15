@@ -1,0 +1,43 @@
+.info-badge {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:where(.color-accent) {
+		background-color: var(--border-color-accent);
+		color: var(--font-color-accent-hard);
+
+		&:where(.without-content) {
+			background-color: var(--font-color-accent-hard);
+		}
+	}
+	&:where(.color-grey) {
+		background-color: var(--border-color-grey);
+		color: var(--font-color-hard);
+	}
+	&:where(.color-green) {
+		background-color: var(--border-color-success);
+		color: var(--font-color-success-hard);
+
+		&:where(.without-content) {
+			background-color: var(--font-color-success-hard);
+		}
+	}
+	&:where(.color-red) {
+		background-color: var(--border-color-error);
+		color: var(--font-color-error-hard);
+	}
+
+	&:where(.size-1) {
+		font-size: var(--font-size-1);
+		padding-block: var(--space-1);
+		padding-inline: var(--space-2);
+		min-width: calc(var(--font-size-1) * var(--default-line-height) + var(--space-1) * 2);
+	}
+	&:where(.size-2) {
+		font-size: var(--font-size-2);
+		padding-block: var(--space-1);
+		padding-inline: var(--space-2);
+		min-width: calc(var(--font-size-2) * var(--default-line-height) + var(--space-1) * 2);
+	}
+}

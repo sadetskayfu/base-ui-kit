@@ -1,0 +1,7 @@
+.value {
+	color: var(--font-color-hard);
+    
+	&:where(.is-placeholder) {
+		color: var(--font-color-soft);
+	}
+}

@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 
-import { getResponsiveClassNames, getResponsiveStyles } from './get-responsive-styles.js';
-import { mergeStyles } from './merge-styles.js';
+import { getResponsiveClassNames, getResponsiveStyles } from './get-responsive-styles';
+import { mergeStyles } from './merge-styles';
 
 import type * as React from 'react';
-import type { PropDef } from '../props/prop-def.js';
+import type { PropDef } from '../props/prop-def';
 
 type PropDefsWithClassName<T> =
 	T extends Record<string, PropDef>

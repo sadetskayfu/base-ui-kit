@@ -1,8 +1,8 @@
-$xs: 520px;
-$sm: 768px;
-$md: 1024px;
-$lg: 1280px;
-$xl: 1640px;
+$xs: 519.98px;
+$sm: 767.98px;
+$md: 1023.98px;
+$lg: 1279.98px;
+$xl: 1639.98px;
 
 @mixin max-width($width) {
 	@media (width <= $width) {

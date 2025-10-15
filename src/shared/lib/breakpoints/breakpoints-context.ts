@@ -3,10 +3,25 @@ import { useContext } from '@/shared/hooks';
 
 export interface BreakpointsContext {
     initial: boolean;
+	/**
+	 * > 520px
+	 */
 	xs: boolean;
+	/**
+	 * > 768px
+	 */
 	sm: boolean;
+	/**
+	 * > 1024px
+	 */
 	md: boolean;
+	/**
+	 * > 1280px
+	 */
 	lg: boolean;
+	/**
+	 * > 1640px
+	 */
 	xl: boolean;
 }
 

@@ -1,1 +1,0 @@
-export * as BaseCollapsible from './index.parts'

@@ -1,4 +1,4 @@
-import type { GetPropDefTypes, PropDef } from './prop-def.js';
+import type { GetPropDefTypes, PropDef } from './prop-def';
 
 const color = ['soft', 'hard', 'accent-hard', 'accent-soft', 'error-hard', 'error-soft'] as const;
 

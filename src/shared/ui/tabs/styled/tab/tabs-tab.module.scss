@@ -1,0 +1,41 @@
+.tab {
+    background-color: transparent;
+    border: none;
+    transition: color 0.2s, border-radius 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--font-color-soft);
+    white-space: nowrap;
+
+    &:where(.full-width) {
+        flex: 1;
+    }
+
+    &:where(.size-2) {
+        padding-inline: var(--space-3);
+        padding-block: var(--space-1);
+        gap: var(--space-1);
+    }
+
+    &:where(.size-3) {
+        padding-inline: var(--space-4);
+        padding-block: var(--space-2);
+        gap: var(--space-2);
+    }
+
+    &:not([data-disabled]) {
+        @include hover {
+            color: var(--font-color-hard);
+        }
+    }
+
+    &:where([data-selected]) {
+        color: var(--font-color-hard);
+    }
+
+    &:focus-visible {
+        @include focused-outline;
+    }
+}

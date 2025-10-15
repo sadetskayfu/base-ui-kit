@@ -1,1 +1,0 @@
-export { TooltipSection } from './tooltip-section'

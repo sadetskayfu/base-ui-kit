@@ -1,0 +1,24 @@
+.space {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-shrink: 0;
+    user-select: none;
+
+    &:where(.size-1) {
+        width: var(--button-height-1);
+        height: var(--button-height-1);
+    }
+    &:where(.size-2) {
+        width: var(--button-height-2);
+        height: var(--button-height-2);
+    }
+    &:where(.size-3) {
+        width: var(--button-height-3);
+        height: var(--button-height-3);
+    }
+    &:where(.size-4) {
+        width: var(--button-height-4);
+        height: var(--button-height-4);
+    }
+}

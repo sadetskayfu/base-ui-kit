@@ -1,4 +1,4 @@
-import type { Responsive } from '../props/prop-def.js';
+import type { Responsive } from '../props/prop-def';
 
 function mapResponsiveProp<Input extends string, Output>(
 	propValue: Responsive<Input> | undefined,

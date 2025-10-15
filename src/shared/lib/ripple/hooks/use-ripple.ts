@@ -1,20 +1,18 @@
 import * as React from 'react';
 import { useEventCallback } from '@/shared/hooks';
 import type { Ripple } from '../model/ripple';
+import { EMPTY_OBJECT } from '@/shared/constants';
 
-type UseRippleProps = {
+type UseRippleParams = {
 	elementRef?: React.RefObject<HTMLElement | null>;
 	disableRipple?: boolean;
 	disableSpaceKey?: boolean;
 	centering?: boolean;
 };
 
-export function useRipple({
-	elementRef,
-	disableRipple,
-	disableSpaceKey,
-	centering,
-}: UseRippleProps) {
+export function useRipple(params: UseRippleParams = EMPTY_OBJECT) {
+	const { centering, disableRipple, disableSpaceKey, elementRef } = params;
+
 	const [ripples, setRipples] = React.useState<Ripple[]>([]);
 
 	const containerRef = React.useRef<HTMLSpanElement>(null);
@@ -140,16 +138,13 @@ export function useRipple({
 		[markLastRippleAsEnding, disableRipple, disableSpaceKey]
 	);
 
-	const handleBlur = React.useCallback(
-		() => {
-			if (disableRipple) {
-				return;
-			}
-			hasKeyClickRef.current = false;
-			markLastRippleAsEnding();
-		},
-		[markLastRippleAsEnding, disableRipple]
-	);
+	const handleBlur = React.useCallback(() => {
+		if (disableRipple) {
+			return;
+		}
+		hasKeyClickRef.current = false;
+		markLastRippleAsEnding();
+	}, [markLastRippleAsEnding, disableRipple]);
 
 	return {
 		ripples,

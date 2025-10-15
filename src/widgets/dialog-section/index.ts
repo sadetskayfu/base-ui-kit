@@ -1,1 +1,0 @@
-export { DialogSection } from './dialog-section'
