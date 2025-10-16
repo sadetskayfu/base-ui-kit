@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { Icon } from '@/shared/ui/icons';
 import { BaseAccordion } from '../base';
-import { extractProps, RadiusProp, radiusPropDef } from '@/shared/lib/utilities-props';
+import { extractProps, type RadiusProp, radiusPropDef } from '@/shared/lib/utilities-props';
 import { Ripple, useRipple } from '@/shared/lib/ripple';
 import styles from './accordion.module.scss';
 

@@ -46,13 +46,13 @@ export const MenuItem = React.forwardRef(function MenuItem(
 				children: (
 					<React.Fragment>
 						{children}
-						{/* {!disableRipple && (
+						{!disableRipple && (
 							<Ripple
 								ref={containerRef}
 								ripples={ripples}
 								removeRipple={removeRipple}
 							/>
-						)} */}
+						)}
 					</React.Fragment>
 				),
 			},
