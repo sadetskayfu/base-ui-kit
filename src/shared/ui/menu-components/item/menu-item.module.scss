@@ -34,21 +34,20 @@
 		}
 	}
 
-	&:where([data-highlighted]) {
-		color: var(--font-color-hard-invert);
-		&:before {
-			background-color: var(--solid-color-accent-1);
-		}
-		[data-desc] {
-			color: var(--font-color-soft-invert);
+	@media (hover: hover) {
+		&:where([data-highlighted]) {
+			color: var(--font-color-hard-invert);
+			&:before {
+				background-color: var(--solid-color-accent-1);
+			}
+			[data-desc] {
+				color: var(--font-color-soft-invert);
+			}
 		}
 	}
-
 
 	&:where([data-disabled]),
 	&:where(.disabled) {
 		@include disabled;
 	}
 }
-
-
