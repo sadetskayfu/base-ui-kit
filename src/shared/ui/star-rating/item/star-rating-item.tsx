@@ -37,7 +37,15 @@ export function StartRatingItem(props: StarRatingItem.Props) {
 					name={name}
 					checked={selectedValue === halfValue}
 					onChange={() => (readOnly ? undefined : setValue(halfValue))}
-					onMouseEnter={() => (readOnly ? undefined : setHoverValue(halfValue))}
+					onMouseEnter={() => {
+						if (readOnly) {
+							return
+						}
+
+						if (window.matchMedia('(pointer: fine)').matches) {
+							setHoverValue(halfValue);
+						  }
+					}}
 					readOnly={readOnly}
 					disabled={disabled}
 					aria-label={getItemLabel(halfValue)}

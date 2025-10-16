@@ -14,7 +14,11 @@ export function StarRatingGroup(props: StarRatingGroup.Props) {
 			render={
 				<Flex
 					role="radiogroup"
-					onMouseLeave={() => setHoverValue(null)}
+					onMouseLeave={() => {
+						if (window.matchMedia('(pointer: fine)').matches) {
+							setHoverValue(null);
+						}
+					}}
 					className={classNames(styles['group'], className)}
 					{...otherProps}
 				/>
