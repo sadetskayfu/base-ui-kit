@@ -17,13 +17,6 @@
 	--menu-item-padding-block: var(--space-2);
 	--menu-item-group-label-height: var(--space-6);
 
-	@include sm {
-		--scaling: 0.9;
-	}
-	@include xs {
-		--scaling: 0.85;
-	}
-
 	.dark-theme {
 		--box-shadow-paper: 0 0 8px rgb(9, 9, 12);
 		--backdrop-bg-color: hsla(0, 0, 0, 0.5);

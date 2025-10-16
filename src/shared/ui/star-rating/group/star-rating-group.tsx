@@ -15,7 +15,7 @@ export function StarRatingGroup(props: StarRatingGroup.Props) {
 				<Flex
 					role="radiogroup"
 					onMouseLeave={() => {
-						if (window.matchMedia('(pointer: fine)').matches) {
+						if (!('ontouchstart' in window)) {
 							setHoverValue(null);
 						}
 					}}

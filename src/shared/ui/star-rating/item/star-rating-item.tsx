@@ -39,12 +39,12 @@ export function StartRatingItem(props: StarRatingItem.Props) {
 					onChange={() => (readOnly ? undefined : setValue(halfValue))}
 					onMouseEnter={() => {
 						if (readOnly) {
-							return
+							return;
 						}
 
-						if (window.matchMedia('(pointer: fine)').matches) {
+						if (!('ontouchstart' in window)) {
 							setHoverValue(halfValue);
-						  }
+						}
 					}}
 					readOnly={readOnly}
 					disabled={disabled}
@@ -56,7 +56,15 @@ export function StartRatingItem(props: StarRatingItem.Props) {
 				name={name}
 				checked={selectedValue === value}
 				onChange={() => (readOnly ? undefined : setValue(value))}
-				onMouseEnter={() => (readOnly ? undefined : setHoverValue(value))}
+				onMouseEnter={() => {
+					if (readOnly) {
+						return;
+					}
+
+					if (!('ontouchstart' in window)) {
+						setHoverValue(value);
+					}
+				}}
 				readOnly={readOnly}
 				disabled={disabled}
 				aria-label={getItemLabel(value)}
