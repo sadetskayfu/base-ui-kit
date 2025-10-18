@@ -11,7 +11,8 @@
 	border: var(--border-weight-soft) solid var(--input-border-color);
 	transition: border-color 0.2s;
 
-	&[data-focused] {
+	&[data-focused],
+	&:focus-visible {
 		outline: var(--border-weight-hard) solid var(--input-focus-outline-color);
 		outline-offset: calc(var(--border-weight-hard) / 2 * -1);
 	}

@@ -1,0 +1,64 @@
+.radio-card {
+	border: var(--border-weight-soft) solid var(--border-color-grey);
+	transition:
+		background-color 0.2s,
+		border-color 0.2s,
+		box-shadow 0.2s;
+	flex: 1;
+    user-select: none;
+    position: relative;
+
+	&:where([data-checked]) {
+		border-color: var(--solid-color-accent-1);
+		box-shadow: 5px 5px 12px var(--color-accent-a3);
+
+		.radio {
+            border-color: var(--solid-color-accent-1);
+			&:before {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+	}
+
+	&:focus-visible {
+		@include focused-outline;
+	}
+
+	&:not([data-disabled]) {
+		@include hover {
+			background-color: var(--color-grey-a1);
+		}
+	}
+
+	&:where([data-disabled]) {
+		@include disabled;
+	}
+}
+
+.radio {
+	--radio-size: #{s(20)};
+	width: var(--radio-size);
+	height: var(--radio-size);
+	border-radius: 50%;
+	position: relative;
+	margin-left: auto;
+	flex-shrink: 0;
+    border: var(--border-weight-soft) solid var(--border-color-grey);
+    transition: border-color 0.2s;
+    overflow: hidden;
+
+	&:before {
+		content: '';
+		@include abs-center;
+		width: calc(var(--radio-size) - 8px);
+		height: calc(var(--radio-size) - 8px);
+		background-color: var(--solid-color-accent-1);
+		transform: translateX(-100%);
+		opacity: 0;
+		border-radius: inherit;
+		transition:
+			transform 0.3s,
+			opacity 0.3s;
+	}
+}

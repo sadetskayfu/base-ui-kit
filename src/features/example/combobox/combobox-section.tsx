@@ -4,6 +4,8 @@ import { ExampleGroupCombobox } from "./ui/example-group-combobox";
 import { ExampleInputInsidePopupCombobox } from "./ui/example-input-inside-popup-combobox";
 import { Grid } from "@/shared/ui/grid";
 import { useBreakpoints } from "@/shared/lib/breakpoints";
+import { ExampleSingleMobileCombobox } from "./ui/example-single-mobile-combobox";
+import { ExampleMultiMobileCombobox } from "./ui/example-multi-mobile-combobox";
 
 export function ComboboxSection() {
     const {lg, md, sm} = useBreakpoints()
@@ -14,6 +16,8 @@ export function ComboboxSection() {
             <ExampleMultiFieldCombobox />
             <ExampleGroupCombobox />
             <ExampleInputInsidePopupCombobox />
+            <ExampleSingleMobileCombobox />
+            <ExampleMultiMobileCombobox />
         </Grid>
     )
 }

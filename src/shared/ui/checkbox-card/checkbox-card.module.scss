@@ -1,0 +1,67 @@
+.checkbox-card {
+	border: var(--border-weight-soft) solid var(--border-color-grey);
+	transition:
+		background-color 0.2s,
+		border-color 0.2s,
+		box-shadow 0.2s;
+	flex: 1;
+	position: relative;
+	user-select: none;
+	background-color: transparent;
+	font-weight: var(--font-weight-light);
+	text-align: start;
+
+	&:where([data-checked]) {
+		border-color: var(--solid-color-accent-1);
+		box-shadow: 5px 5px 12px var(--color-accent-a3);
+
+		.checkbox {
+			background-color: var(--solid-color-accent-1);
+			border-color: var(--solid-color-accent-1);
+			color: var(--font-color-hard-invert);
+		}
+		.check-icon {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	&:focus-visible {
+		@include focused-outline;
+	}
+
+	&:not([data-disabled]) {
+		@include hover {
+			background-color: var(--color-grey-a1);
+		}
+	}
+
+	&:where([data-disabled]) {
+		@include disabled;
+	}
+}
+
+.checkbox {
+	--checkbox-size: #{s(20)};
+	width: var(--checkbox-size);
+	height: var(--checkbox-size);
+	border-radius: var(--radius-1);
+	color: var(--solid-color-accent-1);
+	margin-left: auto;
+	flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: var(--border-weight-soft) solid var(--border-color-grey);
+	transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+	overflow: hidden;
+}
+
+.check-icon {
+    --size: calc(var(--checkbox-size) - 3px);
+    width: var(--size) !important;
+    height: var(--size) !important;
+    opacity: 0;
+	transform: translateX(-100%);
+    transition: opacity 0.3s, transform 0.3s;
+}

@@ -1,0 +1,1 @@
+export { Radio as BaseRadio } from '@base-ui-components/react/radio'

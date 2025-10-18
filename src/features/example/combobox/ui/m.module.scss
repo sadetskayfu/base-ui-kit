@@ -1,0 +1,24 @@
+.header {
+    column-gap: var(--container-padding-x);
+    border-bottom: var(--border-weight-soft) solid var(--border-color-grey);
+    padding-block: var(--space-2);
+    padding-inline: var(--container-padding-x);
+    margin-inline: calc(var(--container-padding-x) * -1);
+}
+
+.close-button {
+    margin-inline: calc(var(--button-height-3) / 4 * -1);
+}
+
+.popup {
+    --menu-item-padding-block: var(--space-3);
+    --menu-item-padding-inline: var(--space-4);
+}
+
+.field {
+    background-color: var(--bg-color-grey-1);
+}
+
+.empty {
+    text-align: center;
+}

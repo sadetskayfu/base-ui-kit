@@ -17,6 +17,7 @@ export function ComboboxPositioner(props: ComboboxPositioner.Props) {
 			bottom: POPUP_COLLISION_PADDING_BLOCK,
 		},
 		arrow,
+		withFullScreenPopup,
 		...otherProps
 	} = props;
 
@@ -25,6 +26,9 @@ export function ComboboxPositioner(props: ComboboxPositioner.Props) {
 			sideOffset={arrow ? POPUP_SIDE_OFFSET_WITH_ARROW : POPUP_SIDE_OFFSET}
 			arrowPadding={arrowPadding}
 			collisionPadding={collisionPadding}
+			render={({ style, ...otherProps }) => (
+				<div {...(!withFullScreenPopup && { style })} {...otherProps} />
+			)}
 			{...otherProps}
 		/>
 	);
@@ -36,5 +40,6 @@ export namespace ComboboxPositioner {
 		 * @default false
 		 */
 		arrow?: boolean;
+		withFullScreenPopup?: boolean;
 	}
 }

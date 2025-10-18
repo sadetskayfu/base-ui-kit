@@ -33,7 +33,7 @@
 
 @mixin focused-outline {
 	outline: var(--border-weight-hard) solid var(--solid-color-accent-1);
-	outline-offset: calc(var(--border-weight-hard) / 2 * -1);
+	outline-offset: 2px;
 }
 
 @mixin border {

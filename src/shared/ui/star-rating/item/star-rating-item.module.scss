@@ -1,5 +1,4 @@
 .item {
-    --star-size: 40px;
     height: var(--star-size);
     width: var(--star-size);
     display: flex;
@@ -18,7 +17,7 @@
     }
 
     &:where(.size-1) {
-        --star-size: var(--button-height-1);
+        --star-size: #{s(20)};
     }
     &:where(.size-2) {
         --star-size: var(--button-height-2);

@@ -17,12 +17,13 @@ export const AriaControl = React.forwardRef(function AriaControl(
 		render,
 		className,
 		ref: forwardedRef,
+
 		props: [
+			otherProps,
 			{
 				'aria-describedby': helperTextIds.length > 0 ? helperTextIds.join(' ') : undefined,
-				'aria-labelledby': labelId
+				'aria-labelledby': labelId,
 			},
-			otherProps,
 		],
 	});
 
@@ -30,6 +31,6 @@ export const AriaControl = React.forwardRef(function AriaControl(
 });
 
 export namespace AriaControl {
-	export type State = {}
-	export type Props = useRenderElement.ModernComponentProps<'div', State>
+	export type State = {};
+	export type Props = useRenderElement.ModernComponentProps<'div', State>;
 }

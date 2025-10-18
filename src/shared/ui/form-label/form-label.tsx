@@ -16,6 +16,7 @@ export const FormLabel = React.forwardRef(function FormLabel(
 		className,
 		required: requiredProp,
 		disabled: disabledProp,
+		wrap = 'nowrap',
 		...otherProps
 	} = props;
 
@@ -28,8 +29,7 @@ export const FormLabel = React.forwardRef(function FormLabel(
 		<Text
 			ref={forwardedRef}
 			className={classNames(styles['form-label'], { ['disabled']: disabled }, className)}
-			wrap="nowrap"
-			weight='medium'
+			wrap={wrap}
 			{...otherProps}
 		>
 			{required ? (

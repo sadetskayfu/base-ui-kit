@@ -4,10 +4,6 @@ import { Box } from '@/shared/ui/box';
 import './styles/index.scss';
 
 export function App() {
-	React.useEffect(() => {
-		fetch('https://track-users.onrender.com/track', { method: 'POST' });
-	}, []);
-
 	return (
 		<div className="container">
 			<Box py="4">

@@ -6,31 +6,17 @@ import { useFormGroupContext } from '@/shared/ui/form-group';
 import styles from './checkbox.module.scss';
 
 export function Checkbox(props: CheckboxRoot.Props) {
-	const {
-		className,
-		children,
-		disabled: disabledProp,
-		readOnly: readOnlyProp,
-		required: requiredProp,
-        size = '1',
-		...otherProps
-	} = props;
+	const { className, children, disabled, readOnly, required, size = '2', ...otherProps } = props;
 
 	const formControlLabelContext = useFormControlLabelContext();
-	const formGroupContext = useFormGroupContext();
-
-	const disabled =
-		disabledProp || formControlLabelContext?.disabled || formGroupContext?.disabled;
-	const required = requiredProp || formControlLabelContext?.required;
-	const readOnly =
-		readOnlyProp || formControlLabelContext?.readOnly || formGroupContext?.readOnly;
+	const groupContext = useFormGroupContext();
 
 	return (
 		<BaseCheckbox.Root
 			className={classNames(styles['checkbox'], styles[`size-${size}`], className)}
-			disabled={disabled}
-			required={required}
-			readOnly={readOnly}
+			disabled={disabled || formControlLabelContext?.disabled || groupContext?.disabled}
+			required={required || formControlLabelContext?.required}
+			readOnly={readOnly || formControlLabelContext?.readOnly || groupContext?.readOnly}
 			{...otherProps}
 		>
 			<BaseCheckbox.Indicator
@@ -53,6 +39,6 @@ export function Checkbox(props: CheckboxRoot.Props) {
 export namespace CheckboxRoot {
 	export interface Props extends Omit<BaseCheckbox.Root.Props, 'className' | 'render'> {
 		className?: string;
-        size?: '1' | '2'
+		size?: '2';
 	}
 }

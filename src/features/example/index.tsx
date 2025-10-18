@@ -17,6 +17,9 @@ import { BadgeSection } from './badge/badge-section';
 import { SkeletonSection } from './skeleton/skeleton-section';
 import { StarRatingSection } from './star-rating/star-rating-section';
 import { ButtonSection } from './button/button-section';
+import { RadioGroupSection } from './radio-group/radio-group-section';
+import { CheckboxSection } from './checkbox/checkbox-section';
+import { SwitchSection } from './switch/switch-section';
 
 export function Example() {
 	return (
@@ -71,6 +74,15 @@ export function Example() {
 			</Accordion>
 			<Accordion title="Star rating" radius="5">
 				<StarRatingSection />
+			</Accordion>
+			<Accordion title="Radio group" radius="5">
+				<RadioGroupSection />
+			</Accordion>
+			<Accordion title="Checkbox" radius="5">
+				<CheckboxSection />
+			</Accordion>
+			<Accordion title="Switch" radius="5">
+				<SwitchSection />
 			</Accordion>
 		</AccordionGroup>
 	);

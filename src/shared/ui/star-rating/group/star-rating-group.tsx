@@ -7,10 +7,12 @@ import styles from './star-rating-group.module.scss';
 export function StarRatingGroup(props: StarRatingGroup.Props) {
 	const { children, className, ...otherProps } = props;
 
-	const { setHoverValue, starCount } = useStarRatingRootContext();
+	const { setHoverValue, starCount, readOnly, disabled } = useStarRatingRootContext();
 
 	return (
 		<Aria.Control
+			aria-disabled={disabled ? 'true' : undefined}
+			aria-readonly={readOnly ? 'true' : undefined}
 			render={
 				<Flex
 					role="radiogroup"

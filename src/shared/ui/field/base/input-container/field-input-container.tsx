@@ -23,15 +23,15 @@ export const FieldInputContainer = React.forwardRef(function FieldInputContainer
 						return
 					}
 
-					const target = event.target as HTMLElement;
-
-					if (target.closest('input, textarea, button, a')) {
-						return;
-					}
-
 					const input = inputRef.current;
 
 					if (!input) {
+						return;
+					}
+
+					const target = event.target as HTMLElement;
+
+					if (target.closest('input, textarea, button, a')) {
 						return;
 					}
 

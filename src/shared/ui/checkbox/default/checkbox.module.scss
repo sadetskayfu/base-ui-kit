@@ -1,65 +1,43 @@
 .checkbox {
-    --checkbox-size: ;
-    --checkbox-hover-bg-color: var(--color-grey-a1);
-	position: relative;
-	height: var(--checkbox-size);
-	width: var(--checkbox-size);
-	padding: 0;
-	border-radius: var(--radius-1);
-	background-color: transparent;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: background-color 0.2s, border 0.2s;
-	flex-shrink: 0;
+    width: var(--checkbox-size);
+    height: var(--checkbox-size);
+    border-radius: var(--radius-1);
     border: var(--border-weight-soft) solid var(--border-color-grey);
+    background-color: transparent;
+    transition: background-color 0.2s, border-color 0.2s;
+    padding: 0px;
+    flex-shrink: 0;
 
-    &:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-        border-radius: var(--radius-2);
-        transition: background-color 0.2s, width 0.2s, height 0.2s;
-        pointer-events: none;
-        z-index: -1;
+    &:where(.size-2) {
+        --checkbox-size: #{s(20)};
     }
 
-	&:where([data-checked]) {
-        --checkbox-hover-bg-color: var(--color-accent-a1);
-        background-color: var(--solid-color-accent-1);
+    &:where([data-checked]) {
         border-color: var(--solid-color-accent-1);
-	}
+        background-color: var(--solid-color-accent-1);
+    }
 
-	&:focus-visible {
-        &::before {
-            background-color: var(--checkbox-hover-bg-color);
-            width: 200%;
-            height: 200%;
-        }
-	}
+    &:focus-visible {
+        @include focused-outline;
+        outline-offset: 2px;
+    }
 
-	&:not([data-disabled]) {
+    &:not([data-disabled]) {
 		@include hover {
-            &::before {
-                background-color: var(--checkbox-hover-bg-color);
-                width: 200%;
-                height: 200%;
+			background-color: var(--color-grey-a1);
+
+            &:where([data-checked]) {
+                background-color: var(--solid-color-accent-2);
             }
 		}
 	}
 
-    &:where(.size-1) {
-        --checkbox-size: var(--space-4);
-    }
-    &:where(.size-2) {
-        --checkbox-size: var(--space-5);
+    &:where([data-disabled]) {
+        @include disabled;
     }
 }
 
 .indicator {
-	position: absolute;
 	color: var(--font-color-soft);
 	display: flex;
 	justify-content: center;
@@ -76,5 +54,11 @@
 	--size: calc(var(--checkbox-size) - 3px);
 	width: var(--size) !important;
 	height: var(--size) !important;
-	stroke-width: 3px;
 }
+
+
+
+
+
+
+

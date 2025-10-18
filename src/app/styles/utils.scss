@@ -14,6 +14,10 @@
 	@include disabled;
 }
 
+.disabled-cursor {
+	cursor: not-allowed;
+}
+
 .full-width {
 	width: 100%;
 }

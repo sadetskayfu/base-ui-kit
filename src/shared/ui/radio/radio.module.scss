@@ -1,0 +1,48 @@
+.radio {
+    width: var(--radio-size);
+    height: var(--radio-size);
+    border-radius: 50%;
+    border: var(--border-weight-soft) solid var(--border-color-grey);
+    background-color: transparent;
+    transition: background-color 0.2s, border-color 0.2s;
+    padding: 0px;
+    position: relative;
+    flex-shrink: 0;
+
+    &:before {
+        content: '';
+        @include abs-center;
+        width: calc(var(--radio-size) - 8px);
+        height: calc(var(--radio-size) - 8px);
+        background-color: var(--solid-color-accent-1);
+        opacity: 0;
+        border-radius: inherit;
+        transition: opacity 0.2s;
+    }
+
+    &:where(.size-2) {
+        --radio-size: #{s(20)};
+    }
+
+    &:where([data-checked]) {
+        border-color: var(--solid-color-accent-1);
+
+        &:before {
+            opacity: 1;
+        }
+    }
+
+    &:focus-visible {
+        @include focused-outline;
+    }
+
+    &:not([data-disabled]) {
+		@include hover {
+			background-color: var(--color-grey-a1);
+		}
+	}
+
+    &:where([data-disabled]) {
+        @include disabled;
+    }
+}
