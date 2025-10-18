@@ -1,10 +1,8 @@
-import * as React from 'react';
 import { fruits } from '@/entities/options/fruits';
 import { Button } from '@/shared/ui/button';
 import { MobileCombobox } from '@/shared/ui/combobox';
 import { Flex } from '@/shared/ui/flex';
 import { Text } from '@/shared/ui/text';
-import styles from './m.module.scss';
 
 export function ExampleMultiMobileCombobox() {
 	return (
@@ -42,7 +40,7 @@ export function ExampleMultiMobileCombobox() {
                     <MobileCombobox.Field placeholder='Input fruit name..'/>
 				</MobileCombobox.Chips>
 				<MobileCombobox.ScrollArea alwaysVisibleScrollbar={false}>
-					<MobileCombobox.Empty className={styles['empty']}>
+					<MobileCombobox.Empty>
 						Not fruits found
 					</MobileCombobox.Empty>
 					<MobileCombobox.List>

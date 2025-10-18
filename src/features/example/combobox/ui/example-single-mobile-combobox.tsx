@@ -1,10 +1,8 @@
-import * as React from 'react';
 import { fruits } from '@/entities/options/fruits';
 import { Button } from '@/shared/ui/button';
 import { MobileCombobox } from '@/shared/ui/combobox';
 import { Flex } from '@/shared/ui/flex';
 import { Text } from '@/shared/ui/text';
-import styles from './m.module.scss';
 
 export function ExampleSingleMobileCombobox() {
 	return (
@@ -27,8 +25,8 @@ export function ExampleSingleMobileCombobox() {
 			<MobileCombobox.Popup>
 				<MobileCombobox.Header title="Fruit" />
 				<MobileCombobox.Field />
-				<MobileCombobox.ScrollArea>
-					<MobileCombobox.Empty className={styles['empty']}>
+				<MobileCombobox.ScrollArea alwaysVisibleScrollbar={false}>
+					<MobileCombobox.Empty>
 						Not fruits found
 					</MobileCombobox.Empty>
 					<MobileCombobox.List>

@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { Example } from '@/features/example';
 import { Box } from '@/shared/ui/box';
 import './styles/index.scss';
