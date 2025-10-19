@@ -6,7 +6,7 @@ export function ExampleLeftDialog() {
 		<Dialog.Root>
 			<Dialog.Trigger render={<Button radius="3" />}>Left side</Dialog.Trigger>
 			<Dialog.Popup side="left" backdrop>
-				<Dialog.Header>
+				<Dialog.Header justify="between">
 					<Dialog.Title>Генератор</Dialog.Title>
 					<Dialog.HeaderClose />
 				</Dialog.Header>

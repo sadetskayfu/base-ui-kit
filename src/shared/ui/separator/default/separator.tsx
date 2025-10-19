@@ -8,7 +8,7 @@ export function Separator(props: Separator.Props) {
 
 	return (
 		<BaseSeparator
-			className={classNames(styles['separator'], 'yar-radius-full', className)}
+			className={classNames(styles['separator'], className)}
 			{...otherProps}
 		/>
 	);

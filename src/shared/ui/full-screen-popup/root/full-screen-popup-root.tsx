@@ -1,15 +1,18 @@
-import * as React from 'react';
 import classNames from 'classnames';
-import { extractProps, gapPropDefs, type GapProps } from '@/shared/lib/utilities-props';
 import { Aria } from '@/shared/ui/aria';
+import { Flex } from '@/shared/ui/flex';
 import styles from './full-screen-popup-root.module.scss';
 
 export function FullScreenPopupRoot(props: FullScreenPopupRoot.Props) {
-	const { children, className, ...otherProps } = extractProps(props, gapPropDefs);
+	const { children, className, p = '4', gapY = '4', bgColor = 'grey-2', ...otherProps } = props;
 
 	return (
 		<Aria.Root>
-			<Aria.Control className={classNames(styles['popup'], className)} {...otherProps}>
+			<Aria.Control
+				className={classNames(styles['popup'], className)}
+				render={<Flex p={p} gapY={gapY} bgColor={bgColor} direction="column" />}
+				{...otherProps}
+			>
 				{children}
 			</Aria.Control>
 		</Aria.Root>
@@ -17,8 +20,6 @@ export function FullScreenPopupRoot(props: FullScreenPopupRoot.Props) {
 }
 
 export namespace FullScreenPopupRoot {
-	export interface Props extends GapProps {
-		children?: React.ReactNode;
-		className?: string;
-	}
+	export interface OwnProps extends Flex.OwnProps {}
+	export interface Props extends Flex.Props {}
 }

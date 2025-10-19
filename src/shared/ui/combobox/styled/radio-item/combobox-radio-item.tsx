@@ -6,11 +6,11 @@ export const ComboboxRadioItem = React.forwardRef(function ComboboxRadioItem(
 	props: ComboboxRadioItem.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { render, disabled, ...otherProps } = props;
+	const { disabled, ...otherProps } = props;
 
 	return (
 		<BaseCombobox.Item
-			render={<MenuComponents.RadioItem render={render} disabled={disabled} />}
+			render={<MenuComponents.RadioItem disabled={disabled} />}
 			disabled={disabled}
 			ref={forwardedRef}
 			{...otherProps}
@@ -19,7 +19,5 @@ export const ComboboxRadioItem = React.forwardRef(function ComboboxRadioItem(
 });
 
 export namespace ComboboxRadioItem {
-	export interface Props
-		extends Omit<BaseCombobox.Item.Props, 'className' | 'render'>,
-			MenuComponents.RadioItem.Props {}
+	export interface Props extends BaseCombobox.Item.Props, MenuComponents.RadioItem.OwnProps {}
 }

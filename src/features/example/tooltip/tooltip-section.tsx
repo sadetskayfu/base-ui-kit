@@ -5,11 +5,11 @@ import { Tooltip, TooltipProvider } from '@/shared/ui/tooltip';
 
 export function TooltipSection() {
 	return (
-		<Flex gap="3" justify='center'>
+		<Flex gap="3" justify="center">
 			<Tooltip
 				describeChild
-				width="300px"
 				content="Текст — зафиксированная на каком-либо материальном носителе человеческая мысль."
+				width='200px'
 			>
 				<Button variant="ghost" radius="3" color="secondary">
 					Tooltip

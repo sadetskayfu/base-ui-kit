@@ -12,6 +12,7 @@
     align-items: center;
 	justify-content: center;
 	user-select: none;
+	font-weight: var(--font-weight-medium);
 
 	&:where(.size-1) {
 		--base-button-padding-inline: var(--space-3);

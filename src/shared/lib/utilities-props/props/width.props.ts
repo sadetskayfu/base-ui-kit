@@ -7,7 +7,6 @@ const widthPropDefs = {
 	 *
 	 * @example
 	 * width="100px"
-	 * width={{ md: '100vw', xl: '1400px' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/width
@@ -24,7 +23,6 @@ const widthPropDefs = {
 	 *
 	 * @example
 	 * minWidth="100px"
-	 * minWidth={{ md: '100vw', xl: '1400px' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/min-width
@@ -41,7 +39,6 @@ const widthPropDefs = {
 	 *
 	 * @example
 	 * maxWidth="100px"
-	 * maxWidth={{ md: '100vw', xl: '1400px' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/max-width

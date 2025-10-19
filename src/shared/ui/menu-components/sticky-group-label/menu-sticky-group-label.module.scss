@@ -1,13 +1,9 @@
 .group-label {
 	position: sticky;
-	display: flex;
-	align-items: center;
 	top: 0;
 	z-index: 1;
-	gap: var(--menu-item-padding-inline);
 	color: var(--font-color-soft);
 	font-weight: var(--font-weight-medium);
-	padding-inline: var(--menu-item-padding-inline);
     height: var(--menu-item-group-label-height);
 	white-space: nowrap;
 

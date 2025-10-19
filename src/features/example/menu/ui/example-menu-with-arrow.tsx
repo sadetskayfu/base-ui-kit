@@ -14,35 +14,22 @@ export function ExampleMenuWithArrow() {
 				With arrow
 				<Menu.Icon />
 			</Menu.Trigger>
-			<Menu.Portal>
-				<Menu.Positioner align="start" arrow>
-					<Menu.Popup width="250px">
-						<Menu.Arrow />
-						<Menu.CheckboxItem label='Item 1' checked={checked1} onCheckedChange={setChecked1}>
-							<Menu.ItemContent
-								label="Item 1"
-								description="Description"
-								icon={<Icon.UserRound />}
-								iconPadding
-							/>
-						</Menu.CheckboxItem>
-						<Menu.CheckboxItem label='Item 2' checked={checked2} onCheckedChange={setChecked2}>
-							<Menu.ItemContent
-								label="Item 2"
-								icon={<Icon.CircleCheckBig />}
-								iconPadding
-							/>
-						</Menu.CheckboxItem>
-						<Menu.CheckboxItem label='Item 3' checked={checked3} onCheckedChange={setChecked3}>
-							<Menu.ItemContent
-								label="Item 3"
-								description="Description"
-								iconPadding
-							/>
-						</Menu.CheckboxItem>
-					</Menu.Popup>
-				</Menu.Positioner>
-			</Menu.Portal>
+			<Menu.Popup width="250px" align='start' arrow>
+				<Menu.CheckboxItem label="Item 1" checked={checked1} onCheckedChange={setChecked1}>
+					<Menu.ItemContent
+						label="Item 1"
+						description="Description"
+						icon={<Icon.UserRound />}
+						iconPadding
+					/>
+				</Menu.CheckboxItem>
+				<Menu.CheckboxItem label="Item 2" checked={checked2} onCheckedChange={setChecked2}>
+					<Menu.ItemContent label="Item 2" icon={<Icon.CircleCheckBig />} iconPadding />
+				</Menu.CheckboxItem>
+				<Menu.CheckboxItem label="Item 3" checked={checked3} onCheckedChange={setChecked3}>
+					<Menu.ItemContent label="Item 3" description="Description" iconPadding />
+				</Menu.CheckboxItem>
+			</Menu.Popup>
 		</Menu.Root>
 	);
 }

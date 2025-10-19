@@ -2,11 +2,6 @@
 	--menu-item-visual-margin: 0px;
 	z-index: 0;
 	position: relative;
-	display: flex;
-	align-items: center;
-	padding-block: calc(var(--menu-item-padding-block) + var(--menu-item-visual-margin));
-	padding-inline: var(--menu-item-padding-inline);
-	column-gap: var(--menu-item-padding-inline);
 	color: var(--font-color-hard);
 	user-select: none;
 

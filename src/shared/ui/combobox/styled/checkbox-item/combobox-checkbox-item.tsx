@@ -6,11 +6,11 @@ export const ComboboxCheckboxItem = React.forwardRef(function ComboboxCheckboxIt
 	props: ComboboxCheckboxItem.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { render, disabled, ...otherProps } = props;
+	const { disabled, ...otherProps } = props;
 
 	return (
 		<BaseCombobox.Item
-			render={<MenuComponents.CheckboxItem render={render} disabled={disabled} />}
+			render={<MenuComponents.CheckboxItem disabled={disabled} />}
 			disabled={disabled}
 			ref={forwardedRef}
 			{...otherProps}
@@ -19,7 +19,5 @@ export const ComboboxCheckboxItem = React.forwardRef(function ComboboxCheckboxIt
 });
 
 export namespace ComboboxCheckboxItem {
-	export interface Props
-		extends Omit<BaseCombobox.Item.Props, 'className' | 'render'>,
-			MenuComponents.CheckboxItem.Props {}
+	export interface Props extends BaseCombobox.Item.Props, MenuComponents.CheckboxItem.OwnProps {}
 }

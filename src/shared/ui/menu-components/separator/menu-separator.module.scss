@@ -1,8 +1,0 @@
-.separator {
-    &:where([data-orientation='horizontal']) {
-        margin-inline: var(--menu-item-padding-inline);
-    }
-    &:where([data-orientation='vertical']) {
-        margin-block: var(--menu-item-padding-inline);
-    }
-}

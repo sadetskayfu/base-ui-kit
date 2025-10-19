@@ -3,6 +3,7 @@ import { BasePopover } from '../../base';
 import { Popup } from '@/shared/ui/popup';
 import { PopupArrow } from '@/shared/ui/popup-arrow';
 import {
+	EMPTY_OBJECT,
 	POPUP_ARROW_PADDING,
 	POPUP_COLLISION_PADDING_BLOCK,
 	POPUP_COLLISION_PADDING_INLINE,
@@ -18,6 +19,14 @@ export function PopoverPopup(props: PopoverPopup.Props) {
 		bgColor = 'grey-2',
 		p = '4',
 		radius = '3',
+		portalTarget,
+		side,
+		align,
+		positionerProps = EMPTY_OBJECT as BasePopover.Positioner.Props,
+		...otherProps
+	} = props;
+
+	const {
 		arrowPadding = POPUP_ARROW_PADDING,
 		collisionPadding = {
 			left: POPUP_COLLISION_PADDING_INLINE,
@@ -25,12 +34,8 @@ export function PopoverPopup(props: PopoverPopup.Props) {
 			top: POPUP_COLLISION_PADDING_BLOCK,
 			bottom: POPUP_COLLISION_PADDING_BLOCK,
 		},
-		portalTarget,
-		anchor,
-		side,
-		align,
-		...otherProps
-	} = props;
+		...otherPositionerProps
+	} = positionerProps;
 
 	return (
 		<BasePopover.Portal container={portalTarget}>
@@ -41,7 +46,7 @@ export function PopoverPopup(props: PopoverPopup.Props) {
 				collisionPadding={collisionPadding}
 				side={side}
 				align={align}
-				anchor={anchor}
+				{...otherPositionerProps}
 			>
 				<BasePopover.Popup
 					render={<Popup bgColor={bgColor} p={p} radius={radius} />}
@@ -58,10 +63,11 @@ export function PopoverPopup(props: PopoverPopup.Props) {
 export namespace PopoverPopup {
 	export interface Props
 		extends Omit<BasePopover.Popup.Props, 'className' | 'render'>,
-			Omit<BasePopover.Positioner.Props, 'className' | 'render'>,
+			Pick<BasePopover.Positioner.Props, 'side' | 'align'>,
 			Popup.Props {
 		arrow?: boolean;
 		backdrop?: boolean;
 		portalTarget?: BasePopover.Portal.Props['container'];
+		positionerProps?: BasePopover.Positioner.Props;
 	}
 }

@@ -9,7 +9,7 @@
 			margin-right: calc(var(--space-1) * -1);
 		}
 		&:where(.offset-2) {
-			margin-right: calc(var(--space-4) * -1);
+			margin-right: calc(var(--container-padding-x) * -1);
 		}
 	}
 

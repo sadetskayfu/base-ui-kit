@@ -3,9 +3,6 @@ import classNames from 'classnames';
 import { MenuItem } from '../item/menu-item';
 import styles from './menu-switch-item.module.scss';
 
-/**
- * Renders a `<MenuComponents.Item>` with visually switch.
- */
 export const MenuSwitchItem = React.forwardRef(function MenuSwitchItem(
 	props: MenuSwitchItem.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
@@ -25,5 +22,6 @@ export const MenuSwitchItem = React.forwardRef(function MenuSwitchItem(
 });
 
 export namespace MenuSwitchItem {
+	export interface OwnProps extends MenuItem.OwnProps {}
 	export interface Props extends MenuItem.Props {}
 }

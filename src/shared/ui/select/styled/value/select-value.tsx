@@ -1,56 +1,24 @@
-import classNames from 'classnames';
 import { BaseSelect } from '../../base';
-import styles from './select-value.module.scss';
-
-function isDirty(value: any) {
-	const isArray = Array.isArray(value);
-
-	if (isArray && value.length > 0) {
-		return true;
-	}
-
-	if (!isArray && value) {
-		return true;
-	}
-
-	return false;
-}
 
 export function SelectValue(props: SelectValue.Props) {
-	const { className, children, placeholder, truncate, ...otherProps } = props;
+	const { getLabel = value => value, renderLabel, placeholder } = props;
 
 	return (
-		<BaseSelect.Value
-			className={state =>
-				classNames(
-					styles['value'],
-					{
-						[styles['is-placeholder']]: placeholder && !isDirty(state.value),
-						['truncate']: truncate,
-					},
-
-					className
-				)
-			}
-			{...otherProps}
-		>
-			{value => {
-				if (placeholder && !isDirty(value)) {
-					return placeholder;
+		<BaseSelect.Value>
+			{(value: any) => {
+				if (value) {
+					return renderLabel ? renderLabel(`${getLabel(value)}`) : `${getLabel(value)}`;
 				}
-				if (typeof children === 'function') {
-					return children(value);
-				}
-				return children;
+				return placeholder;
 			}}
 		</BaseSelect.Value>
 	);
 }
 
 export namespace SelectValue {
-	export interface Props extends Omit<BaseSelect.Value.Props, 'className'> {
-		className?: string;
-		placeholder?: string;
-		truncate?: boolean;
+	export interface Props {
+		placeholder?: string | React.ReactElement;
+		getLabel?: (value: any) => string;
+		renderLabel?: (label: string) => React.ReactNode;
 	}
 }

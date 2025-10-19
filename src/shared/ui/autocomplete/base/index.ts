@@ -1,1 +1,0 @@
-export { Autocomplete as BaseAutocomplete } from '@base-ui-components/react'

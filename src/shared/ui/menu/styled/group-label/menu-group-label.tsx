@@ -6,19 +6,11 @@ export const MenuGroupLabel = React.forwardRef(function MenuGroupLabel(
 	props: MenuGroupLabel.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { render, ...otherProps } = props;
-
 	return (
-		<BaseMenu.GroupLabel
-			render={<MenuComponents.GroupLabel render={render} />}
-			ref={forwardedRef}
-			{...otherProps}
-		/>
+		<BaseMenu.GroupLabel render={<MenuComponents.GroupLabel />} ref={forwardedRef} {...props} />
 	);
 });
 
 export namespace MenuGroupLabel {
-	export interface Props
-		extends Omit<BaseMenu.GroupLabel.Props, 'className' | 'render'>,
-			MenuComponents.GroupLabel.Props {}
+	export interface Props extends BaseMenu.GroupLabel.Props, MenuComponents.GroupLabel.OwnProps {}
 }

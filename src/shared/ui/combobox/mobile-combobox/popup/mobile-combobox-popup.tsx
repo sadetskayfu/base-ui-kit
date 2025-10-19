@@ -3,7 +3,7 @@ import { BaseCombobox } from '../../base';
 import { FullScreenPopup } from '@/shared/ui/full-screen-popup';
 
 export function MobileComboboxPopup(props: MobileComboboxPopup.Props) {
-	const { children, portalTarget, gapY = '3', ...otherProps } = props;
+	const { children, portalTarget, ...otherProps } = props;
 
 	return (
 		<BaseCombobox.Portal container={portalTarget}>
@@ -12,7 +12,7 @@ export function MobileComboboxPopup(props: MobileComboboxPopup.Props) {
 				<RemoveScroll>
 					<BaseCombobox.Popup
 						onFocus={event => event.preventBaseUIHandler()}
-						render={<FullScreenPopup.Root gapY={gapY} />}
+						render={<FullScreenPopup.Root />}
 						{...otherProps}
 					>
 						{children}
@@ -26,7 +26,7 @@ export function MobileComboboxPopup(props: MobileComboboxPopup.Props) {
 export namespace MobileComboboxPopup {
 	export interface Props
 		extends Omit<BaseCombobox.Popup.Props, 'className'>,
-			FullScreenPopup.Root.Props {
+			FullScreenPopup.Root.OwnProps {
 		portalTarget?: BaseCombobox.Portal.Props['container'];
 	}
 }

@@ -16,13 +16,7 @@ import { BaseTooltip } from '../../base';
 import styles from './tooltip-popup.module.scss';
 
 export function TooltipPopup(props: TooltipPopup.Props) {
-	const {
-		children,
-		className,
-		anchorWidth,
-	minAnchorWidth,
-		...otherProps
-	} = extractProps(
+	const { children, className, anchorWidth, minAnchorWidth, ...otherProps } = extractProps(
 		props,
 		radiusPropDef,
 		paddingPropDefs,

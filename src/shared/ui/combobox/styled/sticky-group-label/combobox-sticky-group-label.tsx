@@ -6,19 +6,17 @@ export const ComboboxStickyGroupLabel = React.forwardRef(function ComboboxSticky
 	props: ComboboxStickyGroupLabel.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { render, ...otherProps } = props;
-
 	return (
 		<BaseCombobox.GroupLabel
-			render={<MenuComponents.StickyGroupLabel render={render} />}
+			render={<MenuComponents.StickyGroupLabel />}
 			ref={forwardedRef}
-			{...otherProps}
+			{...props}
 		/>
 	);
 });
 
 export namespace ComboboxStickyGroupLabel {
 	export interface Props
-		extends Omit<BaseCombobox.GroupLabel.Props, 'className' | 'render'>,
-			MenuComponents.StickyGroupLabel.Props {}
+		extends BaseCombobox.GroupLabel.Props,
+			MenuComponents.StickyGroupLabel.OwnProps {}
 }

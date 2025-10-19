@@ -4,6 +4,7 @@ import { Popup } from '@/shared/ui/popup';
 import { PopupArrow } from '@/shared/ui/popup-arrow';
 import { Backdrop } from '@/shared/ui/backdrop';
 import {
+	EMPTY_OBJECT,
 	POPUP_ARROW_PADDING,
 	POPUP_COLLISION_PADDING_BLOCK,
 	POPUP_COLLISION_PADDING_INLINE,
@@ -18,6 +19,17 @@ export function ComboboxPopup(props: ComboboxPopup.Props) {
 		className,
 		arrow,
 		backdrop,
+		portalTarget,
+		side,
+		align,
+		bgColor = 'grey-2',
+		p = '1',
+		radius = '3',
+		positionerProps = EMPTY_OBJECT as BaseCombobox.Positioner.Props,
+		...otherProps
+	} = props;
+
+	const {
 		arrowPadding = POPUP_ARROW_PADDING,
 		collisionPadding = {
 			left: POPUP_COLLISION_PADDING_INLINE,
@@ -25,15 +37,8 @@ export function ComboboxPopup(props: ComboboxPopup.Props) {
 			top: POPUP_COLLISION_PADDING_BLOCK,
 			bottom: POPUP_COLLISION_PADDING_BLOCK,
 		},
-		portalTarget,
-		anchor,
-		side,
-		align,
-		bgColor = 'grey-2',
-		p = '1',
-		radius = '3',
-		...otherProps
-	} = props;
+		...otherPositionerProps
+	} = positionerProps;
 
 	return (
 		<BaseCombobox.Portal container={portalTarget}>
@@ -44,7 +49,7 @@ export function ComboboxPopup(props: ComboboxPopup.Props) {
 				collisionPadding={collisionPadding}
 				side={side}
 				align={align}
-				anchor={anchor}
+				{...otherPositionerProps}
 			>
 				<BaseCombobox.Popup
 					render={
@@ -68,10 +73,12 @@ export function ComboboxPopup(props: ComboboxPopup.Props) {
 export namespace ComboboxPopup {
 	export interface Props
 		extends Omit<BaseCombobox.Popup.Props, 'className' | 'render'>,
-			Omit<BaseCombobox.Positioner.Props, 'className' | 'render'>,
+			Pick<BaseCombobox.Positioner.Props, 'side' | 'align'>,
 			Popup.Props {
 		arrow?: boolean;
 		backdrop?: boolean;
 		portalTarget?: BaseCombobox.Portal.Props['container'];
+		positionerProps?: BaseCombobox.Positioner.Props;
 	}
 }
+

@@ -18,30 +18,25 @@ export function ExampleSingleSelect() {
 							color="secondary"
 							variant="ghost"
 							radius="3"
-							animateBorder
 						/>
 					}
 				>
-                    <Select.BaseValue />
+					<Select.BaseValue />
 					<Select.Icon />
 				</Select.Trigger>
 			</Flex>
-			<Select.Portal>
-				<Select.Positioner>
-					<Select.Popup>
-						<Select.List>
-							{fonts.map(font => (
-								<Select.Item key={font.label} value={font.value}>
-									{font.label}
-									<Select.ItemIndicator>
-										<Icon.Check />
-									</Select.ItemIndicator>
-								</Select.Item>
-							))}
-						</Select.List>
-					</Select.Popup>
-				</Select.Positioner>
-			</Select.Portal>
+			<Select.Popup>
+				<Select.List>
+					{fonts.map(font => (
+						<Select.Item key={font.label} value={font.value}>
+							{font.label}
+							<Select.ItemIndicator>
+								<Icon.Check />
+							</Select.ItemIndicator>
+						</Select.Item>
+					))}
+				</Select.List>
+			</Select.Popup>
 		</Select.Root>
 	);
 }

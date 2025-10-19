@@ -4,7 +4,7 @@ import { useFieldComboboxRootContext } from '../root/field-combobox-root-context
 export function FieldComboboxPopup(props: FieldComboboxPopup.Props) {
 	const { inputContainerRef } = useFieldComboboxRootContext();
 
-	return <Combobox.Popup anchor={inputContainerRef} {...props} />;
+	return <Combobox.Popup positionerProps={{ anchor: inputContainerRef }} {...props} />;
 }
 
 export namespace FieldComboboxPopup {

@@ -11,7 +11,7 @@ export function ExampleSingleMobileCombobox() {
 					<Text weight='medium'>Single mobile combobox</Text>
 					<MobileCombobox.Trigger render={<ButtonField radius="3" />}>
 						<MobileCombobox.Value
-							getLabel={value => <Text color="hard">{value}</Text>}
+							renderLabel={value => <Text color="hard">{value}</Text>}
 							placeholder="Выбирите фрукт"
 						/>
 						<MobileCombobox.Icon />
@@ -20,15 +20,17 @@ export function ExampleSingleMobileCombobox() {
 			<MobileCombobox.Popup>
 				<MobileCombobox.Header title="Выбирите фрукт" />
 				<MobileCombobox.Field placeholder="Введите название фрукта" />
-				<MobileCombobox.ScrollArea alwaysVisibleScrollbar={false}>
-					<MobileCombobox.Empty>Не найдено ниодного фрутка</MobileCombobox.Empty>
+				<MobileCombobox.ScrollArea alwaysVisibleScrollbar={false} offset='2'>
+					<MobileCombobox.Empty align='center'>Не найдено ниодного фрутка</MobileCombobox.Empty>
 					<MobileCombobox.List>
 						{(item: string) => (
 							<MobileCombobox.RadioItem
 								key={item}
 								value={item}
 								radius="3"
-								visualMargin="2"
+								visualMargin="1"
+								py='3'
+								px='4'
 							>
 								{item}
 							</MobileCombobox.RadioItem>

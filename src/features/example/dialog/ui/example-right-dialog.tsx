@@ -6,7 +6,7 @@ export function ExampleRightDialog() {
 		<Dialog.Root>
 			<Dialog.Trigger render={<Button radius="3" />}>Right side</Dialog.Trigger>
 			<Dialog.Popup side="right" backdrop>
-				<Dialog.Header justify="start">
+				<Dialog.Header>
 					<Dialog.HeaderClose />
 					<Dialog.Title>Генератор</Dialog.Title>
 				</Dialog.Header>

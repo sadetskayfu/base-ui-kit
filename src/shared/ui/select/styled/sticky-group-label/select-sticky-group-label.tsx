@@ -6,19 +6,17 @@ export const SelectStickyGroupLabel = React.forwardRef(function SelectStickyGrou
 	props: SelectStickyGroupLabel.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { render, ...otherProps } = props;
-
 	return (
 		<BaseSelect.GroupLabel
-			render={<MenuComponents.StickyGroupLabel render={render} />}
+			render={<MenuComponents.StickyGroupLabel />}
 			ref={forwardedRef}
-			{...otherProps}
+			{...props}
 		/>
 	);
 });
 
 export namespace SelectStickyGroupLabel {
 	export interface Props
-		extends Omit<BaseSelect.GroupLabel.Props, 'className' | 'render'>,
-			MenuComponents.StickyGroupLabel.Props {}
+		extends BaseSelect.GroupLabel.Props,
+			MenuComponents.StickyGroupLabel.OwnProps {}
 }

@@ -6,11 +6,11 @@ export const MenuRadioItem = React.forwardRef(function MenuRadioItem(
 	props: MenuRadioItem.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { render, disabled, ...otherProps } = props;
+	const { disabled, ...otherProps } = props;
 
 	return (
 		<BaseMenu.RadioItem
-			render={<MenuComponents.RadioItem render={render} disabled={disabled} />}
+			render={<MenuComponents.RadioItem disabled={disabled} />}
 			disabled={disabled}
 			ref={forwardedRef}
 			{...otherProps}
@@ -19,7 +19,5 @@ export const MenuRadioItem = React.forwardRef(function MenuRadioItem(
 });
 
 export namespace MenuRadioItem {
-	export interface Props
-		extends Omit<BaseMenu.RadioItem.Props, 'className' | 'render'>,
-			MenuComponents.RadioItem.Props {}
+	export interface Props extends BaseMenu.RadioItem.Props, MenuComponents.RadioItem.OwnProps {}
 }

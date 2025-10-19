@@ -13,7 +13,7 @@ import {
 import styles from './skeleton.module.scss';
 
 export function Skeleton(props: Skeleton.Props) {
-	const { className, ...otherProps } = extractProps(
+	const { className, textSize, boxSize, ...otherProps } = extractProps(
 		props,
 		radiusPropDef,
 		marginPropDefs,
@@ -21,7 +21,17 @@ export function Skeleton(props: Skeleton.Props) {
 		heightPropDefs
 	);
 
-	return <span className={classNames(styles['skeleton'], className)} {...otherProps} />;
+	return (
+		<span
+			className={classNames(
+				styles['skeleton'],
+				textSize && styles[`text-size-${textSize}`],
+				boxSize && styles[`box-size-${boxSize}`],
+				className
+			)}
+			{...otherProps}
+		/>
+	);
 }
 
 export namespace Skeleton {
@@ -30,5 +40,8 @@ export namespace Skeleton {
 			RadiusProp,
 			MarginProps,
 			WidthProps,
-			HeightProps {}
+			HeightProps {
+		textSize?: '1' | '2' | '3' | '4' | '5';
+		boxSize?: '1' | '2' | '3' | '4'
+	}
 }

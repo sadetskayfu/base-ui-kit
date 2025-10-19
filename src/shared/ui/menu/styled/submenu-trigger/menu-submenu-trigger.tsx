@@ -7,22 +7,20 @@ export const MenuSubmenuTrigger = React.forwardRef(function MenuSubmenuTrigger(
 	props: MenuSubmenuTrigger.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { children, render, ...otherProps } = props;
+	const { children, ...otherProps } = props;
 
 	return (
 		<BaseMenu.SubmenuTrigger
-			render={<MenuComponents.Item render={render} />}
+			render={<MenuComponents.Item />}
 			ref={forwardedRef}
 			{...otherProps}
 		>
 			{children}
-			<Icon.ChevronRight className='ml-auto' />
+			<Icon.ChevronRight className="ml-auto" />
 		</BaseMenu.SubmenuTrigger>
 	);
 });
 
 export namespace MenuSubmenuTrigger {
-	export interface Props
-		extends Omit<BaseMenu.SubmenuTrigger.Props, 'className' | 'render'>,
-			MenuComponents.Item.Props {}
+	export interface Props extends BaseMenu.SubmenuTrigger.Props, MenuComponents.Item.OwnProps {}
 }

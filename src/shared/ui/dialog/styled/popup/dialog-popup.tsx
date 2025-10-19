@@ -21,7 +21,7 @@ export function DialogPopup(props: DialogPopup.Props) {
 		portalTarget,
 		backdrop,
 		bgColor = 'grey-2',
-		p = '5',
+		p = '4',
 		radius = '5',
 		side,
 		fullScreen,

@@ -3,15 +3,10 @@
 	transition:
 		transform 0.3s,
 		opacity 0.3s;
-	display: flex;
-	flex-direction: column;
 	height: 100%;
+	width: 100%;
 	top: 0;
 	right: 0;
-	width: 100%;
-    padding-inline: var(--container-padding-x);
-	padding-bottom: var(--container-padding-x);
-    background-color: var(--bg-color-grey-2);
 
 	&[data-starting-style],
 	&[data-ending-style] {

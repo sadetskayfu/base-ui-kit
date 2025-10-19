@@ -11,7 +11,7 @@ export function ExampleMultiMobileCombobox() {
 					<Text weight='medium'>Multi mobile combobox</Text>
 					<MobileCombobox.Trigger render={<ButtonField radius="3" />}>
 						<MobileCombobox.MultiValue
-							getLabel={(label) => <Text color="hard">{label}</Text>}
+							renderLabel={(label) => <Text color="hard">{label}</Text>}
 							placeholder="Выбирите фрукты"
 						/>
 						<MobileCombobox.Icon />
@@ -32,15 +32,16 @@ export function ExampleMultiMobileCombobox() {
 					<MobileCombobox.Field placeholder="Введитье название фрукта" />
 				</MobileCombobox.Chips>
 				<MobileCombobox.ScrollArea alwaysVisibleScrollbar={false} offset="2">
-					<MobileCombobox.Empty>Не найдено ниодного фрутка</MobileCombobox.Empty>
+					<MobileCombobox.Empty align='center'>Не найдено ниодного фрутка</MobileCombobox.Empty>
 					<MobileCombobox.List>
 						{(item: string) => (
 							<MobileCombobox.CheckboxItem
 								key={item}
 								value={item}
 								radius="3"
-								visualMargin="2"
-								disableRipple
+								py='3'
+								px='4'
+								visualMargin="1"
 							>
 								{item}
 							</MobileCombobox.CheckboxItem>

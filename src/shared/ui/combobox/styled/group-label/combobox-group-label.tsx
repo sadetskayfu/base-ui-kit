@@ -6,19 +6,17 @@ export const ComboboxGroupLabel = React.forwardRef(function ComboboxGroupLabel(
 	props: ComboboxGroupLabel.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { render, ...otherProps } = props;
-
 	return (
 		<BaseCombobox.GroupLabel
-			render={<MenuComponents.GroupLabel render={render} />}
+			render={<MenuComponents.GroupLabel />}
 			ref={forwardedRef}
-			{...otherProps}
+			{...props}
 		/>
 	);
 });
 
 export namespace ComboboxGroupLabel {
 	export interface Props
-		extends Omit<BaseCombobox.GroupLabel.Props, 'className' | 'render'>,
-			MenuComponents.GroupLabel.Props {}
+		extends BaseCombobox.GroupLabel.Props,
+			MenuComponents.GroupLabel.OwnProps {}
 }

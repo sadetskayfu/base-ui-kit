@@ -6,11 +6,11 @@ export const MenuItem = React.forwardRef(function MenuItem(
 	props: MenuItem.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { render, disabled, ...otherProps } = props;
+	const { disabled, ...otherProps } = props;
 
 	return (
 		<BaseMenu.Item
-			render={<MenuComponents.Item render={render} disabled={disabled} />}
+			render={<MenuComponents.Item disabled={disabled} />}
 			disabled={disabled}
 			ref={forwardedRef}
 			{...otherProps}
@@ -19,7 +19,5 @@ export const MenuItem = React.forwardRef(function MenuItem(
 });
 
 export namespace MenuItem {
-	export interface Props
-		extends Omit<BaseMenu.Item.Props, 'className' | 'render'>,
-			MenuComponents.Item.Props {}
+	export interface Props extends BaseMenu.Item.Props, MenuComponents.Item.OwnProps {}
 }

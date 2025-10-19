@@ -1,5 +1,6 @@
 .separator {
 	background-color: var(--border-color-grey);
+	border-radius: var(--radius-full);
 
 	&[data-orientation='vertical'] {
 		width: var(--border-weight-soft);

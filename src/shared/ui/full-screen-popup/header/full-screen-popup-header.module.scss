@@ -1,13 +1,13 @@
 .header {
     display: flex;
     align-items: center;
-    column-gap: var(--container-padding-x);
+    column-gap: var(--space-4);
     border-bottom: var(--border-weight-soft) solid var(--border-color-grey);
-    padding-block: var(--space-2);
-    padding-inline: var(--container-padding-x);
-    margin-inline: calc(var(--container-padding-x) * -1);
+    padding-block: var(--space-4);
+    padding-inline: var(--space-4);
+    margin-inline: calc(var(--space-4) * -1);
 }
 
 .close-button {
-    margin-inline: calc(var(--button-height-3) / 4 * -1);
+    margin: calc(var(--button-height-3) / 4 * -1);
 }

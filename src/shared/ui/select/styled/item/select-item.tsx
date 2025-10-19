@@ -6,11 +6,11 @@ export const SelectItem = React.forwardRef(function SelectItem(
 	props: SelectItem.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { render, disabled, ...otherProps } = props;
+	const { disabled, ...otherProps } = props;
 
 	return (
 		<BaseSelect.Item
-			render={<MenuComponents.Item render={render} disabled={disabled} />}
+			render={<MenuComponents.Item disabled={disabled} />}
 			disabled={disabled}
 			ref={forwardedRef}
 			{...otherProps}
@@ -19,7 +19,5 @@ export const SelectItem = React.forwardRef(function SelectItem(
 });
 
 export namespace SelectItem {
-	export interface Props
-		extends Omit<BaseSelect.Item.Props, 'className' | 'render'>,
-			MenuComponents.Item.Props {}
+	export interface Props extends BaseSelect.Item.Props, MenuComponents.Item.OwnProps {}
 }

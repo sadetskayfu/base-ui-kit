@@ -1,10 +1,10 @@
-import { BaseCombobox } from '../../base';
+import { BaseSelect } from '../../base';
 
-export function ComboboxMultiValue(props: ComboboxMultiValue.Props) {
+export function SelectMultiValue(props: SelectMultiValue.Props) {
 	const { placeholder, getLabel = value => value, renderLabel } = props;
 
 	return (
-		<BaseCombobox.Value>
+		<BaseSelect.Value>
 			{(value: any[]) => {
 				if (value.length === 0) {
 					return placeholder;
@@ -18,11 +18,11 @@ export function ComboboxMultiValue(props: ComboboxMultiValue.Props) {
 					? renderLabel(`${getLabel(value[0])} (+${value.length - 1})`)
 					: `${getLabel(value[0])} (+${value.length - 1})`;
 			}}
-		</BaseCombobox.Value>
+		</BaseSelect.Value>
 	);
 }
 
-export namespace ComboboxMultiValue {
+export namespace SelectMultiValue {
 	export interface Props {
 		placeholder?: string | React.ReactElement;
 		getLabel?: (value: any) => string;

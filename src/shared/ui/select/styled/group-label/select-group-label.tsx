@@ -6,19 +6,17 @@ export const SelectGroupLabel = React.forwardRef(function SelectGroupLabel(
 	props: SelectGroupLabel.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { render, ...otherProps } = props;
-
 	return (
 		<BaseSelect.GroupLabel
-			render={<MenuComponents.GroupLabel render={render} />}
+			render={<MenuComponents.GroupLabel />}
 			ref={forwardedRef}
-			{...otherProps}
+			{...props}
 		/>
 	);
 });
 
 export namespace SelectGroupLabel {
 	export interface Props
-		extends Omit<BaseSelect.GroupLabel.Props, 'className' | 'render'>,
-			MenuComponents.GroupLabel.Props {}
+		extends BaseSelect.GroupLabel.Props,
+			MenuComponents.GroupLabel.OwnProps {}
 }

@@ -6,13 +6,11 @@ export const MenuCheckboxItem = React.forwardRef(function MenuCheckboxItem(
 	props: MenuCheckboxItem.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { render, disabled, ...otherProps } = props;
+	const { disabled, ...otherProps } = props;
 
 	return (
 		<BaseMenu.CheckboxItem
-			render={
-				<MenuComponents.CheckboxItem render={render} disabled={disabled} />
-			}
+			render={<MenuComponents.CheckboxItem disabled={disabled} />}
 			disabled={disabled}
 			ref={forwardedRef}
 			{...otherProps}
@@ -21,7 +19,5 @@ export const MenuCheckboxItem = React.forwardRef(function MenuCheckboxItem(
 });
 
 export namespace MenuCheckboxItem {
-	export interface Props
-		extends Omit<BaseMenu.CheckboxItem.Props, 'className' | 'render'>,
-			MenuComponents.CheckboxItem.Props {}
+	export interface Props extends BaseMenu.CheckboxItem.Props, MenuComponents.CheckboxItem.OwnProps {}
 }

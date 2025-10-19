@@ -1,22 +1,25 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import { BaseTabs } from '../../base';
-import { useTabsContext } from '../provider/tabs-context';
-import { extractProps, radiusPropDef, type RadiusProp } from '@/shared/lib/utilities-props';
+import { Flex } from '@/shared/ui/flex';
 import styles from './tabs-tab.module.scss';
 
 export const TabsTab = React.forwardRef(function TabsTab(
 	props: TabsTab.Props,
 	forwardedRef: React.ForwardedRef<HTMLButtonElement>
 ) {
-	const { className, disabled: disabledProp, size, radius: radiusProp, fullWidth: fullWidthProp, ...otherProps } = props;
+	const {
+		className,
+		disabled,
+		radius = '3',
+		px = '4',
+		py = '2',
+		align = 'center',
+		justify = 'center',
+		...otherProps
+	} = props;
 
-	const context = useTabsContext();
-
-	const radius = radiusProp || context?.radius;
-	const disabled = disabledProp || context?.disabled;
-
-	const { className: radiusClassName } = extractProps({ radius }, radiusPropDef);
+	const flexProps = { py, px, align, justify, radius };
 
 	return (
 		<BaseTabs.Tab
@@ -24,23 +27,19 @@ export const TabsTab = React.forwardRef(function TabsTab(
 			disabled={disabled}
 			className={classNames(
 				styles['tab'],
-				styles[`size-${size || context?.size || '3'}`],
 				{
 					['disabled']: disabled,
-                    [styles['full-width']]: fullWidthProp || context?.fullWidth
 				},
-				radiusClassName,
 				className
 			)}
+			render={<Flex {...flexProps} render={<button />} />}
 			{...otherProps}
 		/>
 	);
 });
 
 export namespace TabsTab {
-	export interface Props extends Omit<BaseTabs.Tab.Props, 'className'>, RadiusProp {
+	export interface Props extends Omit<BaseTabs.Tab.Props, 'className'>, Flex.OwnProps {
 		className?: string;
-		size?: '2' | '3';
-        fullWidth?: boolean
 	}
 }

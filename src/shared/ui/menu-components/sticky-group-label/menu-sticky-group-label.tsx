@@ -1,41 +1,36 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { useRenderElement } from '@/shared/hooks/use-render-element';
-import { bgColorPropDef, extractProps, type BgColorProp } from '@/shared/lib/utilities-props';
+import { Flex } from '@/shared/ui/flex';
 import styles from './menu-sticky-group-label.module.scss';
 
-/**
- * Renders a `<div>` element.
- */
 export const MenuStickyGroupLabel = React.forwardRef(function MenuStickyGroupLabel(
 	props: MenuStickyGroupLabel.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { bgColor = 'grey-2' } = props;
+	const {
+		className,
+		bgColor = 'grey-2',
+		gapX = '3',
+		px = '3',
+		align = 'center',
+		...otherProps
+	} = props;
 
-	const { render, className, ...otherProps } = extractProps(
-		{ ...props, bgColor },
-		bgColorPropDef
+	return (
+		<Flex
+			ref={forwardedRef}
+			className={classNames(styles['group-label'], className)}
+			bgColor={bgColor}
+			gapX={gapX}
+			px={px}
+			align={align}
+			{...otherProps}
+		/>
 	);
-
-	return useRenderElement('div', {
-		render,
-		ref: forwardedRef,
-		props: [
-			{
-				className: classNames(styles['group-label'], className),
-			},
-			otherProps,
-		],
-	});
 });
 
 export namespace MenuStickyGroupLabel {
 	export interface State {}
-	export interface Props
-		extends Pick<
-				useRenderElement.ModernComponentProps<'div', State>,
-				'render' | 'children' | 'className'
-			>,
-			BgColorProp {}
+	export interface OwnProps extends Flex.OwnProps {}
+	export interface Props extends Flex.Props {}
 }

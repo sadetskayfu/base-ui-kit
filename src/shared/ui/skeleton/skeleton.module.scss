@@ -1,6 +1,35 @@
 .skeleton {
     animation: blinking 1s ease-in-out infinite;
     background-color: var(--color-grey-a1);
+
+    &:where(.text-size-1) {
+        height: calc(var(--font-size-1) * var(--default-line-height));
+    }
+    &:where(.text-size-2) {
+        height: calc(var(--font-size-2) * var(--default-line-height));
+    }
+    &:where(.text-size-3) {
+        height: calc(var(--font-size-3) * var(--default-line-height));
+    }
+    &:where(.text-size-4) {
+        height: calc(var(--font-size-4) * var(--default-line-height));
+    }
+    &:where(.text-size-5) {
+        height: calc(var(--font-size-5) * var(--default-line-height));
+    }
+
+    &:where(.box-size-1) {
+        height: var(--space-5);
+    }
+    &:where(.box-size-2) {
+        height: var(--space-6);
+    }
+    &:where(.box-size-3) {
+        height: var(--space-7);
+    }
+    &:where(.box-size-4) {
+        height: var(--space-8);
+    }
 }
 
 @keyframes blinking {

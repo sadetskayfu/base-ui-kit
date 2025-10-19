@@ -1,13 +1,13 @@
 import { BaseCombobox } from '../../base';
 
 export function ComboboxValue(props: ComboboxValue.Props) {
-	const { getLabel, placeholder } = props;
+	const { getLabel = value => value, renderLabel, placeholder } = props;
 
 	return (
 		<BaseCombobox.Value>
 			{(value: any) => {
 				if (value) {
-					return getLabel ? getLabel(value) : value;
+					return renderLabel ? renderLabel(`${getLabel(value)}`) : `${getLabel(value)}`;
 				}
 				return placeholder;
 			}}
@@ -18,6 +18,7 @@ export function ComboboxValue(props: ComboboxValue.Props) {
 export namespace ComboboxValue {
 	export interface Props {
 		placeholder?: string | React.ReactElement;
-		getLabel?: (value: any) => string | React.ReactElement;
+		getLabel?: (value: any) => string;
+		renderLabel?: (label: string) => React.ReactNode;
 	}
 }

@@ -6,11 +6,11 @@ export const ComboboxItem = React.forwardRef(function ComboboxItem(
 	props: ComboboxItem.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { render, disabled, ...otherProps } = props;
+	const { disabled, ...otherProps } = props;
 
 	return (
 		<BaseCombobox.Item
-			render={<MenuComponents.Item render={render} disabled={disabled} />}
+			render={<MenuComponents.Item disabled={disabled} />}
 			disabled={disabled}
 			ref={forwardedRef}
 			{...otherProps}
@@ -19,7 +19,5 @@ export const ComboboxItem = React.forwardRef(function ComboboxItem(
 });
 
 export namespace ComboboxItem {
-	export interface Props
-		extends Omit<BaseCombobox.Item.Props, 'className' | 'render'>,
-			MenuComponents.Item.Props {}
+	export interface Props extends BaseCombobox.Item.Props, MenuComponents.Item.OwnProps {}
 }

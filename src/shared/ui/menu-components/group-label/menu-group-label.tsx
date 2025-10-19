@@ -1,34 +1,17 @@
 import * as React from 'react';
-import classNames from 'classnames';
-import { useRenderElement } from '@/shared/hooks/use-render-element';
-import styles from './menu-group-label.module.scss';
+import { Flex } from '@/shared/ui/flex';
 
-/**
- * Renders a `<div>` element.
- */
 export const MenuGroupLabel = React.forwardRef(function MenuGroupLabel(
 	props: MenuGroupLabel.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { render, className, ...otherProps } = props;
+	const { px = '3', py = '2', ...otherProps } = props;
 
-	return useRenderElement('div', {
-		render,
-		ref: forwardedRef,
-		props: [
-			{
-				className: classNames(styles['group-label'], className),
-			},
-			otherProps,
-		],
-	});
+	return <Flex ref={forwardedRef} px={px} py={py} {...otherProps} />;
 });
 
 export namespace MenuGroupLabel {
 	export interface State {}
-	export interface Props
-		extends Pick<
-			useRenderElement.ModernComponentProps<'div', State>,
-			'render' | 'children' | 'className'
-		> {}
+	export interface OwnProps extends Flex.OwnProps {}
+	export interface Props extends Flex.Props {}
 }

@@ -6,11 +6,11 @@ export const MenuSwitchItem = React.forwardRef(function MenuSwitchItem(
 	props: MenuSwitchItem.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const { render, disabled, ...otherProps } = props;
+	const { disabled, ...otherProps } = props;
 
 	return (
 		<BaseMenu.CheckboxItem
-			render={<MenuComponents.SwitchItem render={render} disabled={disabled} />}
+			render={<MenuComponents.SwitchItem disabled={disabled} />}
 			disabled={disabled}
 			ref={forwardedRef}
 			{...otherProps}
@@ -19,7 +19,5 @@ export const MenuSwitchItem = React.forwardRef(function MenuSwitchItem(
 });
 
 export namespace MenuSwitchItem {
-	export interface Props
-		extends Omit<BaseMenu.CheckboxItem.Props, 'className' | 'render'>,
-			MenuComponents.SwitchItem.Props {}
+	export interface Props extends BaseMenu.CheckboxItem.Props, MenuComponents.SwitchItem.OwnProps {}
 }

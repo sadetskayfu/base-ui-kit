@@ -23,7 +23,6 @@ const layoutPropDefs = {
 	 *
 	 * @example
 	 * position="absolute"
-	 * position={{ sm: 'absolute', lg: 'sticky' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/position
@@ -41,7 +40,6 @@ const layoutPropDefs = {
 	 * @example
 	 * inset="4"
 	 * inset="100px"
-	 * inset={{ sm: '0', lg: '50%' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/inset
@@ -60,7 +58,6 @@ const layoutPropDefs = {
 	 * @example
 	 * top="4"
 	 * top="100px"
-	 * top={{ sm: '0', lg: '50%' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/top
@@ -79,7 +76,6 @@ const layoutPropDefs = {
 	 * @example
 	 * right="4"
 	 * right="100px"
-	 * right={{ sm: '0', lg: '50%' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/right
@@ -98,7 +94,6 @@ const layoutPropDefs = {
 	 * @example
 	 * bottom="4"
 	 * bottom="100px"
-	 * bottom={{ sm: '0', lg: '50%' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/bottom
@@ -117,7 +112,6 @@ const layoutPropDefs = {
 	 * @example
 	 * left="4"
 	 * left="100px"
-	 * left={{ sm: '0', lg: '50%' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/left
@@ -135,7 +129,6 @@ const layoutPropDefs = {
 	 *
 	 * @example
 	 * overflow="hidden"
-	 * overflow={{ sm: 'hidden', lg: 'visible' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
@@ -152,7 +145,6 @@ const layoutPropDefs = {
 	 *
 	 * @example
 	 * overflowX="hidden"
-	 * overflowX={{ sm: 'hidden', md: 'visible' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
@@ -169,7 +161,6 @@ const layoutPropDefs = {
 	 *
 	 * @example
 	 * overflowY="hidden"
-	 * overflowY={{ sm: 'hidden', md: 'visible' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
@@ -187,7 +178,6 @@ const layoutPropDefs = {
 	 * @example
 	 * flexBasis="0"
 	 * flexBasis="100%"
-	 * flexBasis={{ sm: '200px', lg: 'auto' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis
@@ -205,7 +195,6 @@ const layoutPropDefs = {
 	 * @example
 	 * flexShrink="0"
 	 * flexShrink="1"
-	 * flexShrink={{ sm: '0', lg: '1' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink
@@ -224,7 +213,6 @@ const layoutPropDefs = {
 	 * @example
 	 * flexGrow="0"
 	 * flexGrow="1"
-	 * flexGrow={{ sm: '0', lg: '1' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow
@@ -257,7 +245,6 @@ const layoutPropDefs = {
 	 * @example
 	 * gridColumn="1"
 	 * gridColumn="1 / -1"
-	 * gridColumn={{ sm: '1 / 3', lg: 'span 3' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column
@@ -274,7 +261,6 @@ const layoutPropDefs = {
 	 * @example
 	 * gridColumnStart="1"
 	 * gridColumnStart="auto"
-	 * gridColumnStart={{ sm: '2', lg: 'span 3' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start
@@ -292,7 +278,6 @@ const layoutPropDefs = {
 	 * @example
 	 * gridColumnEnd="1"
 	 * gridColumnEnd="auto"
-	 * gridColumnEnd={{ sm: '2', lg: 'span 3' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end
@@ -310,7 +295,6 @@ const layoutPropDefs = {
 	 * @example
 	 * gridRow="1"
 	 * gridRow="auto"
-	 * gridRow={{ sm: '2', lg: 'span 3' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row
@@ -328,7 +312,6 @@ const layoutPropDefs = {
 	 * @example
 	 * gridRowStart="1"
 	 * gridRowStart="auto"
-	 * gridRowStart={{ sm: '2', lg: 'span 3' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-start
@@ -346,7 +329,6 @@ const layoutPropDefs = {
 	 * @example
 	 * gridRowEnd="1"
 	 * gridRowEnd="auto"
-	 * gridRowEnd={{ sm: '2', lg: 'span 3' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end
@@ -363,7 +345,6 @@ const layoutPropDefs = {
 	 *
 	 * @example
 	 * alignSelf="center"
-	 * alignSelf={{ sm: 'start', lg: 'center' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/align-self
@@ -380,7 +361,6 @@ const layoutPropDefs = {
 	 *
 	 * @example
 	 * justifySelf="center"
-	 * justifySelf={{ sm: 'start', lg: 'center' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self

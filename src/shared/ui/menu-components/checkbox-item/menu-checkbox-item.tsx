@@ -4,9 +4,6 @@ import { MenuItem } from '../item/menu-item';
 import { Icon } from '@/shared/ui/icons';
 import styles from './menu-checkbox-item.module.scss';
 
-/**
- * Renders a `<MenuComponents.Item>` with visually checkbox.
- */
 export const MenuCheckboxItem = React.forwardRef(function MenuCheckboxItem(
 	props: MenuCheckboxItem.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
@@ -28,5 +25,6 @@ export const MenuCheckboxItem = React.forwardRef(function MenuCheckboxItem(
 });
 
 export namespace MenuCheckboxItem {
+	export interface OwnProps extends MenuItem.OwnProps {}
 	export interface Props extends MenuItem.Props {}
 }
