@@ -3,7 +3,6 @@ export { MobileComboboxPopup as Popup } from './popup/mobile-combobox-popup';
 export { MobileComboboxHeader as Header } from './header/mobile-combobox-header';
 export { MobileComboboxField as Field } from './field/mobile-combobox-field';
 export { MobileComboboxChipList as ChipList } from './chip-list/mobile-combobox-chip-list';
-export { MobileComboboxChips as Chips } from './chips/mobile-combobox-chips';
 
 export {
 	CheckboxItem,
@@ -27,6 +26,7 @@ export {
 	Value,
 	MultiValue,
 	Separator,
+	Chips,
 	Row,
 	Status
 } from '../styled/index.parts';

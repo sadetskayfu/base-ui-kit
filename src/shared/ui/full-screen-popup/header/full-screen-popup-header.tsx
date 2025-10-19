@@ -9,7 +9,17 @@ export function FullScreenPopupHeader(props: FullScreenPopupHeader.Props) {
 	const { title, titleTag, onClose, ...otherProps } = props;
 
 	return (
-		<Flex align="center" border="bottom" gapX="4" py="4" px="4" mt="-4" mx="-4" {...otherProps}>
+		<Flex
+			align="center"
+			border="bottom"
+			gapX="4"
+			py="4"
+			px="4"
+			mt="-4"
+			mb="4"
+			mx="-4"
+			{...otherProps}
+		>
 			<Button
 				className={styles['close-button']}
 				radius="circular"

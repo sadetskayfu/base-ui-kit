@@ -4,13 +4,13 @@ import { Flex } from '@/shared/ui/flex';
 import styles from './full-screen-popup-root.module.scss';
 
 export function FullScreenPopupRoot(props: FullScreenPopupRoot.Props) {
-	const { children, className, p = '4', gapY = '4', bgColor = 'grey-2', ...otherProps } = props;
+	const { children, className, p = '4', bgColor = 'grey-2', ...otherProps } = props;
 
 	return (
 		<Aria.Root>
 			<Aria.Control
 				className={classNames(styles['popup'], className)}
-				render={<Flex p={p} gapY={gapY} bgColor={bgColor} direction="column" />}
+				render={<Flex p={p} bgColor={bgColor} direction="column" />}
 				{...otherProps}
 			>
 				{children}
