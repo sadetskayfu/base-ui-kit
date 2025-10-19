@@ -11,7 +11,7 @@ import {
 	POPUP_SIDE_OFFSET,
 	POPUP_SIDE_OFFSET_WITH_ARROW,
 } from '@/shared/constants';
-import styles from './Select-popup.module.scss';
+import styles from './select-popup.module.scss';
 
 export function SelectPopup(props: SelectPopup.Props) {
 	const {
