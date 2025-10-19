@@ -5,7 +5,12 @@
 
 	&[data-overflow-y-end],
 	&[data-overflow-y-start] {
-		margin-right: calc(var(--space-1) * -1);
+		&:where(.offset-1) {
+			margin-right: calc(var(--space-1) * -1);
+		}
+		&:where(.offset-2) {
+			margin-right: calc(var(--space-4) * -1);
+		}
 	}
 
 	&:where(.scroll-padding) {

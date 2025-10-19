@@ -1,4 +1,4 @@
-export { FieldComboboxPositioner as Positioner } from './positioner/field-combobox-positioner';
+export { FieldComboboxPopup as Popup } from './popup/field-combobox-popup';
 export { FieldComboboxRoot as Root } from './root/field-combobox-root';
 export { FieldComboboxInput as Input } from './input/field-combobox-input';
 export { FieldComboboxMultiInput as MultiInput } from './multi-input/field-combobox-multi-input'
@@ -10,8 +10,6 @@ export { FieldComboboxChips as Chips } from './chips/field-combobox-chips'
 export { Label, HelperText, Slot } from '@/shared/ui/field/default/index.parts';
 
 export {
-	Arrow,
-	Backdrop,
 	CheckboxItem,
 	Chip,
 	ChipAvatar,
@@ -25,8 +23,6 @@ export {
 	ItemContent,
 	ItemIndicator,
 	List,
-	Popup,
-	Portal,
 	RadioItem,
 	Row,
 	ScrollArea,
@@ -34,4 +30,6 @@ export {
 	Status,
 	StickyGroupLabel,
 	Value,
+	BaseValue,
+	MultiValue
 } from '../styled/index.parts';

@@ -1,5 +1,5 @@
 import { fruits } from '@/entities/options/fruits';
-import { Button } from '@/shared/ui/button';
+import { ButtonField } from '@/shared/ui/button-field';
 import { MobileCombobox } from '@/shared/ui/combobox';
 import { Flex } from '@/shared/ui/flex';
 import { Text } from '@/shared/ui/text';
@@ -8,27 +8,20 @@ export function ExampleSingleMobileCombobox() {
 	return (
 		<MobileCombobox.Root items={fruits} modal>
 			<Flex direction="column" gapY="1">
-				<Text weight="medium">Single mobile MobileCombobox</Text>
-				<MobileCombobox.Trigger
-					render={<Button size="4" variant="ghost" color="accent" radius="3" />}
-				>
-					<MobileCombobox.Value>
-						{(value: string | null) => {
-							if (value) {
-								return value;
-							}
-							return `Select fruit`;
-						}}
-					</MobileCombobox.Value>
-				</MobileCombobox.Trigger>
+					<Text weight='medium'>Single mobile combobox</Text>
+					<MobileCombobox.Trigger render={<ButtonField radius="3" />}>
+						<MobileCombobox.Value
+							getLabel={value => <Text color="hard">{value}</Text>}
+							placeholder="Выбирите фрукт"
+						/>
+						<MobileCombobox.Icon />
+					</MobileCombobox.Trigger>
 			</Flex>
 			<MobileCombobox.Popup>
-				<MobileCombobox.Header title="Fruit" />
-				<MobileCombobox.Field />
+				<MobileCombobox.Header title="Выбирите фрукт" />
+				<MobileCombobox.Field placeholder="Введите название фрукта" />
 				<MobileCombobox.ScrollArea alwaysVisibleScrollbar={false}>
-					<MobileCombobox.Empty>
-						Not fruits found
-					</MobileCombobox.Empty>
+					<MobileCombobox.Empty>Не найдено ниодного фрутка</MobileCombobox.Empty>
 					<MobileCombobox.List>
 						{(item: string) => (
 							<MobileCombobox.RadioItem

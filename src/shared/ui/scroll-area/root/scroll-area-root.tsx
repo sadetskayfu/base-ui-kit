@@ -29,13 +29,14 @@ export function ScrollAreaRoot(props: ScrollAreaRoot.Props) {
 		orientation = 'vertical',
 		overflowShadow,
 		alwaysVisibleScrollbar,
+		hiddenScrollbar,
 		scrollbarMargin = true,
 		tabIndex = -1,
 		...otherProps
 	} = extractProps(rootProps, marginPropDefs, widthPropDefs);
 
-	const visibleScrollbarX = orientation === 'horizontal' || orientation === 'both';
-	const visibleScrollbarY = orientation === 'vertical' || orientation === 'both';
+	const visibleScrollbarX = !hiddenScrollbar &&  (orientation === 'horizontal' || orientation === 'both');
+	const visibleScrollbarY = !hiddenScrollbar && (orientation === 'vertical' || orientation === 'both');
 
 	const viewportProps = extractProps(
 		{ radius, border, bgColor, height, maxHeight, minHeight },
@@ -92,6 +93,7 @@ export namespace ScrollAreaRoot {
 		orientation?: 'horizontal' | 'vertical' | 'both';
 		overflowShadow?: boolean;
 		alwaysVisibleScrollbar?: boolean;
+		hiddenScrollbar?: boolean
 		scrollbarMargin?: boolean
 		tabIndex?: number;
 	}

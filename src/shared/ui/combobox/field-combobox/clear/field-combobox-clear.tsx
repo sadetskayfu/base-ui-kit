@@ -4,7 +4,7 @@ import { Combobox } from '../../styled';
 
 export function FieldComboboxClear(props: FieldComboboxClear.Props) {
 	return (
-		<Combobox.Clear aria-label="Очистить выбранное" render={<Button />} {...props}>
+		<Combobox.Clear aria-label="Очистить" render={<Button />} {...props}>
 			<Icon.X />
 		</Combobox.Clear>
 	);

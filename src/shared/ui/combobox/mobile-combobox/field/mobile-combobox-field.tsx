@@ -2,11 +2,11 @@ import { Field } from '@/shared/ui/field';
 import { BaseCombobox } from '../../base';
 
 export function MobileComboboxField(props: MobileComboboxField.Props) {
-	const { placeholder } = props;
+	const { placeholder, radius = '3', size = '2', ...otherProps } = props;
 
 	return (
 		<Field.Root>
-			<Field.InputContainer radius="3" size='2'>
+			<Field.InputContainer radius={radius} size={size} {...otherProps}>
 				<Field.Input placeholder={placeholder} render={<BaseCombobox.Input />} />
 			</Field.InputContainer>
 		</Field.Root>
@@ -14,7 +14,7 @@ export function MobileComboboxField(props: MobileComboboxField.Props) {
 }
 
 export namespace MobileComboboxField {
-	export interface Props {
+	export interface Props extends Field.InputContainer.Props {
 		placeholder?: string;
 	}
 }

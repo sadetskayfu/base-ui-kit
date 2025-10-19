@@ -13,10 +13,20 @@ import {
 	type RadiusProp,
 	type WidthProps,
 } from '@/shared/lib/utilities-props';
+import { Backdrop } from '@/shared/ui/backdrop';
 import styles from './dialog-popup.module.scss';
 
 export function DialogPopup(props: DialogPopup.Props) {
-	const { bgColor = 'grey-2', p = '5', radius = '5', side, fullScreen, width = '600px' } = props;
+	const {
+		portalTarget,
+		backdrop,
+		bgColor = 'grey-2',
+		p = '5',
+		radius = '5',
+		side,
+		fullScreen,
+		width = '600px',
+	} = props;
 
 	const { children, className, ...otherProps } = extractProps(
 		{ ...props, bgColor, p, radius, width },
@@ -28,17 +38,20 @@ export function DialogPopup(props: DialogPopup.Props) {
 	);
 
 	return (
-		<BaseDialog.Popup
-			className={classNames(
-				styles['popup'],
-				side && styles[`side-${side}`],
-				{ [styles['full-screen']]: fullScreen },
-				className
-			)}
-			{...otherProps}
-		>
-			{children}
-		</BaseDialog.Popup>
+		<BaseDialog.Portal container={portalTarget}>
+			{backdrop && <BaseDialog.Backdrop render={<Backdrop transitionDuration={300} />} />}
+			<BaseDialog.Popup
+				className={classNames(
+					styles['popup'],
+					side && styles[`side-${side}`],
+					{ [styles['full-screen']]: fullScreen },
+					className
+				)}
+				{...otherProps}
+			>
+				{children}
+			</BaseDialog.Popup>
+		</BaseDialog.Portal>
 	);
 }
 
@@ -53,5 +66,7 @@ export namespace DialogPopup {
 		className?: string;
 		fullScreen?: boolean;
 		side?: 'left' | 'right';
+		portalTarget?: BaseDialog.Portal.Props['container'];
+		backdrop?: boolean;
 	}
 }

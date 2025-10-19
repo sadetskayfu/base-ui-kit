@@ -79,7 +79,7 @@ export namespace ChipRoot {
 	export type Variant = 'ghost';
 	export type Radius = '1' | 'full';
 
-	export interface Props extends BaseChip.Root.Props, MarginProps {
+	export interface OwnProps extends BaseChip.Root.OwnProps, MarginProps {
 		/**
 		 * @default '2'
 		 */
@@ -106,4 +106,6 @@ export namespace ChipRoot {
 		 */
 		interactive?: boolean;
 	}
+
+	export interface Props extends OwnProps, BaseChip.Root.Props {}
 }

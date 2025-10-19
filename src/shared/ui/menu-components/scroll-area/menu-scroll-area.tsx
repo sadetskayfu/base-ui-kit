@@ -9,6 +9,7 @@ export function MenuScrollArea(props: MenuScrollArea.Props) {
 		viewportClassName,
 		withStickyGroupLabel,
 		alwaysVisibleScrollbar = true,
+		offset = '1',
 		...otherProps
 	} = props;
 
@@ -16,6 +17,7 @@ export function MenuScrollArea(props: MenuScrollArea.Props) {
 		<ScrollArea.Root
 			className={classNames(
 				styles['scroll-area'],
+				styles[`offset-${offset}`],
 				{ [styles['scroll-padding']]: withStickyGroupLabel },
 				className
 			)}
@@ -34,5 +36,6 @@ export namespace MenuScrollArea {
 		 * Adds css attribute `scroll-padding-top` equal to css var `--menu-item-group-label-height`
 		 */
 		withStickyGroupLabel?: boolean;
+		offset?: '1' | '2'
 	}
 }

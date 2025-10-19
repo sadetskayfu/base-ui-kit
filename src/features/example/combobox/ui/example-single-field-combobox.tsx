@@ -24,26 +24,18 @@ export function ExampleSingleFieldCombobox() {
 					</FieldCombobox.Slot>
 				</FieldCombobox.InputContainer>
 			</Flex>
-			<FieldCombobox.Portal>
-				<FieldCombobox.Positioner>
-					<FieldCombobox.Popup>
-						<FieldCombobox.ScrollArea>
-							<FieldCombobox.Empty>Not fruits found</FieldCombobox.Empty>
-							<FieldCombobox.List>
-								{(item: string) => (
-									<FieldCombobox.RadioItem
-										key={item}
-										value={item}
-										visualMargin="1"
-									>
-										{item}
-									</FieldCombobox.RadioItem>
-								)}
-							</FieldCombobox.List>
-						</FieldCombobox.ScrollArea>
-					</FieldCombobox.Popup>
-				</FieldCombobox.Positioner>
-			</FieldCombobox.Portal>
+			<FieldCombobox.Popup>
+				<FieldCombobox.ScrollArea>
+					<FieldCombobox.Empty>Not fruits found</FieldCombobox.Empty>
+					<FieldCombobox.List>
+						{(item: string) => (
+							<FieldCombobox.RadioItem key={item} value={item} visualMargin="1">
+								{item}
+							</FieldCombobox.RadioItem>
+						)}
+					</FieldCombobox.List>
+				</FieldCombobox.ScrollArea>
+			</FieldCombobox.Popup>
 		</FieldCombobox.Root>
 	);
 }

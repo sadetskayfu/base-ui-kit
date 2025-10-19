@@ -2,8 +2,8 @@ export { ComboboxRoot as Root } from './root/mobile-combobox-root';
 export { MobileComboboxPopup as Popup } from './popup/mobile-combobox-popup';
 export { MobileComboboxHeader as Header } from './header/mobile-combobox-header';
 export { MobileComboboxField as Field } from './field/mobile-combobox-field';
-export { MobileComboboxChipList as ChipList } from './chip-list/mobile-combobox-chip-list'
-export { MobileComboboxChips as Chips } from './chips/mobile-combobox-chips'
+export { MobileComboboxChipList as ChipList } from './chip-list/mobile-combobox-chip-list';
+export { MobileComboboxChips as Chips } from './chips/mobile-combobox-chips';
 
 export {
 	CheckboxItem,
@@ -17,10 +17,16 @@ export {
 	Trigger,
 	Collection,
 	List,
+	Icon,
 	ScrollArea,
-    Value,
-    Empty,
+	Empty,
 	Chip,
 	ChipAvatar,
-	ChipLabel
+	ChipLabel,
+	BaseValue,
+	Value,
+	MultiValue,
+	Separator,
+	Row,
+	Status
 } from '../styled/index.parts';

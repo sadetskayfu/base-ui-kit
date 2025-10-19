@@ -5,12 +5,12 @@ import { Flex } from '@/shared/ui/flex';
 
 export function ExampleMultiFieldCombobox() {
 	return (
-		<FieldCombobox.Root items={fruits} multiple>
+		<FieldCombobox.Root items={fruits} multiple modal>
 			<Flex direction="column" gapY="1">
 				<FieldCombobox.Label>Multi field combobox</FieldCombobox.Label>
 				<FieldCombobox.InputContainer radius="3">
 					<FieldCombobox.Chips>
-						<FieldCombobox.Value>
+						<FieldCombobox.BaseValue>
 							{(values: string[]) =>
 								values.map(value => (
 									<FieldCombobox.Chip key={value} size="1">
@@ -18,7 +18,7 @@ export function ExampleMultiFieldCombobox() {
 									</FieldCombobox.Chip>
 								))
 							}
-						</FieldCombobox.Value>
+						</FieldCombobox.BaseValue>
 						<FieldCombobox.MultiInput placeholder="Input fruit name.." />
 					</FieldCombobox.Chips>
 					<FieldCombobox.Slot side="right" px="2">
@@ -35,26 +35,18 @@ export function ExampleMultiFieldCombobox() {
 					</FieldCombobox.Slot>
 				</FieldCombobox.InputContainer>
 			</Flex>
-			<FieldCombobox.Portal>
-				<FieldCombobox.Positioner>
-					<FieldCombobox.Popup>
-						<FieldCombobox.ScrollArea>
-							<FieldCombobox.Empty>Not fruits found</FieldCombobox.Empty>
-							<FieldCombobox.List>
-								{(item: string) => (
-									<FieldCombobox.CheckboxItem
-										key={item}
-										value={item}
-										visualMargin="1"
-									>
-										{item}
-									</FieldCombobox.CheckboxItem>
-								)}
-							</FieldCombobox.List>
-						</FieldCombobox.ScrollArea>
-					</FieldCombobox.Popup>
-				</FieldCombobox.Positioner>
-			</FieldCombobox.Portal>
+			<FieldCombobox.Popup>
+				<FieldCombobox.ScrollArea>
+					<FieldCombobox.Empty>Not fruits found</FieldCombobox.Empty>
+					<FieldCombobox.List>
+						{(item: string) => (
+							<FieldCombobox.CheckboxItem key={item} value={item} visualMargin="1">
+								{item}
+							</FieldCombobox.CheckboxItem>
+						)}
+					</FieldCombobox.List>
+				</FieldCombobox.ScrollArea>
+			</FieldCombobox.Popup>
 		</FieldCombobox.Root>
 	);
 }

@@ -7,7 +7,7 @@ import styles from './field-label.module.scss';
  * Renders a `<FormLabel>` component.
  */
 export function FieldLabel(props: FieldLabel.Props) {
-	const { children, className, tag = 'label', color, ...otherProps } = props;
+	const { children, className, tag = 'label', weight = 'medium', color, ...otherProps } = props;
 
 	return (
 		<BaseField.Label
@@ -16,6 +16,7 @@ export function FieldLabel(props: FieldLabel.Props) {
 				<FormLabel
 					tag={tag}
 					required={state.required}
+					weight={weight}
 					color={state.errored ? 'error-soft' : state.focused ? 'accent-soft' : color}
 					{...props}
 					{...otherProps}

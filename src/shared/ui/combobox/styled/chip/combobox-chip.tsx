@@ -13,7 +13,7 @@ export function ComboboxChip(props: ComboboxChip.Props) {
 }
 
 export namespace ComboboxChip {
-	export interface Props
-		extends Omit<BaseCombobox.Chip.Props, 'className'>,
-			Pick<Chip.Root.Props, 'size' | 'radius' | 'className'> {}
+	export interface Props extends Omit<BaseCombobox.Chip.Props, 'className'>, Chip.Root.OwnProps {
+		className?: string;
+	}
 }

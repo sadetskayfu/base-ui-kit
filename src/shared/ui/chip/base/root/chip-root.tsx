@@ -9,14 +9,7 @@ export const ChipRoot = React.forwardRef(function ChipRoot(
 	props: ChipRoot.Props,
 	forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
-	const {
-		render,
-		disabled = false,
-		nativeButton,
-		onClose,
-		tabIndex,
-		...otherProps
-	} = props;
+	const { render, disabled = false, nativeButton, onClose, tabIndex, ...otherProps } = props;
 
 	const contextValue: ChipRootContext = React.useMemo(
 		() => ({ disabled, onClose }),
@@ -29,7 +22,7 @@ export const ChipRoot = React.forwardRef(function ChipRoot(
 		props: [
 			{
 				onKeyDown: event => {
-					if (onClose && !disabled && (event.key === 'Backspace')) {
+					if (onClose && !disabled && event.key === 'Backspace') {
 						event.preventDefault();
 						event.stopPropagation();
 
@@ -49,7 +42,8 @@ export const ChipRoot = React.forwardRef(function ChipRoot(
 
 export namespace ChipRoot {
 	export interface State {}
-	export interface Props extends useRenderElement.ModernComponentProps<'div', State> {
+
+	export interface OwnProps {
 		disabled?: boolean;
 		/**
 		 * @default false
@@ -57,4 +51,6 @@ export namespace ChipRoot {
 		nativeButton?: boolean;
 		onClose?: (event: Event) => void;
 	}
+
+	export interface Props extends useRenderElement.ModernComponentProps<'div', State>, OwnProps {}
 }

@@ -6,17 +6,13 @@ export function ExampleOpenOnHoverPopover() {
 	return (
 		<Popover.Root openOnHover>
 			<Popover.Trigger
-				render={<Button variant="ghost" color="secondary" radius="3" animateBorder />}
+				render={<Button variant="ghost" color="secondary" radius="3" />}
 			>
 				Open on hover
 			</Popover.Trigger>
-			<Popover.Portal>
-				<Popover.Positioner>
-					<Popover.Popup width="400px">
-						<ExamplePopoverContent />
-					</Popover.Popup>
-				</Popover.Positioner>
-			</Popover.Portal>
+			<Popover.Popup width="400px">
+				<ExamplePopoverContent />
+			</Popover.Popup>
 		</Popover.Root>
 	);
 }

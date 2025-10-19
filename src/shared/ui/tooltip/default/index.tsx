@@ -9,6 +9,7 @@ export function Tooltip(props: Tooltip.Props) {
 		delay = 250,
 		describeChild,
 		side,
+		align,
 		width,
 		defaultOpen = false,
 		open: externalOpen,
@@ -30,7 +31,7 @@ export function Tooltip(props: Tooltip.Props) {
 				render={children}
 			/>
 			<StyledTooltip.Portal>
-				<StyledTooltip.Positioner side={side}>
+				<StyledTooltip.Positioner side={side} align={align}>
 					<StyledTooltip.Popup width={width} bgColor="grey-2" radius="2" px="2" py="1">
 						<StyledTooltip.Arrow />
 						{typeof content === 'string' ? (
@@ -58,7 +59,7 @@ export namespace Tooltip {
 	export interface Props
 		extends StyledTooltip.Root.Props,
 			Pick<StyledTooltip.Popup.Props, 'width'>,
-			Pick<StyledTooltip.Positioner.Props, 'side'> {
+			Pick<StyledTooltip.Positioner.Props, 'side' | 'align'> {
 		children: React.ReactElement<Record<string, unknown>>;
 		content: string | ((id: string) => React.ReactNode) | React.ReactNode;
 		describeChild?: boolean;
