@@ -1,1 +1,1 @@
-export * from './styled'
+export * as Tabs from './index.parts'

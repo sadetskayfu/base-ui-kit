@@ -1,5 +1,5 @@
-import { useContext } from '@/shared/hooks';
 import * as React from 'react';
+import { useContext } from '@/shared/hooks';
 
 export interface StarRatingRootContext {
 	name: string

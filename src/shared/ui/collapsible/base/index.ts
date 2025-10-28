@@ -1,1 +1,0 @@
-export { Collapsible as BaseCollapsible } from '@base-ui-components/react'

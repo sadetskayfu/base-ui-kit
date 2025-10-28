@@ -1,0 +1,1 @@
+export { CheckboxGroup as BaseCheckboxGroup } from '@base-ui-components/react/checkbox-group';

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { Aria } from '@/shared/ui/aria';
+import { Aria } from '../../aria';
 import { AlertRootContext } from './alert-root-context';
 import { extractProps, marginPropDefs, radiusPropDef, type MarginProps, type RadiusProp } from '@/shared/lib/utilities-props';
 import styles from './alert-root.module.scss';

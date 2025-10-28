@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { Icon } from '@/shared/ui/icons';
+import { Icon } from '../../icons';
 import { useAlertRootContext } from '../root/alert-root-context';
 import styles from './alert-icon.module.scss';
 

@@ -1,0 +1,1 @@
+export { ScrollArea as BaseScrollArea } from '@base-ui-components/react/scroll-area'

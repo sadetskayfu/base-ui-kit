@@ -1,0 +1,1 @@
+export { Accordion as BaseAccordion } from '@base-ui-components/react/accordion'

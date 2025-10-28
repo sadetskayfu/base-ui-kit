@@ -1,6 +1,6 @@
 import classNames from 'classnames';
-import { Button } from '@/shared/ui/button';
-import { Icon } from '@/shared/ui/icons';
+import { Button } from '../../button';
+import { Icon } from '../../icons';
 import { useAlertRootContext } from '../root/alert-root-context';
 import styles from './alert-close.module.scss';
 

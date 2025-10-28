@@ -4,13 +4,14 @@ import {
 	layoutPropDefs,
 	marginPropDefs,
 	radiusPropDef,
+	borderPropDef,
+	bgColorPropDef,
 	type RadiusProp,
 	type LayoutProps,
 	type MarginProps,
 	type BorderProp,
-	borderPropDef,
 	type BgColorProp,
-	bgColorPropDef,
+	
 } from '@/shared/lib/utilities-props';
 import { useRenderElement } from '@/shared/hooks';
 import { flexPropDefs, type FlexOwnProps } from './flex.props';

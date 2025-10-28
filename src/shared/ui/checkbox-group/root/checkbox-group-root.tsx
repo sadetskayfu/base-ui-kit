@@ -1,6 +1,6 @@
-import { CheckboxGroup as BaseCheckboxGroup } from '@base-ui-components/react';
-import { FormGroup } from '@/shared/ui/form-group';
-import { Flex } from '@/shared/ui/flex';
+import { FormGroup } from '../../form-group';
+import { Flex } from '../../flex';
+import { BaseCheckboxGroup } from '../../base/checkbox-group';
 
 export function CheckboxGroupRoot<Value extends string[]>(props: CheckboxGroupRoot.Props<Value>) {
 	const { onValueChange, disabled, readOnly, ...otherProps } = props;

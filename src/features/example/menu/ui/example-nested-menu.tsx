@@ -10,11 +10,11 @@ export function ExampleNestedMenu() {
 			</Menu.Trigger>
 			<Menu.Popup width="200px" align="start">
 				<Menu.Item label="Item 1">
-					<Menu.ItemContent label="Item 1" />
+					Item 1
 				</Menu.Item>
 				<Menu.SubmenuRoot>
 					<Menu.SubmenuTrigger>
-						<Menu.ItemContent label="Item 2" description="Nested menu 1" />
+						Nested menu 1
 					</Menu.SubmenuTrigger>
 					<Menu.Popup>
 						<Menu.Item>Item 1</Menu.Item>
@@ -23,7 +23,7 @@ export function ExampleNestedMenu() {
 				</Menu.SubmenuRoot>
 				<Menu.SubmenuRoot>
 					<Menu.SubmenuTrigger>
-						<Menu.ItemContent label="Item 3" description="Nested menu 2" />
+						Nested menu 2
 					</Menu.SubmenuTrigger>
 					<Menu.Popup>
 						<Menu.Item>Item 1</Menu.Item>

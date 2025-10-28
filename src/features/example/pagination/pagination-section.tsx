@@ -19,7 +19,7 @@ export function PaginationSection() {
 			>
 				<ButtonProvider radius="2" size='3' iconButton>
 					<Pagination.BackButton
-						render={<Button color="accent" variant="clear" autoFs />}
+						render={<Button color="accent" variant="clear" autoFontSize />}
 					>
 						<Icon.ChevronLeft />
 					</Pagination.BackButton>
@@ -35,7 +35,7 @@ export function PaginationSection() {
 						)}
 					/>
 					<Pagination.ForwardButton
-						render={<Button color="accent" variant="clear" autoFs />}
+						render={<Button color="accent" variant="clear" autoFontSize />}
 					>
 						<Icon.ChevronRight />
 					</Pagination.ForwardButton>

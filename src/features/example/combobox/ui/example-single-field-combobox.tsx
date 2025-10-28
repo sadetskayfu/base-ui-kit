@@ -1,6 +1,6 @@
 import { fruits } from '@/entities/options/fruits';
 import { ButtonProvider } from '@/shared/ui/button';
-import { FieldCombobox } from '@/shared/ui/combobox';
+import { FieldCombobox } from '@/shared/ui/field-combobox';
 import { Flex } from '@/shared/ui/flex';
 
 export function ExampleSingleFieldCombobox() {

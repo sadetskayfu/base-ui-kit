@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StarRatingRootContext } from './star-rating-root-context';
-import { Aria } from '@/shared/ui/aria';
+import { Aria } from '../../aria';
 
 export function StarRatingRoot(props: StarRatingRoot.Props) {
 	const {

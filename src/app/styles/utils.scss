@@ -17,6 +17,9 @@
 .disabled-cursor {
 	cursor: not-allowed;
 }
+.inherit-cursor {
+	cursor: inherit;
+}
 
 .full-width {
 	width: 100%;
@@ -58,74 +61,4 @@
 	}
 }
 
-.animate-border {
-	&:before,
-	&:after {
-		content: '';
-		position: absolute;
-		width: 10px;
-		height: 5px;
-		opacity: 0;
-		pointer-events: none;
-		transition:
-			width 0.6s,
-			height 0.4s,
-			opacity 0.6s,
-			border-color 0.1s
-	}
-	
-	&:before {
-		left: -1px;
-		bottom: -1px;
-		border-left: 2px solid var(--border-color);
-		border-bottom: 2px solid var(--border-color);
-		border-bottom-left-radius: inherit;
-	}
-	&:after {
-		right: -1px;
-		top: -1px;
-		border-right: 2px solid var(--border-color);
-		border-top: 2px solid var(--border-color);
-		border-top-right-radius: inherit;
-	}
-
-	&:not([data-disabled]) {
-		@include hover {
-			border-top-left-radius: 0px;
-			border-bottom-right-radius: 0px;
-
-			&:before,
-			&:after {
-				width: 100%;
-				height: calc(100% + 2px);
-				opacity: 1;
-			}
-		}
-	}
-
-	&[data-popup-open],
-	&[data-focused] {
-		border-top-left-radius: 0px;
-		border-bottom-right-radius: 0px;
-
-		&:before,
-		&:after {
-			width: 100%;
-			height: calc(100% + 2px);
-			opacity: 1;
-		}
-	}
-
-	&:focus-visible {
-		border-top-left-radius: 0px;
-		border-bottom-right-radius: 0px;
-		
-		&:before,
-		&:after{
-			width: 100%;
-			height: calc(100% + 2px);
-			opacity: 1;
-		}
-	}
-}
 

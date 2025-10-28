@@ -1,7 +1,8 @@
 import { Button, ButtonProvider } from '@/shared/ui/button';
 import { Flex } from '@/shared/ui/flex';
 import { Icon } from '@/shared/ui/icons';
-import { Tooltip, TooltipProvider } from '@/shared/ui/tooltip';
+import { Tooltip } from '@/shared/ui/tooltip';
+import { TooltipGroup } from '@/shared/ui/tooltip-group';
 
 export function TooltipSection() {
 	return (
@@ -16,7 +17,7 @@ export function TooltipSection() {
 				</Button>
 			</Tooltip>
 			<Flex gap="1">
-				<TooltipProvider>
+				<TooltipGroup>
 					<ButtonProvider iconButton variant="ghost" radius="3" color="secondary">
 						<Tooltip content="Info">
 							<Button aria-label="Info">
@@ -34,7 +35,7 @@ export function TooltipSection() {
 							</Button>
 						</Tooltip>
 					</ButtonProvider>
-				</TooltipProvider>
+				</TooltipGroup>
 			</Flex>
 		</Flex>
 	);

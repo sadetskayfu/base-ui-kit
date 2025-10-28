@@ -1,1 +1,1 @@
-export * from './styled'
+export * as Dialog from './index.parts'

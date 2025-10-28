@@ -1,1 +1,0 @@
-export { Avatar as BaseAvatar } from '@base-ui-components/react'

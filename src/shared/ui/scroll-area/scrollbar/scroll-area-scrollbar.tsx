@@ -1,24 +1,22 @@
 import classNames from 'classnames';
-import { ScrollArea as BaseScrollArea } from '@base-ui-components/react';
+import { BaseScrollArea } from '../../base/scroll-area';
 import styles from './scroll-area-scrollbar.module.scss';
 
 export function ScrollAreaScrollbar(props: ScrollAreaScrollbar.Props) {
-	const { className, alwaysVisible, orientation, margin } = props;
+	const { className, alwaysVisible, orientation, margin, ...otherProps } = props;
 
 	return (
 		<BaseScrollArea.Scrollbar
-			className={state =>
-				classNames(
-					styles['scrollbar'],
-					styles[`orientation-${state.orientation}`],
-					{
-						[styles['always-visible']]: alwaysVisible,
-						[styles['margin']]: margin,
-					},
-					className
-				)
-			}
+			className={classNames(
+				styles['scrollbar'],
+				{
+					[styles['always-visible']]: alwaysVisible,
+					[styles['margin']]: margin,
+				},
+				className
+			)}
 			orientation={orientation}
+			{...otherProps}
 		>
 			<BaseScrollArea.Thumb className={styles['thumb']} />
 		</BaseScrollArea.Scrollbar>

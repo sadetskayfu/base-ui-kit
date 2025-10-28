@@ -1,9 +1,11 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import {
+	bgColorPropDef,
 	extractProps,
 	marginPropDefs,
 	radiusPropDef,
+	type BgColorProp,
 	type MarginProps,
 	type RadiusProp,
 } from '@/shared/lib/utilities-props';
@@ -19,7 +21,7 @@ export const ButtonField = React.forwardRef(function ButtonField(
 		size = '2',
 		fullWidth,
 		...otherProps
-	} = extractProps(props, marginPropDefs, radiusPropDef);
+	} = extractProps(props, marginPropDefs, radiusPropDef, bgColorPropDef);
 
 	return (
 		<button
@@ -40,7 +42,7 @@ export const ButtonField = React.forwardRef(function ButtonField(
 export namespace ButtonField {
 	export type Size = '1' | '2';
 
-	export interface Props extends React.ComponentProps<'button'>, RadiusProp, MarginProps {
+	export interface Props extends React.ComponentProps<'button'>, RadiusProp, MarginProps, BgColorProp {
 		size?: Size;
 		fullWidth?: boolean;
 	}

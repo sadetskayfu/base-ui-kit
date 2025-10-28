@@ -20,7 +20,7 @@ export const BaseButton = React.forwardRef(function BaseButton(
 		render,
 		className,
 		size = '3',
-		autoFs,
+		autoFontSize,
 		disabled,
 		disableRipple: disableRippleProp,
 		disableRippleSpaceKey,
@@ -48,7 +48,7 @@ export const BaseButton = React.forwardRef(function BaseButton(
 						disabled: disabled,
 						'full-width': fullWidth,
 						[styles['icon-button']]: iconButton,
-						[styles['auto-fs']]: autoFs,
+						[styles['auto-font-size']]: autoFontSize,
 					},
 					className
 				),
@@ -85,10 +85,10 @@ export namespace BaseButton {
 		 * @default '3'
 		 */
 		size?: Size;
-		autoFs?: boolean;
+		autoFontSize?: boolean;
 	}
 
-	export type State = {};
+	export interface State {}
 	export interface Props
 		extends useRenderElement.ModernComponentProps<'button', State>,
 			OwnProps {}

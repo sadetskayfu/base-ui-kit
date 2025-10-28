@@ -8,7 +8,7 @@ import { ExampleMenuWithArrow } from './ui/example-menu-with-arrow';
 export function MenuSection() {
 	return (
 		<Flex gap="3" justify='center' wrap='wrap'>
-			<ButtonProvider radius="3" variant="ghost" color="secondary" animateBorder>
+			<ButtonProvider radius="3" variant="ghost" color="secondary">
 				<ExampleMenu />
 				<ExampleNestedMenu />
 				<ExampleMenuWithBackdrop />

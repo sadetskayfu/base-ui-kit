@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { getItemLabel } from '../helpers/get-item-label';
 import { useStarRatingRootContext } from '../root/star-rating-root-context';
-import { Icon } from '@/shared/ui/icons';
+import { Icon } from '../../icons';
 import styles from './star-rating-item.module.scss';
 
 export function StartRatingItem(props: StarRatingItem.Props) {

@@ -1,2 +1,1 @@
-export * from './base'
-export * from './styled'
+export * as Select from './index.parts'

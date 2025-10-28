@@ -21,7 +21,7 @@
 		}
 	}
 
-	&.orientation-vertical {
+	&:where([data-orientation='vertical']) {
 		width: var(--scroll-area-clickable-scrollbar-width);
 		justify-content: center;
 
@@ -44,7 +44,7 @@
 		}
 	}
 
-	&.orientation-horizontal {
+	&:where([data-orientation='horizontal']) {
 		height: var(--scroll-area-clickable-scrollbar-width);
 		align-items: center;
 

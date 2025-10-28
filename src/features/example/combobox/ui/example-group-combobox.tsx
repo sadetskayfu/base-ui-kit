@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { groupedUsers, type User, type UserGroup } from '@/entities/options/users';
 import { Avatar } from '@/shared/ui/avatar';
-import { FieldCombobox as Combobox } from '@/shared/ui/combobox';
+import { FieldCombobox as Combobox } from '@/shared/ui/field-combobox';
 import { Flex } from '@/shared/ui/flex';
 import { Icon } from '@/shared/ui/icons';
 import { ButtonProvider } from '@/shared/ui/button';

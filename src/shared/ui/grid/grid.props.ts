@@ -18,14 +18,13 @@ const alignContentValues = [
 ] as const;
 const justifyItemsValues = ['start', 'center', 'end', 'baseline', 'stretch'] as const;
 
-const gridPropDefs = {
+export const gridPropDefs = {
 	/**
 	 * Sets the CSS **display** property.
-	 * Supports a subset of the corresponding CSS values and responsive objects.
+	 * Supports a subset of the corresponding CSS values.
 	 *
 	 * @example
 	 * display="inline-grid"
-	 * display={{ sm: 'none', lg: 'grid' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/display
@@ -38,7 +37,7 @@ const gridPropDefs = {
 	},
 	/**
 	 * Sets the CSS **grid-template** property.
-	 * Supports a subset of the corresponding CSS values and responsive objects.
+	 * Supports a subset of the corresponding CSS values.
 	 *
 	 * @example
 	 * template='"header header" "sidebar content"'
@@ -54,14 +53,13 @@ const gridPropDefs = {
 	},
 	/**
 	 * Sets the CSS **grid-template-columns** property.
-	 * Supports numeric string values, CSS strings and responsive objects.
+	 * Supports numeric string values, CSS strings.
 	 *
 	 * Use numeric string values to create grid columns of even size.
 	 *
 	 * @example
 	 * columns="3"
 	 * columns="100px 1fr"
-	 * columns={{ xs: '1', md: 'auto 1fr' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
@@ -76,14 +74,13 @@ const gridPropDefs = {
 	},
 	/**
 	 * Sets the CSS **grid-template-rows** property.
-	 * Supports numeric string values, CSS strings and responsive objects.
+	 * Supports numeric string values, CSS strings.
 	 *
 	 * Use numeric string values to create grid rows of even size.
 	 *
 	 * @example
 	 * rows="3"
 	 * rows="100px 1fr"
-	 * rows={{ xs: '1', md: 'auto 1fr' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows
@@ -98,11 +95,10 @@ const gridPropDefs = {
 	},
 	/**
 	 * Sets the CSS **grid-auto-flow** property.
-	 * Supports the corresponding CSS values and responsive objects.
+	 * Supports the corresponding CSS values.
 	 *
 	 * @example
 	 * flow="column"
-	 * flow={{ sm: 'column', lg: 'row' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow
@@ -115,11 +111,10 @@ const gridPropDefs = {
 	},
 	/**
 	 * Sets the CSS **align-items** property.
-	 * Supports the corresponding CSS values and responsive objects.
+	 * Supports the corresponding CSS values.
 	 *
 	 * @example
 	 * align="center"
-	 * align={{ sm: 'baseline', lg: 'center' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
@@ -132,11 +127,10 @@ const gridPropDefs = {
 	},
 	/**
 	 * Sets the CSS **justify-content** property.
-	 * Supports a subset of the corresponding CSS values and responsive objects.
+	 * Supports a subset of the corresponding CSS values.
 	 *
 	 * @example
 	 * justify="between"
-	 * justify={{ sm: 'start', lg: 'center' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
@@ -150,11 +144,10 @@ const gridPropDefs = {
 	},
 	/**
 	 * Sets the CSS **align-content** property.
-	 * Supports a subset of the corresponding CSS values and responsive objects.
+	 * Supports a subset of the corresponding CSS values.
 	 *
 	 * @example
 	 * alignContent="between"
-	 * alignContent={{ sm: 'start', lg: 'center' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/align-content
@@ -168,11 +161,10 @@ const gridPropDefs = {
 	},
 	/**
 	 * Sets the CSS **justify-items** property.
-	 * Supports a subset of the corresponding CSS values and responsive objects.
+	 * Supports a subset of the corresponding CSS values.
 	 *
 	 * @example
 	 * justifyItems="center"
-	 * justifyItems={{ sm: 'start', lg: 'center' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/align-content
@@ -221,8 +213,5 @@ function parseAlignContentValue(value: string) {
 	}
 }
 
-// Use all of the imported prop defs to ensure that JSDoc works
-type GridOwnProps = GetPropDefTypes<typeof gridPropDefs>;
+export type GridOwnProps = GetPropDefTypes<typeof gridPropDefs>;
 
-export { gridPropDefs };
-export type { GridOwnProps };

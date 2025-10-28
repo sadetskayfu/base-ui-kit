@@ -1,9 +1,9 @@
 import classNames from 'classnames';
-import { BaseCheckbox } from '@/shared/ui/checkbox';
-import { Flex } from '@/shared/ui/flex';
-import { Icon } from '@/shared/ui/icons';
+import { BaseCheckbox } from '../base/checkbox';
+import { Flex } from '../flex';
+import { Icon } from '../icons';
 import { Ripple, useRipple } from '@/shared/lib/ripple';
-import { useFormGroupContext } from '@/shared/ui/form-group';
+import { useFormGroupContext } from '../form-group';
 import styles from './checkbox-card.module.scss';
 
 export function CheckboxCard(props: CheckboxCard.Props) {

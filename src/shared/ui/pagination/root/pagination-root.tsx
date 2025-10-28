@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { PaginationRootContext } from './pagination-root-context';
 import { useEventCallback } from '@/shared/hooks';
-import { Flex } from '@/shared/ui/flex';
+import { Flex } from '../../flex';
 
 export const PaginationRoot = React.forwardRef(function PaginationRoot(
 	props: PaginationRoot.Props,

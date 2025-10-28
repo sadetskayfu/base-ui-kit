@@ -6,14 +6,13 @@ const alignValues = ['start', 'center', 'end', 'baseline', 'stretch'] as const;
 const justifyValues = ['start', 'center', 'end', 'between'] as const;
 const wrapValues = ['nowrap', 'wrap', 'wrap-reverse'] as const;
 
-const flexPropDefs = {
+export const flexPropDefs = {
 	/**
 	 * Sets the CSS **display** property.
-	 * Supports a subset of the corresponding CSS values and responsive objects.
+	 * Supports a subset of the corresponding CSS values.
 	 *
 	 * @example
 	 * display="inline-flex"
-	 * display={{ sm: 'none', lg: 'flex' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/display
@@ -26,11 +25,10 @@ const flexPropDefs = {
 	},
 	/**
 	 * Sets the CSS **flex-direction** property.
-	 * Supports the corresponding CSS values and responsive objects.
+	 * Supports the corresponding CSS values.
 	 *
 	 * @example
 	 * direction="column"
-	 * direction={{ sm: 'column', lg: 'row' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
@@ -43,11 +41,10 @@ const flexPropDefs = {
 	},
 	/**
 	 * Sets the CSS **align-items** property.
-	 * Supports the corresponding CSS values and responsive objects.
+	 * Supports the corresponding CSS values.
 	 *
 	 * @example
 	 * align="center"
-	 * align={{ sm: 'baseline', lg: 'center' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
@@ -60,11 +57,10 @@ const flexPropDefs = {
 	},
 	/**
 	 * Sets the CSS **justify-content** property.
-	 * Supports a subset of the corresponding CSS values and responsive objects.
+	 * Supports a subset of the corresponding CSS values.
 	 *
 	 * @example
 	 * justify="between"
-	 * justify={{ sm: 'start', lg: 'center' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
@@ -78,11 +74,10 @@ const flexPropDefs = {
 	},
 	/**
 	 * Sets the CSS **flex-wrap** property.
-	 * Supports the corresponding CSS values and responsive objects.
+	 * Supports the corresponding CSS values.
 	 *
 	 * @example
 	 * wrap="wrap"
-	 * wrap={{ sm: 'wrap', lg: 'nowrap' }}
 	 *
 	 * @link
 	 * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap
@@ -106,8 +101,5 @@ function parseJustifyValue(value: string) {
 	return value === 'between' ? 'space-between' : value;
 }
 
-// Use all of the imported prop defs to ensure that JSDoc works
-type FlexOwnProps = GetPropDefTypes<typeof flexPropDefs & typeof gapPropDefs>;
+export type FlexOwnProps = GetPropDefTypes<typeof flexPropDefs & typeof gapPropDefs>;
 
-export { flexPropDefs };
-export type { FlexOwnProps };

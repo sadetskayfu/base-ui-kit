@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { Text } from '@/shared/ui/text';
-import { useFormControlLabelContext } from '@/shared/ui/form-control-label';
+import { Text } from '../text';
+import { useFormControlLabelContext } from '../form-control-label';
 import styles from './form-label.module.scss';
 
 /**

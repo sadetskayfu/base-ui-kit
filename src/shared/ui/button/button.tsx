@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { BaseButton } from '@/shared/ui/base-button';
-import { Loader } from '@/shared/ui/loader';
+import { BaseButton } from '../base-button';
+import { Loader } from '../loader';
 import { useButtonContext } from './provider/button-context';
 import styles from './button.module.scss';
 
@@ -20,8 +20,7 @@ export const Button = React.forwardRef(function Button(
 		disabled: disabledProp,
 		iconButton,
 		disableRipple,
-		animateBorder: animateBorderProp,
-		autoFs,
+		autoFontSize,
 		...otherProps
 	} = props;
 
@@ -30,7 +29,6 @@ export const Button = React.forwardRef(function Button(
 	const loading = loadingProp || context?.loading;
 	const disabled = disabledProp || context?.disabled;
 	const radius = radiusProp || context?.radius
-	const animateBorder = animateBorderProp || context?.animateBorder
 
 	return (
 		<BaseButton
@@ -42,8 +40,6 @@ export const Button = React.forwardRef(function Button(
 				{
 					[styles['loading']]: loading,
 					[styles['disabled']]: disabled,
-					[styles['animate-border']]: animateBorder,
-					['animate-border']: animateBorder,
 				},
 				className
 			)}
@@ -52,7 +48,7 @@ export const Button = React.forwardRef(function Button(
 			iconButton={iconButton || context?.iconButton}
 			size={size || context?.size}
 			radius={radius || context?.radius}
-			autoFs={autoFs || context?.autoFs}
+			autoFontSize={autoFontSize || context?.autoFontSize}
 			{...otherProps}
 		>
 			{children}
@@ -65,7 +61,6 @@ export namespace Button {
 	export type Variant = 'filled' | 'ghost' | 'outlined' | 'clear';
 	export type Color = 'accent' | 'secondary' | 'secondary-soft' | 'error' | 'success' | 'warning';
 
-	export type State = {};
 	export interface Props extends BaseButton.Props {
 		/**
 		 * @default 'filled'
@@ -76,6 +71,5 @@ export namespace Button {
 		 */
 		color?: Color;
 		loading?: boolean;
-		animateBorder?: boolean
 	}
 }

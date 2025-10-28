@@ -4,13 +4,13 @@ import {
 	layoutPropDefs,
 	marginPropDefs,
 	radiusPropDef,
+	borderPropDef,
+	bgColorPropDef,
 	type RadiusProp,
 	type LayoutProps,
 	type MarginProps,
 	type BorderProp,
-	borderPropDef,
 	type BgColorProp,
-	bgColorPropDef,
 } from '@/shared/lib/utilities-props';
 import { useRenderElement } from '@/shared/hooks';
 import { type GridOwnProps, gridPropDefs } from './grid.props';
@@ -44,9 +44,8 @@ export const Grid = React.forwardRef(function Grid(
 
 export namespace Grid {
 	export interface State {}
-	export interface Props
-		extends useRenderElement.ModernComponentProps<'div', State>,
-			LayoutProps,
+	export interface OwnProps
+		extends LayoutProps,
 			MarginProps,
 			RadiusProp,
 			BorderProp,
@@ -54,4 +53,5 @@ export namespace Grid {
 			GridOwnProps {
 		tag?: keyof React.JSX.IntrinsicElements;
 	}
+	export interface Props extends useRenderElement.ModernComponentProps<'div', State>, OwnProps {}
 }

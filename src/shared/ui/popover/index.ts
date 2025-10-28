@@ -1,2 +1,1 @@
-export * from './base'
-export * from './styled'
+export * as Popover from './index.parts'

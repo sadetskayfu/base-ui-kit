@@ -1,6 +1,6 @@
 import { fruits } from '@/entities/options/fruits';
 import { ButtonField } from '@/shared/ui/button-field';
-import { MobileCombobox } from '@/shared/ui/combobox';
+import { MobileCombobox } from '@/shared/ui/mobile-combobox';
 import { Flex } from '@/shared/ui/flex';
 import { Text } from '@/shared/ui/text';
 
@@ -31,7 +31,7 @@ export function ExampleMultiMobileCombobox() {
 					</MobileCombobox.ChipList>
 					<MobileCombobox.Field placeholder="Введитье название фрукта" />
 				</MobileCombobox.Chips>
-				<MobileCombobox.ScrollArea alwaysVisibleScrollbar={false} offset="2">
+				<MobileCombobox.ScrollArea alwaysVisibleScrollbar={false} offset="4">
 					<MobileCombobox.Empty align='center'>Не найдено ниодного фрутка</MobileCombobox.Empty>
 					<MobileCombobox.List>
 						{(item: string) => (

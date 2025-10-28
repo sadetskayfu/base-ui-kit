@@ -7,10 +7,9 @@ export type ButtonContext = {
 	variant?: Button.Props['variant'];
 	color?: Button.Props['color'];
 	iconButton?: boolean;
-	animateBorder?: boolean
 	disabled?: boolean;
 	loading?: boolean;
-	autoFs?: boolean
+	autoFontSize?: boolean
 };
 
 export const ButtonContext = React.createContext<ButtonContext | undefined>(undefined);

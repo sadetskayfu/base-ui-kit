@@ -1,1 +1,0 @@
-export * as MenuComponents from './index.parts'

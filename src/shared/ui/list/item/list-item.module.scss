@@ -1,0 +1,60 @@
+.item {
+	--menu-item-visual-margin: 0px;
+	z-index: 0;
+	position: relative;
+	color: var(--font-color-hard);
+	user-select: none;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		inset-block: var(--menu-item-visual-margin);
+		border-radius: inherit;
+		left: 0;
+		z-index: -1;
+	}
+
+	&:where(.visual-margin-1) {
+		--menu-item-visual-margin: 1px;
+	}
+	&:where(.visual-margin-2) {
+		--menu-item-visual-margin: 3px;
+	}
+
+	&:where([data-popup-open]),
+	&:where([data-selected]) {
+		&:before {
+			background-color: var(--color-accent-a1);
+		}
+	}
+
+	@media (hover: hover) {
+		&:where([data-highlighted]) {
+			color: var(--font-color-hard-invert);
+			&:before {
+				background-color: var(--solid-color-accent-1);
+			}
+			[data-desc] {
+				color: var(--font-color-soft-invert);
+			}
+		}
+	}
+
+	&:where(.hovered) {
+		@include hover {
+			color: var(--font-color-hard-invert);
+			&:before {
+				background-color: var(--solid-color-accent-1);
+			}
+			[data-desc] {
+				color: var(--font-color-soft-invert);
+			}
+		}
+	}
+
+	&:where([data-disabled]),
+	&:where(.disabled) {
+		@include disabled;
+	}
+}

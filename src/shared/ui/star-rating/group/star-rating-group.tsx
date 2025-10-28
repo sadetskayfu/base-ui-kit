@@ -1,6 +1,6 @@
 import classNames from 'classnames';
-import { Aria } from '@/shared/ui/aria';
-import { Flex } from '@/shared/ui/flex';
+import { Aria } from '../../aria';
+import { Flex } from '../../flex';
 import { useStarRatingRootContext } from '../root/star-rating-root-context';
 import styles from './star-rating-group.module.scss';
 

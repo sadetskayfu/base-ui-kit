@@ -1,8 +1,8 @@
 import classNames from 'classnames';
-import { BaseRadio } from '@/shared/ui/radio';
-import { Flex } from '@/shared/ui/flex';
+import { BaseRadio } from '../base/radio';
+import { Flex } from '../flex';
 import { Ripple, useRipple } from '@/shared/lib/ripple';
-import { useFormGroupContext } from '@/shared/ui/form-group';
+import { useFormGroupContext } from '../form-group';
 import styles from './radio-card.module.scss';
 
 export function RadioCard(props: RadioCard.Props) {

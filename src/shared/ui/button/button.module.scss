@@ -9,11 +9,9 @@
 	border: none;
 	color: var(--button-color);
 
-	&:not(.animate-border) {
-		&:focus-visible {
-			@include focused-outline;
-			outline-offset: 2px;
-		}
+	&:focus-visible {
+		@include focused-outline;
+		outline-offset: 2px;
 	}
 
 	&:where(.variant-filled) {

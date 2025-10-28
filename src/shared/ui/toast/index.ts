@@ -1,2 +1,2 @@
-export * from './styled';
-export * from './toast-manager';
+export * as Toast from './index.parts'
+export * from './toast-manager'

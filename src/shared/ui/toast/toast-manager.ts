@@ -1,4 +1,4 @@
-import { BaseToast } from './base';
+import { BaseToast } from '../base/toast';
 
 export const createToastManager = BaseToast.createToastManager;
 export const useToastManager = BaseToast.useToastManager;

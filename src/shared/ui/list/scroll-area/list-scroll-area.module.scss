@@ -1,0 +1,25 @@
+.scroll-area {
+	min-height: 0;
+	display: flex;
+	flex-direction: column;
+
+	&[data-overflow-y-end],
+	&[data-overflow-y-start] {
+		&:where(.offset-1) {
+			margin-right: calc(var(--space-1) * -1);
+		}
+		&:where(.offset-4) {
+			margin-right: calc(var(--space-4) * -1);
+		}
+	}
+
+	&:where(.scroll-padding) {
+		.viewport {
+			scroll-padding-top: var(--menu-item-group-label-height);
+		}
+	}
+}
+
+.viewport {
+	min-height: 0;
+}

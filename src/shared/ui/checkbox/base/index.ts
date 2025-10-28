@@ -1,1 +1,0 @@
-export { Checkbox as BaseCheckbox } from '@base-ui-components/react'

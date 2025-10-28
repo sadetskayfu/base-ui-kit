@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Button } from '@/shared/ui/button';
-import { Icon } from '@/shared/ui/icons';
 import { Menu } from '@/shared/ui/menu';
 
 export function ExampleMenuWithArrow() {
@@ -14,20 +13,15 @@ export function ExampleMenuWithArrow() {
 				With arrow
 				<Menu.Icon />
 			</Menu.Trigger>
-			<Menu.Popup width="250px" align='start' arrow>
-				<Menu.CheckboxItem label="Item 1" checked={checked1} onCheckedChange={setChecked1}>
-					<Menu.ItemContent
-						label="Item 1"
-						description="Description"
-						icon={<Icon.UserRound />}
-						iconPadding
-					/>
+			<Menu.Popup width="250px" align="start" arrow>
+				<Menu.CheckboxItem checked={checked1} onCheckedChange={setChecked1}>
+					Item 1
 				</Menu.CheckboxItem>
-				<Menu.CheckboxItem label="Item 2" checked={checked2} onCheckedChange={setChecked2}>
-					<Menu.ItemContent label="Item 2" icon={<Icon.CircleCheckBig />} iconPadding />
+				<Menu.CheckboxItem checked={checked2} onCheckedChange={setChecked2}>
+					Item 2
 				</Menu.CheckboxItem>
-				<Menu.CheckboxItem label="Item 3" checked={checked3} onCheckedChange={setChecked3}>
-					<Menu.ItemContent label="Item 3" description="Description" iconPadding />
+				<Menu.CheckboxItem checked={checked3} onCheckedChange={setChecked3}>
+					Item 3
 				</Menu.CheckboxItem>
 			</Menu.Popup>
 		</Menu.Root>

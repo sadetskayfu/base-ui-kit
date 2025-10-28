@@ -1,1 +1,0 @@
-export { Switch as BaseSwitch } from '@base-ui-components/react/switch';

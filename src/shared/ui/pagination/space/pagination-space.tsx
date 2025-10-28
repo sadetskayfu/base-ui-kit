@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { useButtonContext } from '@/shared/ui/button';
+import { useButtonContext } from '../../button';
 import styles from './pagination-space.module.scss';
 
 export function PaginationSpace() {

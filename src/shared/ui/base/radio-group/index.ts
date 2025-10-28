@@ -1,0 +1,1 @@
+export { RadioGroup as BaseRadioGroup } from '@base-ui-components/react/radio-group';

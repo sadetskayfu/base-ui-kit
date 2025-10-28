@@ -41,7 +41,7 @@
 		padding-inline: var(--space-1);
 	}
 
-	&:where(.auto-fs) {
+	&:where(.auto-font-size) {
 		font-size: calc(var(--base-button-height) / 2);
 	}
 }

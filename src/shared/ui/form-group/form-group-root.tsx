@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Aria } from '@/shared/ui/aria';
+import { Aria } from '../aria';
+import { Flex } from '../flex';
 import { FormGroupContext } from './form-group-context';
-import { Flex } from '@/shared/ui/flex';
 
 export function FormGroupRoot(props: FormGroupRoot.Props) {
 	const {

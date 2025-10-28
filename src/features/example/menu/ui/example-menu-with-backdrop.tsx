@@ -10,13 +10,13 @@ export function ExampleMenuWithBackdrop() {
 			</Menu.Trigger>
 			<Menu.Popup width="250px" align='start' backdrop>
 				<Menu.Item>
-					<Menu.ItemContent label="Item 1" description="Description" />
+					Item 1
 				</Menu.Item>
 				<Menu.Item>
-					<Menu.ItemContent label="Item 2" />
+					Item 2
 				</Menu.Item>
 				<Menu.Item>
-					<Menu.ItemContent label="Item 3" description="Description" />
+					Item 3
 				</Menu.Item>
 			</Menu.Popup>
 		</Menu.Root>

@@ -1,0 +1,1 @@
+export { Tooltip as BaseTooltip } from '@base-ui-components/react/tooltip'

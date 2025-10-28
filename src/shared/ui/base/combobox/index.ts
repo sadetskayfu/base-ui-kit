@@ -1,0 +1,1 @@
+export { Combobox as BaseCombobox } from '@base-ui-components/react/combobox'

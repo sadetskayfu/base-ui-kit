@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import { BaseRadio } from './base';
-import { useFormControlLabelContext } from '@/shared/ui/form-control-label';
-import { useFormGroupContext } from '@/shared/ui/form-group';
+import { BaseRadio } from '../base/radio';
+import { useFormControlLabelContext } from '../form-control-label';
+import { useFormGroupContext } from '../form-group';
 import styles from './radio.module.scss';
 
 export function Radio(props: Radio.Props) {

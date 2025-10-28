@@ -13,24 +13,24 @@ export function ButtonSection() {
 					<Button color="accent" variant="filled">
 						Accent filled
 					</Button>
-					<Button color="accent" variant="ghost" animateBorder>
+					<Button color="accent" variant="ghost">
 						Accent ghost
 					</Button>
 					<Button color="accent" variant="outlined">
 						Accent outlined
 					</Button>
-					<Button color="accent" variant="clear" animateBorder>
+					<Button color="accent" variant="clear">
 						Accent clear
 					</Button>
 				</Flex>
 				<Flex direction="column" gap="3">
-					<Button color="secondary" variant="ghost" animateBorder>
+					<Button color="secondary" variant="ghost">
 						Secondary ghost
 					</Button>
 					<Button color="secondary" variant="outlined">
 						Secondary outlined
 					</Button>
-					<Button color="secondary" variant="clear" animateBorder>
+					<Button color="secondary" variant="clear">
 						Secondary clear
 					</Button>
 				</Flex>
@@ -46,13 +46,13 @@ export function ButtonSection() {
 					<Button color="success" variant="filled">
 						Success filled
 					</Button>
-					<Button color="success" variant="ghost" animateBorder>
+					<Button color="success" variant="ghost">
 						Success ghost
 					</Button>
 					<Button color="success" variant="outlined">
 						Success outlined
 					</Button>
-					<Button color="success" variant="clear" animateBorder>
+					<Button color="success" variant="clear">
 						Success clear
 					</Button>
 				</Flex>
@@ -60,13 +60,13 @@ export function ButtonSection() {
 					<Button color="error" variant="filled">
 						Error filled
 					</Button>
-					<Button color="error" variant="ghost" animateBorder>
+					<Button color="error" variant="ghost">
 						Error ghost
 					</Button>
 					<Button color="error" variant="outlined">
 						Error outlined
 					</Button>
-					<Button color="error" variant="clear" animateBorder>
+					<Button color="error" variant="clear">
 						Error clear
 					</Button>
 				</Flex>

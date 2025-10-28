@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Flex } from '@/shared/ui/flex';
-import { FormControlLabelContext } from './form-control-label-context';
-import { useFormGroupContext } from '@/shared/ui/form-group';
 import classNames from 'classnames';
+import { Flex } from '../flex';
+import { useFormGroupContext } from '../form-group';
+import { FormControlLabelContext } from './form-control-label-context';
 
 /**
  * Renders `<Flex>` component.

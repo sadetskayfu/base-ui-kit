@@ -1,1 +1,0 @@
-export { Select as BaseSelect } from '@base-ui-components/react'

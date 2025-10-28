@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import styles from './badge.module.scss';
 import { InfoBadge } from '../info-badge';
 import { extractProps, marginPropDefs, type MarginProps } from '@/shared/lib/utilities-props';
+import styles from './badge.module.scss';
 
 export function Badge(props: Badge.Props) {
 	const {

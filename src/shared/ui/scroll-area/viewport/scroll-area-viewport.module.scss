@@ -6,6 +6,13 @@
 		@include focused-outline;
 	}
 
+	&:where(.overflow-shadow-color-grey-1) {
+		--scroll-area-overflow-shadow-color: var(--bg-color-grey-1);
+	}
+	&:where(.overflow-shadow-color-grey-2) {
+		--scroll-area-overflow-shadow-color: var(--bg-color-grey-2);
+	}
+
 	&:where(.overflow-shadow) {
 		&:where(.orientation-horizontal) {
 			.start-shadow,

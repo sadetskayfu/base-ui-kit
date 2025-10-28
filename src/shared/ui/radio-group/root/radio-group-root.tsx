@@ -1,6 +1,6 @@
-import { RadioGroup as BaseRadioGroup } from '@base-ui-components/react';
-import { FormGroup } from '@/shared/ui/form-group';
-import { Flex } from '@/shared/ui/flex';
+import { FormGroup } from '../../form-group';
+import { Flex } from '../../flex';
+import { BaseRadioGroup } from '../../base/radio-group';
 
 export function RadioGroupRoot<Value extends string>(props: RadioGroupRoot.Props<Value>) {
 	const { onValueChange, readOnly, disabled, ...otherProps } = props;

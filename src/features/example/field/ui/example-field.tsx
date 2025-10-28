@@ -12,7 +12,7 @@ export function ExampleField() {
 			<Flex direction="column" gapY="1">
 				<Field.Label>Default field</Field.Label>
 				<Field.InputContainer>
-					<Field.Slot side="left" px="4" separator>
+					<Field.Slot side="left" px="4" border='right'>
 						<Icon.UserRound />
 					</Field.Slot>
 					<Field.Input

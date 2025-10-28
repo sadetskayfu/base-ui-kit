@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { Box } from '@/shared/ui/box';
+import { Box } from '../../box';
 import styles from './alert-content.module.scss';
 /**
  * Renders a `<Box>` component. Using with `<Alert.Icon>` in `<Alert.Header>`

@@ -1,5 +1,5 @@
 import { ButtonProvider } from '@/shared/ui/button';
-import { PasswordField } from '@/shared/ui/field';
+import { PasswordField } from '@/shared/ui/password-field';
 import { Flex } from '@/shared/ui/flex';
 
 export function ExamplePasswordField() {

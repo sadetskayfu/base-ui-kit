@@ -1,4 +1,4 @@
-import { Accordion, AccordionGroup } from '@/shared/ui/accordion';
+import { Accordion } from '@/shared/ui/accordion';
 import { PaginationSection } from './pagination/pagination-section';
 import { Flex } from '@/shared/ui/flex';
 import { MenuSection } from './menu/menu-section';
@@ -20,6 +20,7 @@ import { ButtonSection } from './button/button-section';
 import { RadioGroupSection } from './radio-group/radio-group-section';
 import { CheckboxSection } from './checkbox/checkbox-section';
 import { SwitchSection } from './switch/switch-section';
+import { AccordionGroup } from '@/shared/ui/accordion-group';
 
 export function Example() {
 	return (

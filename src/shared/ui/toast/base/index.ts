@@ -1,1 +1,0 @@
-export { Toast as BaseToast } from '@base-ui-components/react'

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { Aria } from '@/shared/ui/aria';
+import { Aria } from '../../aria';
 import styles from './alert-description.module.scss';
 
 /**

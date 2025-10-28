@@ -1,5 +1,5 @@
 import { ButtonProvider } from '@/shared/ui/button';
-import { NumberField } from '@/shared/ui/field';
+import { NumberField } from '@/shared/ui/number-field';
 import { Flex } from '@/shared/ui/flex';
 
 export function ExampleNumberField() {
