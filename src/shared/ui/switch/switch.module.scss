@@ -3,7 +3,7 @@
     height: var(--switch-size);
     border-radius: var(--radius-full);
     border: var(--border-weight-soft) solid var(--border-color-grey);
-    background-color: var(--bg-color-grey-4);
+    background-color: var(--color-grey-4);
     transition: background-color 0.2s, border-color 0.2s;
     padding: 0px;
     position: relative;
@@ -15,7 +15,7 @@
         @include abs-center;
         width: var(--size);
         height: var(--size);
-        background-color: var(--bg-color-grey-1);
+        background-color: var(--color-grey-1);
         border-radius: 50%;
         transform: translateX(calc(var(--switch-size) / 2 * -1));
         transition: transform 0.2s;

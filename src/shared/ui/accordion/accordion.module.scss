@@ -1,7 +1,7 @@
 .accordion {
 	--accordion-transition: 0.4s;
     --border-color: var(--solid-color-accent-1);
-	border: var(--border-weight-hard) solid var(--bg-color-grey-3);
+	border: var(--border-weight-hard) solid var(--color-grey-3);
 
 	&:where(.size-1) {
 		--accordion-padding-inline: var(--space-2);
@@ -40,7 +40,7 @@
     padding-block: var(--accordion-padding-block);
 	padding-inline: var(--accordion-padding-inline);
     column-gap: var(--accordion-padding-inline);
-    background-color: var(--bg-color-grey-3);
+    background-color: var(--color-grey-3);
 	cursor: inherit;
 	user-select: none;
     transition: color 0.2s, border-radius var(--accordion-transition);
