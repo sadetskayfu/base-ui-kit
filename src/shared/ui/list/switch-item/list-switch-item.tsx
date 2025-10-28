@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import { ListItem } from '../item/list-item';
-import styles from './List-switch-item.module.scss';
+import styles from './list-switch-item.module.scss';
 
 export const ListSwitchItem = React.forwardRef(function ListSwitchItem(
 	props: ListSwitchItem.Props,
